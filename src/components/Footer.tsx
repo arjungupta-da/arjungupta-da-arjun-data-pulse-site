@@ -1,5 +1,5 @@
 
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Linkedin, Mail } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -13,37 +13,32 @@ const Footer = () => {
             <p className="text-sm text-muted-foreground">Data Analyst</p>
           </div>
           
-          <div className="flex flex-col items-center md:items-end">
-            <div className="flex gap-4 mb-4">
+          <div className="flex flex-col mb-4 md:mb-0 items-center">
+            <p className="text-sm text-muted-foreground mb-2">Connect with me</p>
+            <div className="flex gap-4">
               <a 
                 href="https://www.linkedin.com/in/arjunguptain/" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="w-8 h-8 rounded-full flex items-center justify-center bg-secondary hover:bg-primary/20 text-muted-foreground hover:text-primary transition-colors"
+                className="flex items-center gap-2 px-4 py-2 rounded-md bg-secondary/80 hover:bg-primary/20 text-muted-foreground hover:text-primary transition-all"
                 aria-label="LinkedIn"
               >
                 <Linkedin size={16} />
+                <span>LinkedIn Profile</span>
               </a>
               
               <a 
                 href="mailto:arjunguptain@outlook.com" 
-                className="w-8 h-8 rounded-full flex items-center justify-center bg-secondary hover:bg-primary/20 text-muted-foreground hover:text-primary transition-colors"
+                className="flex items-center gap-2 px-4 py-2 rounded-md bg-secondary/80 hover:bg-primary/20 text-muted-foreground hover:text-primary transition-all"
                 aria-label="Email"
               >
                 <Mail size={16} />
-              </a>
-              
-              <a 
-                href="https://github.com/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="w-8 h-8 rounded-full flex items-center justify-center bg-secondary hover:bg-primary/20 text-muted-foreground hover:text-primary transition-colors"
-                aria-label="GitHub"
-              >
-                <Github size={16} />
+                <span>Email Me</span>
               </a>
             </div>
-            
+          </div>
+          
+          <div className="flex flex-col items-center md:items-end">
             <p className="text-sm text-muted-foreground">
               © {currentYear} Arjun Gupta. All rights reserved.
             </p>
