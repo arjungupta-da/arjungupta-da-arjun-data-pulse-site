@@ -11,7 +11,7 @@ const HeroSection = () => {
             <span className="text-gradient">ARJUN GUPTA</span>
           </h1>
           
-          <h2 className="text-xl md:text-2xl font-bold mb-6 text-data-purple">
+          <h2 className="text-xl md:text-2xl font-bold mb-6 text-amber-400">
             Data Analyst
           </h2>
           
@@ -20,11 +20,11 @@ const HeroSection = () => {
           </p>
           
           <div className="flex flex-wrap gap-4 mb-8">
-            <Button asChild className="bg-primary hover:bg-primary/80">
+            <Button asChild className="bg-amber-600 hover:bg-amber-700 text-white">
               <a href="#contact">Get In Touch</a>
             </Button>
             
-            <Button asChild variant="outline" className="border-primary text-primary hover:bg-primary/10">
+            <Button asChild variant="outline" className="border-amber-600 text-amber-400 hover:bg-amber-900/20">
               <a href="#projects">View Projects</a>
             </Button>
           </div>
@@ -34,7 +34,7 @@ const HeroSection = () => {
               href="https://www.linkedin.com/in/arjunguptain/" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="w-10 h-10 rounded-full flex items-center justify-center bg-secondary hover:bg-primary/20 text-muted-foreground hover:text-primary transition-colors"
+              className="w-10 h-10 rounded-full flex items-center justify-center bg-secondary hover:bg-amber-900/30 text-muted-foreground hover:text-amber-400 transition-colors"
               aria-label="LinkedIn"
             >
               <Linkedin size={20} />
@@ -42,7 +42,7 @@ const HeroSection = () => {
             
             <a 
               href="mailto:arjunguptain@outlook.com" 
-              className="w-10 h-10 rounded-full flex items-center justify-center bg-secondary hover:bg-primary/20 text-muted-foreground hover:text-primary transition-colors"
+              className="w-10 h-10 rounded-full flex items-center justify-center bg-secondary hover:bg-amber-900/30 text-muted-foreground hover:text-amber-400 transition-colors"
               aria-label="Email"
             >
               <Mail size={20} />
@@ -52,16 +52,16 @@ const HeroSection = () => {
         
         <div className="flex-1 order-1 md:order-2 flex justify-center">
           <div className="relative">
-            <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary/30 shadow-xl shadow-primary/20">
+            <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-amber-600/30 shadow-xl shadow-amber-900/20">
               <img 
-                src="/public/lovable-uploads/4c81863c-8d7a-4aa3-8285-1c4ecac84661.png" 
+                src="/public/lovable-uploads/d5c4481e-e7b4-4b99-95ca-423cd2472d22.png" 
                 alt="Arjun Gupta" 
                 className="w-full h-full object-cover"
               />
             </div>
             
             <div className="absolute -bottom-4 -right-4 bg-secondary p-3 rounded-full animate-float shadow-lg">
-              <div className="w-16 h-16 rounded-full bg-data-purple flex items-center justify-center">
+              <div className="w-16 h-16 rounded-full bg-amber-600 flex items-center justify-center">
                 <span className="font-display font-bold text-sm">DATA</span>
               </div>
             </div>

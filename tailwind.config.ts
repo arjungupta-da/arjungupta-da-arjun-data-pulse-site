@@ -67,7 +67,8 @@ export default {
 					cyan: '#33C3F0',
 					purple: '#9b87f5',
 					magenta: '#D946EF',
-					orange: '#F97316'
+					orange: '#F97316',
+					amber: '#FBBF24'
 				}
 			},
 			fontFamily: {
