@@ -1,5 +1,5 @@
 
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
@@ -47,16 +47,6 @@ const HeroSection = () => {
             >
               <Mail size={20} />
             </a>
-            
-            <a 
-              href="https://github.com/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="w-10 h-10 rounded-full flex items-center justify-center bg-secondary hover:bg-primary/20 text-muted-foreground hover:text-primary transition-colors"
-              aria-label="GitHub"
-            >
-              <Github size={20} />
-            </a>
           </div>
         </div>
         
@@ -64,7 +54,7 @@ const HeroSection = () => {
           <div className="relative">
             <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary/30 shadow-xl shadow-primary/20">
               <img 
-                src="/public/lovable-uploads/1d98d078-0373-4caf-a3e2-132bdbe05f0d.png" 
+                src="/public/lovable-uploads/4c81863c-8d7a-4aa3-8285-1c4ecac84661.png" 
                 alt="Arjun Gupta" 
                 className="w-full h-full object-cover"
               />

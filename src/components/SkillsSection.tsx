@@ -16,19 +16,24 @@ const SkillsSection = () => {
     "Canva"
   ];
 
-  const certifications = [
+  const featuredCertifications = [
     {
       name: "Python for Everybody - Specialization",
       issuer: "University of Michigan & Coursera",
       date: "Dec 2023",
-      link: "https://www.coursera.org/account/accomplishments/specialization/L2C8WHHHFT7E"
+      link: "https://www.coursera.org/account/accomplishments/specialization/L2C8WHHHFT7E",
+      description: "Comprehensive Python programming specialization covering data structures, databases, and web data access"
     },
     {
       name: "Data Analysis with Python",
       issuer: "IBM Developer Skills Network & Coursera",
       date: "Nov 2023",
-      link: "https://www.credly.com/badges/4ba5a3e7-2e99-4910-a913-281bd41c91a1/public_url"
-    },
+      link: "https://www.credly.com/badges/4ba5a3e7-2e99-4910-a913-281bd41c91a1/public_url",
+      description: "Applied data analysis using Python libraries (NumPy, Pandas, Scikit-learn) for real-world datasets"
+    }
+  ];
+
+  const certifications = [
     {
       name: "Capstone: Retrieving, Processing, and Visualizing Data with Python",
       issuer: "Coursera",
@@ -88,23 +93,48 @@ const SkillsSection = () => {
       issuer: "Coursera",
       date: "Oct 2023",
       link: "#"
-    }
-  ];
-
-  const projectCertificates = [
-    {
-      name: "Python for Everybody Project",
-      issuer: "University of Michigan & Coursera",
-      date: "Dec 2023",
-      link: "https://www.coursera.org/account/accomplishments/specialization/L2C8WHHHFT7E",
-      description: "Comprehensive Python programming specialization covering data structures, databases, and web data access"
     },
     {
-      name: "IBM Data Analysis Project",
-      issuer: "IBM Developer Skills Network",
-      date: "Nov 2023",
-      link: "https://www.credly.com/badges/4ba5a3e7-2e99-4910-a913-281bd41c91a1/public_url",
-      description: "Applied data analysis using Python libraries (NumPy, Pandas, Scikit-learn) for real-world datasets"
+      name: "Get Started with Microsoft Fabric",
+      issuer: "Microsoft Learn",
+      date: "Mar 2024",
+      link: "https://learn.microsoft.com/api/achievements/share/en-us/arjunguptain/NZRZRVZF"
+    },
+    {
+      name: "Getting Started with Python",
+      issuer: "Coursera",
+      date: "Sept 2023",
+      link: "https://www.coursera.org/account/accomplishments/verify/Q72KS2U7UX43"
+    },
+    {
+      name: "Implement a Lakehouse with Microsoft Fabric",
+      issuer: "Microsoft Learn",
+      date: "Mar 2024",
+      link: "https://learn.microsoft.com/api/achievements/share/en-us/arjunguptain/8AXACKHW"
+    },
+    {
+      name: "Ingest data with Microsoft Fabric",
+      issuer: "Microsoft Learn",
+      date: "Mar 2024",
+      link: "https://learn.microsoft.com/api/achievements/share/en-us/arjunguptain/45J5YPMK"
+    },
+    {
+      name: "Introduction to Generative AI",
+      issuer: "Google",
+      date: "Apr 2024",
+      link: "https://www.cloudskillsboost.google/public_profiles/8932209c-8a91-49ca-b7d4-46fd5e52f2c2/badges/8161414"
+    },
+    {
+      name: "Preparing Data for Analysis with Microsoft Excel",
+      issuer: "Coursera",
+      date: "Jan 2024",
+      link: "https://www.coursera.org/account/accomplishments/verify/E1G7ZTMALRWE"
+    },
+    {
+      name: "Python & Artificial Intelligence Bootcamp",
+      issuer: "DevTown",
+      date: "Dec 2023",
+      link: "https://cert.devtown.in/verify/1699td"
     }
   ];
 
@@ -131,10 +161,10 @@ const SkillsSection = () => {
           
           <div className="lg:col-span-2">
             <div className="glass-card p-8 rounded-lg h-full">
-              <h3 className="text-2xl font-display font-bold mb-6 text-data-cyan">Featured Projects & Certificates</h3>
+              <h3 className="text-2xl font-display font-bold mb-6 text-data-cyan">Featured Project Certificates</h3>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {projectCertificates.map((cert, index) => (
+                {featuredCertifications.map((cert, index) => (
                   <a 
                     key={index}
                     href={cert.link}
@@ -150,6 +180,18 @@ const SkillsSection = () => {
                     <p className="text-sm mt-2 text-muted-foreground">{cert.description}</p>
                   </a>
                 ))}
+              </div>
+              
+              <div className="mt-6 text-center">
+                <a 
+                  href="https://www.linkedin.com/in/arjunguptain/" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center text-primary hover:text-primary/80 transition-colors"
+                >
+                  <span>View my LinkedIn Profile</span>
+                  <ExternalLink size={14} className="ml-1" />
+                </a>
               </div>
             </div>
           </div>
@@ -169,26 +211,14 @@ const SkillsSection = () => {
                 className="flex items-start p-3 bg-secondary/30 rounded-md hover:bg-secondary/50 transition-colors group"
               >
                 <Award size={18} className="text-primary mt-0.5 mr-2 flex-shrink-0 group-hover:text-data-cyan transition-colors" />
-                <div>
+                <div className="flex-1">
                   <h4 className="font-medium text-sm group-hover:text-foreground transition-colors">{cert.name}</h4>
                   <p className="text-xs text-muted-foreground">{cert.issuer}</p>
                   {cert.date && <p className="text-xs text-primary/80 mt-1">{cert.date}</p>}
                 </div>
-                <ExternalLink size={14} className="ml-auto text-muted-foreground flex-shrink-0 opacity-0 group-hover:opacity-100 transition-opacity" />
+                <ExternalLink size={14} className="ml-2 text-muted-foreground flex-shrink-0 opacity-0 group-hover:opacity-100 transition-opacity" />
               </a>
             ))}
-          </div>
-          
-          <div className="mt-8 text-center">
-            <a 
-              href="https://www.linkedin.com/in/arjunguptain/" 
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center text-primary hover:text-primary/80 transition-colors"
-            >
-              <span>View my complete profile on LinkedIn</span>
-              <ExternalLink size={14} className="ml-1" />
-            </a>
           </div>
         </div>
       </div>
