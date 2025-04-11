@@ -4,10 +4,10 @@ import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
   return (
-    <section id="home" className="min-h-screen pt-16 flex items-center gradient-bg">
-      <div className="container mx-auto px-4 py-16 md:py-24 flex flex-col md:flex-row gap-8 items-center">
-        <div className="flex-1 order-2 md:order-1">
-          <h1 className="text-4xl md:text-6xl font-display font-extrabold mb-4">
+    <section id="home" className="min-h-screen pt-16 flex items-center justify-center gradient-bg">
+      <div className="container mx-auto px-4 py-16 md:py-24 flex flex-col md:flex-row gap-12 items-center">
+        <div className="flex-1 order-2 md:order-1 max-w-xl">
+          <h1 className="text-4xl md:text-6xl font-display font-extrabold mb-6">
             <span className="text-gradient">ARJUN GUPTA</span>
           </h1>
           
@@ -34,25 +34,25 @@ const HeroSection = () => {
               href="https://www.linkedin.com/in/arjunguptain/" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="w-10 h-10 rounded-full flex items-center justify-center bg-secondary hover:bg-amber-900/30 text-muted-foreground hover:text-amber-400 transition-colors"
+              className="w-12 h-12 rounded-full flex items-center justify-center bg-secondary hover:bg-amber-900/30 text-muted-foreground hover:text-amber-400 transition-colors"
               aria-label="LinkedIn"
             >
-              <Linkedin size={20} />
+              <Linkedin size={22} />
             </a>
             
             <a 
               href="mailto:arjunguptain@outlook.com" 
-              className="w-10 h-10 rounded-full flex items-center justify-center bg-secondary hover:bg-amber-900/30 text-muted-foreground hover:text-amber-400 transition-colors"
+              className="w-12 h-12 rounded-full flex items-center justify-center bg-secondary hover:bg-amber-900/30 text-muted-foreground hover:text-amber-400 transition-colors"
               aria-label="Email"
             >
-              <Mail size={20} />
+              <Mail size={22} />
             </a>
           </div>
         </div>
         
         <div className="flex-1 order-1 md:order-2 flex justify-center">
           <div className="relative">
-            <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-amber-600/30 shadow-xl shadow-amber-900/20">
+            <div className="w-72 h-72 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-amber-600/30 shadow-xl shadow-amber-900/20">
               <img 
                 src="/public/lovable-uploads/d5c4481e-e7b4-4b99-95ca-423cd2472d22.png" 
                 alt="Arjun Gupta" 

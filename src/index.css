@@ -70,7 +70,7 @@
   }
 
   .glass-card {
-    @apply bg-amber-950/20 backdrop-blur-sm border border-amber-900/10 shadow-lg;
+    @apply bg-amber-950/20 backdrop-blur-sm border border-amber-900/10 shadow-lg rounded-xl;
   }
   
   .text-gradient {
@@ -78,6 +78,43 @@
   }
 
   .section-heading {
-    @apply text-3xl font-display font-bold mb-6 text-gradient;
+    @apply text-3xl font-display font-bold mb-8 text-gradient;
+  }
+
+  section {
+    @apply py-20;
+  }
+
+  .container {
+    @apply px-6 md:px-8;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply tracking-tight;
+  }
+
+  a {
+    @apply transition-colors duration-200;
+  }
+  
+  /* Consistent spacing classes */
+  .section-container {
+    @apply container mx-auto px-4 md:px-8 py-16 md:py-24;
+  }
+  
+  .title-spacing {
+    @apply mb-8;
+  }
+  
+  .subtitle-spacing {
+    @apply mb-6;
+  }
+  
+  .paragraph-spacing {
+    @apply mb-6;
+  }
+  
+  .button-spacing {
+    @apply mt-8;
   }
 }
