@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@500;600;700;800&display=swap');
 
 @tailwind base;
@@ -80,12 +81,14 @@
     @apply text-3xl font-display font-bold mb-8 text-gradient;
   }
 
+  /* Standardized section spacing */
   section {
-    @apply py-20;
+    @apply py-16 md:py-20;
   }
 
+  /* Consistent container padding */
   .container {
-    @apply px-6 md:px-8;
+    @apply px-4 md:px-8 mx-auto;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -98,22 +101,27 @@
   
   /* Consistent spacing classes */
   .section-container {
-    @apply container mx-auto px-4 md:px-8 py-16 md:py-24;
+    @apply container mx-auto px-4 md:px-8 py-16 md:py-20;
   }
   
   .title-spacing {
-    @apply mb-8;
+    @apply mb-6 md:mb-8;
   }
   
   .subtitle-spacing {
-    @apply mb-6;
+    @apply mb-4 md:mb-6;
   }
   
   .paragraph-spacing {
-    @apply mb-6;
+    @apply mb-4 md:mb-6;
   }
   
   .button-spacing {
-    @apply mt-8;
+    @apply mt-6 md:mt-8;
+  }
+  
+  /* Add spacing between sections */
+  section + section {
+    @apply border-t border-secondary/30;
   }
 }

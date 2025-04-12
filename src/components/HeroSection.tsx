@@ -4,22 +4,22 @@ import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
   return (
-    <section id="home" className="min-h-screen pt-16 flex items-center justify-center gradient-bg">
-      <div className="container mx-auto px-4 py-16 md:py-24 flex flex-col md:flex-row gap-12 items-center">
+    <section id="home" className="min-h-screen flex items-center justify-center gradient-bg">
+      <div className="section-container flex flex-col md:flex-row gap-12 items-center">
         <div className="flex-1 order-2 md:order-1 max-w-xl">
-          <h1 className="text-4xl md:text-6xl font-display font-extrabold mb-6">
+          <h1 className="text-4xl md:text-6xl font-display font-extrabold title-spacing">
             <span className="text-gradient">ARJUN GUPTA</span>
           </h1>
           
-          <h2 className="text-xl md:text-2xl font-bold mb-6 text-amber-400">
+          <h2 className="text-xl md:text-2xl font-bold subtitle-spacing text-amber-400">
             Data Analyst
           </h2>
           
-          <p className="text-muted-foreground text-lg mb-8 max-w-xl">
+          <p className="text-muted-foreground text-lg paragraph-spacing max-w-xl">
             Results-driven Data Analyst specializing in transforming complex datasets into actionable insights that drive operational excellence and data-informed decision-making.
           </p>
           
-          <div className="flex flex-wrap gap-4 mb-8">
+          <div className="flex flex-wrap gap-4 button-spacing">
             <Button asChild className="bg-amber-600 hover:bg-amber-700 text-white">
               <a href="#contact">Get In Touch</a>
             </Button>
@@ -29,7 +29,7 @@ const HeroSection = () => {
             </Button>
           </div>
           
-          <div className="flex gap-4">
+          <div className="flex gap-4 mt-8">
             <a 
               href="https://www.linkedin.com/in/arjunguptain/" 
               target="_blank" 
