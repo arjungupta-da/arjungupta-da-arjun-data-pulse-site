@@ -38,19 +38,19 @@ const ProjectsSection = () => {
           {projects.map((project, index) => (
             <div 
               key={index} 
-              className="glass-card rounded-lg overflow-hidden hover:border-primary/30 transition-colors group"
+              className="glass-card rounded-lg overflow-hidden hover:border-primary/30 transition-colors group h-full flex flex-col"
             >
               <div className="h-2 bg-gradient-to-r from-data-cyan via-data-purple to-data-magenta"></div>
-              <div className="p-6">
+              <div className="p-6 flex flex-col h-full">
                 <div className="mb-4">
                   <p className="text-muted-foreground text-sm mb-2">{project.date} | {project.organization}</p>
                   <h3 className="text-xl font-display font-bold text-data-cyan mb-1">{project.title}</h3>
                   <p className="text-sm text-primary">{project.subtitle}</p>
                 </div>
                 
-                <p className="text-muted-foreground text-sm mb-4">{project.description}</p>
+                <p className="text-muted-foreground text-sm mb-4 flex-grow">{project.description}</p>
                 
-                <div className="flex justify-end">
+                <div className="flex justify-end mt-auto">
                   <a 
                     href={project.link}
                     target="_blank"

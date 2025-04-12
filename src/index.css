@@ -78,17 +78,17 @@
   }
 
   .section-heading {
-    @apply text-3xl font-display font-bold mb-8 text-gradient;
+    @apply text-3xl font-display font-bold mb-8 text-gradient text-center;
   }
 
   /* Standardized section spacing */
   section {
-    @apply py-16 md:py-20;
+    @apply py-12 md:py-16;
   }
 
   /* Consistent container padding */
   .container {
-    @apply px-4 md:px-8 mx-auto;
+    @apply px-4 md:px-6 lg:px-8 mx-auto max-w-7xl;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -101,15 +101,15 @@
   
   /* Consistent spacing classes */
   .section-container {
-    @apply container mx-auto px-4 md:px-8 py-16 md:py-20;
+    @apply container mx-auto px-4 md:px-6 lg:px-8 py-12 md:py-16;
   }
   
   .title-spacing {
-    @apply mb-6 md:mb-8;
+    @apply mb-4 md:mb-6;
   }
   
   .subtitle-spacing {
-    @apply mb-4 md:mb-6;
+    @apply mb-3 md:mb-4;
   }
   
   .paragraph-spacing {
@@ -122,6 +122,6 @@
   
   /* Add spacing between sections */
   section + section {
-    @apply border-t border-secondary/30;
+    @apply border-t border-secondary/20;
   }
 }

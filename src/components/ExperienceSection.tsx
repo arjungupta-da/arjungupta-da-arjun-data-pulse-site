@@ -5,13 +5,22 @@ const ExperienceSection = () => {
   return (
     <section id="experience" className="py-16 md:py-24 gradient-bg">
       <div className="container mx-auto px-4">
-        <h2 className="section-heading">Work Experience</h2>
+        <h2 className="section-heading text-center">Work Experience</h2>
         
         <div className="glass-card p-8 rounded-lg">
           <div className="flex flex-col md:flex-row justify-between mb-4">
             <div>
               <h3 className="text-2xl font-display font-bold text-data-cyan">Data Analysis Trainer</h3>
-              <p className="text-lg text-muted-foreground">Delhi School of Skill Development</p>
+              <p className="text-lg text-muted-foreground">
+                <a 
+                  href="https://www.dssd.in/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:text-primary transition-colors"
+                >
+                  Delhi School of Skill Development
+                </a>
+              </p>
             </div>
             
             <div className="flex items-center gap-2 mt-2 md:mt-0">

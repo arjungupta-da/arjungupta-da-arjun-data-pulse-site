@@ -15,7 +15,7 @@ const EducationSection = () => {
                 <p className="text-lg text-muted-foreground">Keshav Mahavidyalaya, University of Delhi</p>
               </div>
               
-              <div className="flex items-center gap-2 mt-2 md:mt-0">
+              <div className="flex items-center gap-2 mt-2 md:mt-0 md:ml-4 flex-shrink-0">
                 <Calendar size={16} className="text-primary" />
                 <span className="text-muted-foreground">Completed Jun 2024</span>
               </div>
@@ -36,7 +36,7 @@ const EducationSection = () => {
                 <p className="text-lg text-muted-foreground">PM SHRI Kendriya Vidyalaya</p>
               </div>
               
-              <div className="flex items-center gap-2 mt-2 md:mt-0">
+              <div className="flex items-center gap-2 mt-2 md:mt-0 md:ml-4 flex-shrink-0">
                 <Calendar size={16} className="text-primary" />
                 <span className="text-muted-foreground">Completed Mar 2021</span>
               </div>

@@ -1,25 +1,27 @@
 
-import { Linkedin, Mail } from "lucide-react";
+import { Linkedin, Mail, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
   return (
     <section id="home" className="min-h-screen flex items-center justify-center gradient-bg">
-      <div className="section-container flex flex-col md:flex-row gap-12 items-center">
+      <div className="section-container flex flex-col md:flex-row gap-12 items-center text-center md:text-left">
         <div className="flex-1 order-2 md:order-1 max-w-xl">
-          <h1 className="text-4xl md:text-6xl font-display font-extrabold title-spacing">
+          <h1 className="text-4xl md:text-6xl font-display font-extrabold title-spacing mx-auto md:mx-0">
             <span className="text-gradient">ARJUN GUPTA</span>
           </h1>
           
-          <h2 className="text-xl md:text-2xl font-bold subtitle-spacing text-amber-400">
-            Data Analyst
-          </h2>
+          <div className="flex justify-center md:justify-start">
+            <h2 className="text-xl md:text-2xl font-bold subtitle-spacing text-amber-400">
+              Data Analyst
+            </h2>
+          </div>
           
-          <p className="text-muted-foreground text-lg paragraph-spacing max-w-xl">
+          <p className="text-muted-foreground text-lg paragraph-spacing max-w-xl mx-auto md:mx-0">
             Results-driven Data Analyst specializing in transforming complex datasets into actionable insights that drive operational excellence and data-informed decision-making.
           </p>
           
-          <div className="flex flex-wrap gap-4 button-spacing">
+          <div className="flex flex-wrap gap-4 button-spacing justify-center md:justify-start">
             <Button asChild className="bg-amber-600 hover:bg-amber-700 text-white">
               <a href="#contact">Get In Touch</a>
             </Button>
@@ -27,9 +29,19 @@ const HeroSection = () => {
             <Button asChild variant="outline" className="border-amber-600 text-amber-400 hover:bg-amber-900/20">
               <a href="#projects">View Projects</a>
             </Button>
+            
+            <Button asChild variant="secondary" className="bg-secondary hover:bg-secondary/80 text-primary">
+              <a 
+                href="https://drive.google.com/file/d/1BW5hSQWoow3J6k1R06XihoSIx83L5bUg/view?usp=sharing" 
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Download size={18} className="mr-1" /> Resume
+              </a>
+            </Button>
           </div>
           
-          <div className="flex gap-4 mt-8">
+          <div className="flex gap-4 mt-8 justify-center md:justify-start">
             <a 
               href="https://www.linkedin.com/in/arjunguptain/" 
               target="_blank" 

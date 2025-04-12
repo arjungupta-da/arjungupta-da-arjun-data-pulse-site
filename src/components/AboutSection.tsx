@@ -9,11 +9,13 @@ const AboutSection = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="col-span-2">
-            <div className="glass-card p-8 rounded-lg h-full">
-              <h3 className="text-2xl font-display font-bold mb-4">Profile Summary</h3>
-              <p className="text-muted-foreground mb-6">
-                Results-driven Data Analyst with a Bachelor's degree in Physical Sciences, specializing in Computer Science. Adept at identifying key patterns within complex datasets and translating insights into actionable strategies. Committed to continuous learning and passionate about empowering others while driving operational excellence and data-informed decision-making.
-              </p>
+            <div className="glass-card p-8 rounded-lg h-full flex flex-col justify-between">
+              <div>
+                <h3 className="text-2xl font-display font-bold mb-4 text-center md:text-left">Profile Summary</h3>
+                <p className="text-muted-foreground mb-6">
+                  Results-driven Data Analyst with a Bachelor's degree in Physical Sciences, specializing in Computer Science. Adept at identifying key patterns within complex datasets and translating insights into actionable strategies. Committed to continuous learning and passionate about empowering others while driving operational excellence and data-informed decision-making.
+                </p>
+              </div>
               
               <div className="flex flex-col gap-4">
                 <div className="flex items-start gap-3">
@@ -36,8 +38,10 @@ const AboutSection = () => {
           </div>
           
           <div>
-            <div className="glass-card p-8 rounded-lg h-full">
-              <h3 className="text-2xl font-display font-bold mb-4">Contact Details</h3>
+            <div className="glass-card p-8 rounded-lg h-full flex flex-col justify-between">
+              <div>
+                <h3 className="text-2xl font-display font-bold mb-4 text-center md:text-left">Contact Details</h3>
+              </div>
               
               <div className="flex flex-col gap-4">
                 <div className="flex items-start gap-3">
