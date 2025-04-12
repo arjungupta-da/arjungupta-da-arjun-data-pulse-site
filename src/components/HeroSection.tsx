@@ -54,7 +54,7 @@ const HeroSection = () => {
           <div className="relative">
             <div className="w-72 h-72 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-amber-600/30 shadow-xl shadow-amber-900/20">
               <img 
-                src="/public/lovable-uploads/d5c4481e-e7b4-4b99-95ca-423cd2472d22.png" 
+                src="/lovable-uploads/d5c4481e-e7b4-4b99-95ca-423cd2472d22.png" 
                 alt="Arjun Gupta" 
                 className="w-full h-full object-cover"
               />
