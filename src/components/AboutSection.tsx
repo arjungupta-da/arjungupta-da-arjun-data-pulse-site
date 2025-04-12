@@ -3,11 +3,11 @@ import { Briefcase, GraduationCap, MapPin, Phone, Mail } from "lucide-react";
 
 const AboutSection = () => {
   return (
-    <section id="about" className="py-16 md:py-24 gradient-bg">
-      <div className="container mx-auto px-4">
+    <section id="about" className="gradient-bg">
+      <div className="container mx-auto">
         <h2 className="section-heading">About Me</h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="equal-height-cards">
           <div className="col-span-2">
             <div className="glass-card p-8 rounded-lg h-full flex flex-col justify-between">
               <div>
@@ -19,7 +19,7 @@ const AboutSection = () => {
               
               <div className="flex flex-col gap-4">
                 <div className="flex items-start gap-3">
-                  <Briefcase className="text-primary mt-1" size={20} />
+                  <Briefcase className="text-primary mt-1 flex-shrink-0" size={20} />
                   <div>
                     <h4 className="font-semibold">Current Position</h4>
                     <p className="text-muted-foreground text-sm">Data Analysis Trainer at Delhi School of Skill Development</p>
@@ -27,7 +27,7 @@ const AboutSection = () => {
                 </div>
                 
                 <div className="flex items-start gap-3">
-                  <GraduationCap className="text-primary mt-1" size={20} />
+                  <GraduationCap className="text-primary mt-1 flex-shrink-0" size={20} />
                   <div>
                     <h4 className="font-semibold">Education</h4>
                     <p className="text-muted-foreground text-sm">B.Sc. Physical Sciences with Computer Science</p>
@@ -45,7 +45,7 @@ const AboutSection = () => {
               
               <div className="flex flex-col gap-4">
                 <div className="flex items-start gap-3">
-                  <MapPin className="text-primary mt-1" size={20} />
+                  <MapPin className="text-primary mt-1 flex-shrink-0" size={20} />
                   <div>
                     <h4 className="font-semibold">Location</h4>
                     <p className="text-muted-foreground text-sm">New Delhi, India</p>
@@ -53,7 +53,7 @@ const AboutSection = () => {
                 </div>
                 
                 <div className="flex items-start gap-3">
-                  <Phone className="text-primary mt-1" size={20} />
+                  <Phone className="text-primary mt-1 flex-shrink-0" size={20} />
                   <div>
                     <h4 className="font-semibold">Phone</h4>
                     <p className="text-muted-foreground text-sm">+91 77039-76867</p>
@@ -61,7 +61,7 @@ const AboutSection = () => {
                 </div>
                 
                 <div className="flex items-start gap-3">
-                  <Mail className="text-primary mt-1" size={20} />
+                  <Mail className="text-primary mt-1 flex-shrink-0" size={20} />
                   <div>
                     <h4 className="font-semibold">Email</h4>
                     <a href="mailto:arjunguptain@outlook.com" className="text-muted-foreground text-sm hover:text-primary transition-colors">arjunguptain@outlook.com</a>

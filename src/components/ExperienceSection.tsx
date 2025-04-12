@@ -3,9 +3,9 @@ import { Calendar } from "lucide-react";
 
 const ExperienceSection = () => {
   return (
-    <section id="experience" className="py-16 md:py-24 gradient-bg">
-      <div className="container mx-auto px-4">
-        <h2 className="section-heading text-center">Work Experience</h2>
+    <section id="experience" className="gradient-bg">
+      <div className="container mx-auto">
+        <h2 className="section-heading">Work Experience</h2>
         
         <div className="glass-card p-8 rounded-lg">
           <div className="flex flex-col md:flex-row justify-between mb-4">

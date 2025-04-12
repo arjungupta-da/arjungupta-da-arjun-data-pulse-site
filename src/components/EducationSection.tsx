@@ -3,8 +3,8 @@ import { Calendar } from "lucide-react";
 
 const EducationSection = () => {
   return (
-    <section id="education" className="py-16 md:py-24 gradient-bg">
-      <div className="container mx-auto px-4">
+    <section id="education" className="gradient-bg">
+      <div className="container mx-auto">
         <h2 className="section-heading">Education</h2>
         
         <div className="space-y-8">

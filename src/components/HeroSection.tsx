@@ -1,5 +1,5 @@
 
-import { Linkedin, Mail, Download } from "lucide-react";
+import { Linkedin, Mail, Download, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
@@ -7,12 +7,12 @@ const HeroSection = () => {
     <section id="home" className="min-h-screen flex items-center justify-center gradient-bg">
       <div className="section-container flex flex-col md:flex-row gap-12 items-center text-center md:text-left">
         <div className="flex-1 order-2 md:order-1 max-w-xl">
-          <h1 className="text-4xl md:text-6xl font-display font-extrabold title-spacing mx-auto md:mx-0">
+          <h1 className="text-4xl md:text-6xl font-display font-extrabold title-spacing text-center md:text-left">
             <span className="text-gradient">ARJUN GUPTA</span>
           </h1>
           
-          <div className="flex justify-center md:justify-start">
-            <h2 className="text-xl md:text-2xl font-bold subtitle-spacing text-amber-400">
+          <div className="flex justify-center md:justify-start w-full">
+            <h2 className="text-xl md:text-2xl font-bold subtitle-spacing text-amber-400 text-center md:text-left">
               Data Analyst
             </h2>
           </div>
@@ -37,6 +37,16 @@ const HeroSection = () => {
                 rel="noopener noreferrer"
               >
                 <Download size={18} className="mr-1" /> Resume
+              </a>
+            </Button>
+
+            <Button asChild variant="secondary" className="bg-amber-700/80 hover:bg-amber-700 text-white">
+              <a 
+                href="https://drive.google.com/file/d/1BW5hSQWoow3J6k1R06XihoSIx83L5bUg/view?usp=sharing" 
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FileText size={18} className="mr-1" /> View CV
               </a>
             </Button>
           </div>
