@@ -8,7 +8,7 @@ const HeroSection = () => {
       <div className="section-container flex flex-col md:flex-row gap-12 items-center">
         <div className="flex-1 order-2 md:order-1 max-w-xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-extrabold title-spacing">
-            <span className="text-gradient">ARJUN GUPTA</span>
+            <span className="text-gradient">Arjun Gupta</span>
           </h1>
           
           <div className="flex w-full justify-center">

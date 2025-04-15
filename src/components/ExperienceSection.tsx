@@ -1,4 +1,3 @@
-
 import { Calendar } from "lucide-react";
 
 const ExperienceSection = () => {
@@ -18,7 +17,7 @@ const ExperienceSection = () => {
                   rel="noopener noreferrer"
                   className="hover:text-primary transition-colors"
                 >
-                  DELHI SCHOOL OF SKILL DEVELOPMENT
+                  Delhi School of Skill Development
                 </a>
                 , Delhi, India
               </p>
