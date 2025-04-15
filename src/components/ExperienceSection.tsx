@@ -2,11 +2,11 @@ import { Calendar } from "lucide-react";
 
 const ExperienceSection = () => {
   return (
-    <section id="experience" className="gradient-bg">
+    <section id="experience" className="gradient-bg reveal">
       <div className="container mx-auto px-4">
         <h2 className="section-heading">Work Experience</h2>
         
-        <div className="glass-card p-6 md:p-8 rounded-lg">
+        <div className="glass-card p-6 md:p-8 rounded-lg reveal-left">
           <div className="flex flex-col md:flex-row justify-between mb-4">
             <div>
               <h3 className="text-2xl font-display font-bold text-data-cyan">Data Analysis & Programming Trainer</h3>
