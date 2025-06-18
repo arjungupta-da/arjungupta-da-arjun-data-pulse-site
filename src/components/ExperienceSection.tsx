@@ -1,3 +1,4 @@
+
 import { Calendar } from "lucide-react";
 
 const ExperienceSection = () => {
@@ -9,7 +10,7 @@ const ExperienceSection = () => {
         <div className="glass-card p-6 md:p-8 rounded-lg reveal-left">
           <div className="flex flex-col md:flex-row justify-between mb-4">
             <div>
-              <h3 className="text-2xl font-display font-bold text-data-cyan">Data Analysis & Programming Trainer</h3>
+              <h3 className="text-2xl font-display font-bold text-data-cyan">Data Analytics & Programming Trainer</h3>
               <p className="text-lg text-muted-foreground">
                 <a 
                   href="https://www.dssd.in/" 

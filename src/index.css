@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@500;600;700;800&display=swap');
 
 @tailwind base;
@@ -6,44 +7,44 @@
 
 @layer base {
   :root {
-    --background: 28 25% 8%;
+    --background: 16 20% 6%;
     --foreground: 0 0% 98%;
 
-    --card: 28 20% 10%;
+    --card: 16 15% 8%;
     --card-foreground: 0 0% 98%;
 
-    --popover: 28 20% 10%;
+    --popover: 16 15% 8%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 43 96% 58%;
-    --primary-foreground: 28 25% 8%;
+    --primary: 158 84% 42%;
+    --primary-foreground: 16 20% 6%;
 
-    --secondary: 28 15% 15%;
+    --secondary: 16 12% 12%;
     --secondary-foreground: 0 0% 98%;
 
-    --muted: 28 15% 20%;
-    --muted-foreground: 28 5% 70%;
+    --muted: 16 10% 18%;
+    --muted-foreground: 16 5% 70%;
 
-    --accent: 30 97% 50%;
+    --accent: 166 76% 37%;
     --accent-foreground: 0 0% 98%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 28 15% 20%;
-    --input: 28 15% 20%;
-    --ring: 43 96% 58%;
+    --border: 16 12% 18%;
+    --input: 16 12% 18%;
+    --ring: 158 84% 42%;
 
     --radius: 0.75rem;
 
-    --sidebar-background: 28 25% 8%;
+    --sidebar-background: 16 20% 6%;
     --sidebar-foreground: 0 0% 98%;
-    --sidebar-primary: 43 96% 58%;
+    --sidebar-primary: 158 84% 42%;
     --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 28 15% 15%;
+    --sidebar-accent: 16 12% 12%;
     --sidebar-accent-foreground: 0 0% 98%;
-    --sidebar-border: 28 15% 15%;
-    --sidebar-ring: 43 96% 58%;
+    --sidebar-border: 16 12% 12%;
+    --sidebar-ring: 158 84% 42%;
   }
 
   /* Enhanced animations */
@@ -158,15 +159,15 @@
 
   .gradient-bg::before {
     content: '';
-    @apply absolute inset-0 bg-gradient-to-br from-background via-background to-amber-950/30 z-[-1] transition-opacity duration-500;
+    @apply absolute inset-0 bg-gradient-to-br from-background via-background to-emerald-950/30 z-[-1] transition-opacity duration-500;
   }
 
   .glass-card {
-    @apply bg-amber-950/20 backdrop-blur-sm border border-amber-900/10 shadow-lg rounded-xl transition-all duration-500 hover:shadow-xl hover:border-amber-600/20 hover:translate-y-[-5px];
+    @apply bg-emerald-950/20 backdrop-blur-sm border border-emerald-900/10 shadow-lg rounded-xl transition-all duration-500 hover:shadow-xl hover:border-emerald-600/20 hover:translate-y-[-5px];
   }
   
   .text-gradient {
-    @apply bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-emerald-400 via-teal-500 to-emerald-600 bg-clip-text text-transparent;
   }
 
   .section-heading {
@@ -189,7 +190,7 @@
   }
 
   ::selection {
-    @apply bg-amber-600/20 text-foreground;
+    @apply bg-emerald-600/20 text-foreground;
   }
 
   /* Standardized section spacing - Updated for consistency */
@@ -248,5 +249,14 @@
   
   .equal-height-cards > div {
     @apply h-full;
+  }
+
+  /* LinkedIn Badge Styling */
+  .linkedin-badge-container {
+    @apply flex items-center justify-center;
+  }
+
+  .linkedin-badge-container .LI-profile-badge {
+    @apply transform scale-75 hover:scale-80 transition-transform duration-300;
   }
 }
