@@ -1,17 +1,16 @@
-
 import { useState } from "react";
 import { Linkedin, Mail, MapPin, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
-
 const ContactSection = () => {
-  const { toast } = useToast();
+  const {
+    toast
+  } = useToast();
 
   // Simple contact information section without the form
-  return (
-    <section id="contact" className="py-16 md:py-24 gradient-bg">
+  return <section id="contact" className="py-16 md:py-24 gradient-bg">
       <div className="container mx-auto px-4">
-        <h2 className="section-heading text-center">Get In Touch</h2>
+        <h2 className="section-heading text-center">Get-In Touch</h2>
         
         <div className="max-w-3xl mx-auto mt-12">
           <div className="glass-card p-8 rounded-lg">
@@ -32,10 +31,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-lg">Email</h4>
-                  <a 
-                    href="mailto:arjunguptain@outlook.com"
-                    className="text-muted-foreground hover:text-primary transition-colors mt-1 block"
-                  >
+                  <a href="mailto:arjunguptain@outlook.com" className="text-muted-foreground hover:text-primary transition-colors mt-1 block">
                     arjunguptain@outlook.com
                   </a>
                 </div>
@@ -47,10 +43,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-lg">Phone</h4>
-                  <a 
-                    href="tel:+917703976867"
-                    className="text-muted-foreground hover:text-primary transition-colors mt-1 block"
-                  >
+                  <a href="tel:+917703976867" className="text-muted-foreground hover:text-primary transition-colors mt-1 block">
                     +91 77039-76867
                   </a>
                 </div>
@@ -62,12 +55,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-lg">LinkedIn</h4>
-                  <a 
-                    href="https://www.linkedin.com/in/arjunguptain/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-muted-foreground hover:text-primary transition-colors mt-1 block"
-                  >
+                  <a href="https://www.linkedin.com/in/arjunguptain/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors mt-1 block">
                     linkedin.com/in/arjunguptain
                   </a>
                 </div>
@@ -87,8 +75,6 @@ const ContactSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default ContactSection;

@@ -1,37 +1,23 @@
-
 import { Linkedin, Mail } from "lucide-react";
-
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  
-  return (
-    <footer className="bg-secondary/50 border-t border-secondary py-8">
+  return <footer className="bg-secondary/50 border-t border-secondary py-8">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center justify-between">
           <div className="mb-4 md:mb-0">
             <p className="text-gradient font-display font-bold text-xl">ARJUN GUPTA</p>
-            <p className="text-sm text-muted-foreground">Data Analyst</p>
+            <p className="text-sm text-muted-foreground">Data Analytics and Programming Trainer</p>
           </div>
           
           <div className="flex flex-col mb-4 md:mb-0 items-center">
             <p className="text-sm text-muted-foreground mb-2">Connect with me</p>
             <div className="flex gap-4">
-              <a 
-                href="https://www.linkedin.com/in/arjunguptain/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 px-4 py-2 rounded-md bg-secondary/80 hover:bg-primary/20 text-muted-foreground hover:text-primary transition-all"
-                aria-label="LinkedIn"
-              >
+              <a href="https://www.linkedin.com/in/arjunguptain/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-4 py-2 rounded-md bg-secondary/80 hover:bg-primary/20 text-muted-foreground hover:text-primary transition-all" aria-label="LinkedIn">
                 <Linkedin size={16} />
                 <span>LinkedIn Profile</span>
               </a>
               
-              <a 
-                href="mailto:arjunguptain@outlook.com" 
-                className="flex items-center gap-2 px-4 py-2 rounded-md bg-secondary/80 hover:bg-primary/20 text-muted-foreground hover:text-primary transition-all"
-                aria-label="Email"
-              >
+              <a href="mailto:arjunguptain@outlook.com" className="flex items-center gap-2 px-4 py-2 rounded-md bg-secondary/80 hover:bg-primary/20 text-muted-foreground hover:text-primary transition-all" aria-label="Email">
                 <Mail size={16} />
                 <span>Email Me</span>
               </a>
@@ -45,8 +31,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;

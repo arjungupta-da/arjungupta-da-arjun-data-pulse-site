@@ -1,9 +1,6 @@
-
 import { Briefcase, GraduationCap, MapPin, Phone, Mail } from "lucide-react";
-
 const AboutSection = () => {
-  return (
-    <section id="about" className="gradient-bg">
+  return <section id="about" className="gradient-bg">
       <div className="container mx-auto">
         <h2 className="section-heading">About Me</h2>
         
@@ -12,9 +9,7 @@ const AboutSection = () => {
             <div className="glass-card p-8 rounded-lg h-full flex flex-col justify-between">
               <div>
                 <h3 className="text-2xl font-display font-bold mb-4 text-center md:text-left">Profile Summary</h3>
-                <p className="text-muted-foreground mb-6">
-                  Results-driven Data Analyst with a Bachelor's degree in Physical Sciences, specializing in Computer Science. Adept at identifying key patterns within complex datasets and translating insights into actionable strategies. Committed to continuous learning and passionate about empowering others while driving operational excellence and data-informed decision-making.
-                </p>
+                <p className="text-muted-foreground mb-6">Results-driven Data Analyst & Programmer with a Bachelor's degree in Physical Sciences, specializing in Computer Science. Adept at identifying key patterns within complex datasets and translating insights into actionable strategies. Committed to continuous learning and passionate about empowering others while driving operational excellence and data-informed decision-making.</p>
               </div>
               
               <div className="flex flex-col gap-4">
@@ -22,7 +17,7 @@ const AboutSection = () => {
                   <Briefcase className="text-primary mt-1 flex-shrink-0" size={20} />
                   <div>
                     <h4 className="font-semibold">Current Position</h4>
-                    <p className="text-muted-foreground text-sm">Data Analysis Trainer at Delhi School of Skill Development</p>
+                    <p className="text-muted-foreground text-sm">Data Analytics and Programming Trainer at Delhi School of Skill Development</p>
                   </div>
                 </div>
                 
@@ -72,8 +67,6 @@ const AboutSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default AboutSection;
