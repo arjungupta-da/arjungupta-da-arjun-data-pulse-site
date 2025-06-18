@@ -10,9 +10,9 @@ const ExperienceSection = () => {
         <div className="glass-card p-6 md:p-8 rounded-lg reveal-left">
           <div className="flex flex-col md:flex-row justify-between mb-4">
             <div>
-              <h3 className="text-2xl font-display font-bold text-amber-400">Data Analytics & Programming Trainer</h3>
+              <h3 className="text-2xl font-display font-bold text-orange-400">Data Analytics & Programming Trainer</h3>
               <p className="text-lg text-muted-foreground">
-                <a href="https://www.dssd.in/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                <a href="https://www.dssd.in/" target="_blank" rel="noopener noreferrer" className="hover:text-orange-400 transition-colors">
                   Delhi School of Skill Development
                 </a>
                 , Delhi, India
@@ -20,7 +20,7 @@ const ExperienceSection = () => {
             </div>
             
             <div className="flex items-center gap-2 mt-2 md:mt-0">
-              <Calendar size={16} className="text-primary" />
+              <Calendar size={16} className="text-orange-400" />
               <span className="text-muted-foreground">Aug 2023 - Present</span>
             </div>
           </div>

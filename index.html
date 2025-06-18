@@ -18,6 +18,20 @@
     <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
     
     <link rel="icon" type="image/png" href="/lovable-uploads/74c0fc21-6d90-49fb-af6d-acea2edfbfa1.png" />
+    <style>
+      /* Circular favicon styling */
+      link[rel="icon"] {
+        border-radius: 50%;
+      }
+      
+      /* Add circular mask to favicon */
+      @supports (mask: circle()) {
+        link[rel="icon"] {
+          mask: circle(50%);
+          -webkit-mask: circle(50%);
+        }
+      }
+    </style>
   </head>
 
   <body>
