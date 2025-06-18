@@ -31,7 +31,7 @@ const HeroSection = () => {
             </h2>
           </div>
           
-          <p className="text-muted-foreground text-base md:text-lg paragraph-spacing max-w-xl mx-auto reveal-delay-3">Results-driven Data Analyst & Programmer specializing in transforming complex concepts into practical skills that drive operational excellence and data-informed decision-making.</p>
+          <p className="text-muted-foreground text-base md:text-lg paragraph-spacing max-w-xl mx-auto reveal-delay-3">Data Analytics and Programming Trainer at Delhi School of Skill Development | NAB India and Edubridge's Certified Trainer | AI Enthusiast | 5-Star HackerRank (Python and T-SQL)</p>
           
           <div className="flex flex-wrap gap-4 button-spacing justify-center">
             <Button asChild className="bg-emerald-600 hover:bg-emerald-700 text-white">
