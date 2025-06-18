@@ -1,4 +1,3 @@
-
 import { Linkedin, Mail, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect } from "react";
@@ -61,25 +60,15 @@ const HeroSection = () => {
           </div>
           
           <div className="flex gap-4 mt-8 justify-center">
-            {/* LinkedIn Badge */}
-            <div className="linkedin-badge-container">
-              <div 
-                className="badge-base LI-profile-badge" 
-                data-locale="en_US" 
-                data-size="large" 
-                data-theme="dark" 
-                data-type="VERTICAL" 
-                data-vanity="arjunguptain" 
-                data-version="v1"
-              >
-                <a 
-                  className="badge-base__link LI-simple-link" 
-                  href="https://in.linkedin.com/in/arjunguptain?trk=profile-badge"
-                >
-                  Arjun Gupta
-                </a>
-              </div>
-            </div>
+            <a 
+              href="https://in.linkedin.com/in/arjunguptain" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="w-12 h-12 rounded-full flex items-center justify-center bg-secondary hover:bg-emerald-900/30 text-muted-foreground hover:text-emerald-400 transition-colors"
+              aria-label="LinkedIn"
+            >
+              <Linkedin size={22} />
+            </a>
             
             <a 
               href="mailto:arjunguptain@outlook.com" 
