@@ -1,8 +1,6 @@
-
 import { Linkedin, Mail, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect } from "react";
-
 const HeroSection = () => {
   useEffect(() => {
     // Load LinkedIn badge script
@@ -12,7 +10,6 @@ const HeroSection = () => {
     script.defer = true;
     script.type = 'text/javascript';
     document.head.appendChild(script);
-
     return () => {
       // Cleanup script on unmount
       const existingScript = document.querySelector('script[src="https://platform.linkedin.com/badges/js/profile.js"]');
@@ -21,9 +18,7 @@ const HeroSection = () => {
       }
     };
   }, []);
-
-  return (
-    <section id="home" className="min-h-screen flex items-center justify-center gradient-bg reveal">
+  return <section id="home" className="min-h-screen flex items-center justify-center gradient-bg reveal">
       <div className="section-container flex flex-col md:flex-row gap-12 items-center">
         <div className="flex-1 order-2 md:order-1 max-w-xl mx-auto text-center reveal-left">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-extrabold title-spacing reveal-delay-1">
@@ -36,9 +31,7 @@ const HeroSection = () => {
             </h2>
           </div>
           
-          <p className="text-muted-foreground text-base md:text-lg paragraph-spacing max-w-xl mx-auto reveal-delay-3">
-            NAB India and Edubridge's Certified Trainer  AI Enthusiast | 5-Star HackerRank (Python and T-SQL)
-          </p>
+          <p className="text-muted-foreground text-base md:text-lg paragraph-spacing max-w-xl mx-auto reveal-delay-3">NAB India and Edubridge's Certified Trainer | AI Enthusiast | 5-Star HackerRank (Python and T-SQL)</p>
           
           <div className="flex flex-wrap gap-4 button-spacing justify-center">
             <Button asChild className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white border-0 shadow-lg hover:shadow-xl">
@@ -71,12 +64,9 @@ const HeroSection = () => {
           <div className="relative">
             <div className="w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-blue-500/30 shadow-2xl shadow-blue-900/30 float-animation relative">
               <div className="absolute inset-0 bg-gradient-to-br from-blue-400/20 via-transparent to-cyan-400/20 pointer-events-none"></div>
-              <img 
-                src="/lovable-uploads/74c0fc21-6d90-49fb-af6d-acea2edfbfa1.png" 
-                alt="Arjun Gupta" 
-                className="w-full h-full object-cover object-center" 
-                style={{aspectRatio: '1/1'}} 
-              />
+              <img src="/lovable-uploads/74c0fc21-6d90-49fb-af6d-acea2edfbfa1.png" alt="Arjun Gupta" className="w-full h-full object-cover object-center" style={{
+              aspectRatio: '1/1'
+            }} />
             </div>
             
             <div className="absolute -bottom-4 -right-4 bg-secondary/80 backdrop-blur-sm p-3 rounded-full float-animation shadow-xl border border-blue-500/30">
@@ -87,8 +77,6 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;
