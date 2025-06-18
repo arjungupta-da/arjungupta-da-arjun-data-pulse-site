@@ -231,7 +231,7 @@
   }
 
   .glass-card {
-    @apply backdrop-blur-xl border shadow-2xl rounded-xl transition-all duration-500 hover:shadow-3xl hover:translate-y-[-5px];
+    @apply backdrop-blur-xl border shadow-2xl rounded-xl transition-all duration-500 hover:shadow-2xl hover:translate-y-[-5px];
     background: rgba(26, 20, 16, 0.7);
     border: 1px solid rgba(251, 146, 60, 0.2);
     box-shadow: 
