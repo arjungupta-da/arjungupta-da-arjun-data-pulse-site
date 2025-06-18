@@ -22,8 +22,9 @@ const NavBar = () => {
       let current = "";
 
       sections.forEach((section) => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
+        const element = section as HTMLElement;
+        const sectionTop = element.offsetTop;
+        const sectionHeight = element.clientHeight;
         if (window.scrollY >= sectionTop - 200) {
           current = section.getAttribute("id") || "";
         }

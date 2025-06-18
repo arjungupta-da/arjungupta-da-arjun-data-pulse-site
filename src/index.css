@@ -257,6 +257,6 @@
   }
 
   .linkedin-badge-container .LI-profile-badge {
-    @apply transform scale-75 hover:scale-80 transition-transform duration-300;
+    @apply transform scale-75 hover:scale-90 transition-transform duration-300;
   }
 }
