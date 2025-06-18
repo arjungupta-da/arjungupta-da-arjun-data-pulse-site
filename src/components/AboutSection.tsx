@@ -9,7 +9,13 @@ const AboutSection = () => {
             <div className="glass-card p-8 rounded-lg h-full flex flex-col justify-between">
               <div>
                 <h3 className="text-2xl font-display font-bold mb-4 text-center md:text-left">Profile Summary</h3>
-                <p className="text-muted-foreground mb-6">Results-driven Data Analyst & Programmer with a Bachelor's degree in Physical Sciences, specializing in Computer Science. Adept at identifying key patterns within complex datasets and translating insights into actionable strategies. Committed to continuous learning and passionate about empowering others while driving operational excellence and data-informed decision-making.</p>
+                <p className="text-muted-foreground mb-6">Dedicated to mentoring aspiring analysts and developers through practical, hands-on training in Artificial Intelligence, C, C++, Data Structures and Algorithms, Google Looker Studio, Microsoft Excel, Microsoft Power BI, Python, Microsoft SQL Server, Statistics and Tableau. I specialize in breaking down complex data concepts into easy-to-understand modules, enabling learners to transform raw data into strategic insights. 
+
+
+In my role, I design and deliver comprehensive training sessions, guiding students to build interactive dashboards and insightful reports that support data-driven decision-making. My focus is on nurturing both technical skills and analytical thinking. 
+
+
+I hold a Bachelor of Science in Physical Sciences with Computer Science from Keshav Mahavidyalaya, completed in June 2024. This academic background strengthens my teaching by blending computer science fundamentals with a deep understanding of analytical frameworks and real-world applications.</p>
               </div>
               
               <div className="flex flex-col gap-4">
