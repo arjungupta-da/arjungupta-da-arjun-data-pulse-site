@@ -40,15 +40,15 @@ const HeroSection = () => {
           </p>
           
           <div className="flex flex-wrap gap-4 button-spacing justify-center reveal reveal-delay-4">
-            <Button asChild className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white border-0 shadow-lg hover:shadow-xl transition-all duration-500 hover:scale-110">
+            <Button asChild className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white border-0 shadow-lg hover:shadow-xl apple-button">
               <a href="#contact">Get-In Touch</a>
             </Button>
             
-            <Button asChild variant="outline" className="border-blue-500/50 text-blue-400 hover:bg-blue-500/10 backdrop-blur-sm bg-blue-500/5 transition-all duration-500 hover:scale-110">
+            <Button asChild variant="outline" className="border-blue-500/50 text-blue-400 hover:bg-blue-500/10 backdrop-blur-sm bg-blue-500/5 apple-button">
               <a href="#projects">View Projects</a>
             </Button>
             
-            <Button asChild variant="secondary" className="bg-gradient-to-r from-cyan-600/80 to-blue-600/80 hover:from-cyan-700 hover:to-blue-700 text-white shadow-lg transition-all duration-500 hover:scale-110">
+            <Button asChild variant="secondary" className="bg-gradient-to-r from-cyan-600/80 to-blue-600/80 hover:from-cyan-700 hover:to-blue-700 text-white shadow-lg apple-button">
               <a href="https://drive.google.com/file/d/12JjGkllEiRqHpWPInmoN_LWVjJ4Mem61/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                 <Download size={18} className="mr-1" /> Resume
               </a>
@@ -56,11 +56,21 @@ const HeroSection = () => {
           </div>
           
           <div className="flex gap-4 mt-8 justify-center reveal reveal-delay-4">
-            <a href="https://in.linkedin.com/in/arjunguptain" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full flex items-center justify-center bg-secondary/50 backdrop-blur-sm hover:bg-blue-500/20 text-muted-foreground hover:text-blue-400 transition-all duration-500 border border-blue-500/20 hover:border-blue-500/40 hover:scale-110 bounce-subtle" aria-label="LinkedIn">
+            <a 
+              href="https://in.linkedin.com/in/arjunguptain" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="w-12 h-12 rounded-full flex items-center justify-center bg-secondary/50 backdrop-blur-sm hover:bg-blue-500/20 text-muted-foreground hover:text-blue-400 transition-all duration-500 border border-blue-500/20 hover:border-blue-500/40 gentle-hover" 
+              aria-label="LinkedIn"
+            >
               <Linkedin size={22} />
             </a>
             
-            <a href="mailto:arjunguptain@outlook.com" className="w-12 h-12 rounded-full flex items-center justify-center bg-secondary/50 backdrop-blur-sm hover:bg-blue-500/20 text-muted-foreground hover:text-blue-400 transition-all duration-500 border border-blue-500/20 hover:border-blue-500/40 hover:scale-110 bounce-subtle" aria-label="Email">
+            <a 
+              href="mailto:arjunguptain@outlook.com" 
+              className="w-12 h-12 rounded-full flex items-center justify-center bg-secondary/50 backdrop-blur-sm hover:bg-blue-500/20 text-muted-foreground hover:text-blue-400 transition-all duration-500 border border-blue-500/20 hover:border-blue-500/40 gentle-hover" 
+              aria-label="Email"
+            >
               <Mail size={22} />
             </a>
           </div>
@@ -68,7 +78,7 @@ const HeroSection = () => {
         
         <div className="flex-1 order-1 md:order-2 flex justify-center reveal-right reveal-delay-2">
           <div className="relative">
-            <div className="w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-blue-500/30 shadow-2xl shadow-blue-900/30 float-animation relative group">
+            <div className="w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-blue-500/30 shadow-2xl shadow-blue-900/30 float-animation relative group apple-card">
               <div className="absolute inset-0 bg-gradient-to-br from-blue-400/20 via-transparent to-cyan-400/20 pointer-events-none transition-opacity duration-500 group-hover:opacity-75"></div>
               <img 
                 src="/lovable-uploads/74c0fc21-6d90-49fb-af6d-acea2edfbfa1.png" 
