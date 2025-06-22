@@ -1,27 +1,14 @@
 
 import { Calendar } from "lucide-react";
-import useScrollAnimation from "@/hooks/useScrollAnimation";
 
 const EducationSection = () => {
-  const { elementRef: titleRef, isVisible: titleVisible } = useScrollAnimation<HTMLHeadingElement>({ delay: 200 });
-  const { elementRef: firstCardRef, isVisible: firstCardVisible } = useScrollAnimation<HTMLDivElement>({ delay: 400 });
-  const { elementRef: secondCardRef, isVisible: secondCardVisible } = useScrollAnimation<HTMLDivElement>({ delay: 600 });
-
   return (
     <section id="education" className="gradient-bg">
       <div className="container mx-auto">
-        <h2 
-          ref={titleRef}
-          className={`section-heading transition-all duration-1000 ${titleVisible ? 'reveal-on-scroll visible' : 'reveal-on-scroll'}`}
-        >
-          Education
-        </h2>
+        <h2 className="section-heading">Education</h2>
         
         <div className="space-y-8">
-          <div 
-            ref={firstCardRef}
-            className={`glass-card p-8 rounded-lg transition-all duration-1000 ${firstCardVisible ? 'reveal-left-scroll visible' : 'reveal-left-scroll'}`}
-          >
+          <div className="glass-card p-8 rounded-lg">
             <div className="flex flex-col md:flex-row justify-between mb-4">
               <div>
                 <h3 className="text-2xl font-display font-bold text-blue-400">Bachelors of Science in Physical Sciences with Computer Science</h3>
@@ -42,10 +29,7 @@ const EducationSection = () => {
             </div>
           </div>
           
-          <div 
-            ref={secondCardRef}
-            className={`glass-card p-8 rounded-lg transition-all duration-1000 ${secondCardVisible ? 'reveal-right-scroll visible' : 'reveal-right-scroll'}`}
-          >
+          <div className="glass-card p-8 rounded-lg">
             <div className="flex flex-col md:flex-row justify-between mb-4">
               <div>
                 <h3 className="text-2xl font-display font-bold text-blue-400">Non-Medical Science with Computer Science</h3>
