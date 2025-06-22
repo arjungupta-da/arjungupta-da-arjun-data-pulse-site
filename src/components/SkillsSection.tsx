@@ -1,4 +1,3 @@
-
 import { CheckCircle, Award, ExternalLink } from "lucide-react";
 import useScrollAnimation from "@/hooks/useScrollAnimation";
 
@@ -9,17 +8,20 @@ const SkillsSection = () => {
   const { elementRef: allCertsRef, isVisible: allCertsVisible } = useScrollAnimation<HTMLDivElement>({ delay: 800 });
 
   const skills = [
-    "Python",
-    "SQL",
-    "Microsoft Excel", 
-    "Microsoft Power BI",
-    "Tableau",
+    "Artificial Intelligence",
+    "C/C++",
+    "Canva",
     "Data Cleaning",
     "Data Visualization",
-    "Statistical Analysis",
-    "C/C++",
     "DSA",
-    "Canva"
+    "Google Looker Studio",
+    "Microsoft Excel", 
+    "Microsoft Power BI",
+    "MySQL/T-SQL",
+    "Python",
+    "Statistical Analysis",
+    "Statistics",
+    "Tableau"
   ];
 
   const featuredCertifications = [
