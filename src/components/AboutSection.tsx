@@ -3,9 +3,9 @@ import { Briefcase, GraduationCap, MapPin, Phone, Mail } from "lucide-react";
 import useScrollAnimation from "@/hooks/useScrollAnimation";
 
 const AboutSection = () => {
-  const { elementRef: titleRef, isVisible: titleVisible } = useScrollAnimation({ delay: 200 });
-  const { elementRef: profileRef, isVisible: profileVisible } = useScrollAnimation({ delay: 400 });
-  const { elementRef: contactRef, isVisible: contactVisible } = useScrollAnimation({ delay: 600 });
+  const { elementRef: titleRef, isVisible: titleVisible } = useScrollAnimation<HTMLHeadingElement>({ delay: 200 });
+  const { elementRef: profileRef, isVisible: profileVisible } = useScrollAnimation<HTMLDivElement>({ delay: 400 });
+  const { elementRef: contactRef, isVisible: contactVisible } = useScrollAnimation<HTMLDivElement>({ delay: 600 });
 
   return (
     <section id="about" className="gradient-bg">

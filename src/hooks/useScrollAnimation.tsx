@@ -8,7 +8,7 @@ interface UseScrollAnimationOptions {
   delay?: number;
 }
 
-export const useScrollAnimation = (options: UseScrollAnimationOptions = {}) => {
+export const useScrollAnimation = <T extends HTMLElement = HTMLElement>(options: UseScrollAnimationOptions = {}) => {
   const {
     threshold = 0.1,
     rootMargin = '0px 0px -100px 0px',
@@ -16,7 +16,7 @@ export const useScrollAnimation = (options: UseScrollAnimationOptions = {}) => {
     delay = 0
   } = options;
 
-  const elementRef = useRef<HTMLElement>(null);
+  const elementRef = useRef<T>(null);
   const [isVisible, setIsVisible] = useState(false);
   const [hasAnimated, setHasAnimated] = useState(false);
 
