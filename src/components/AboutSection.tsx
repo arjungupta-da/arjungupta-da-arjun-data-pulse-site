@@ -1,15 +1,28 @@
 
 import { Briefcase, GraduationCap, MapPin, Phone, Mail } from "lucide-react";
+import useScrollAnimation from "@/hooks/useScrollAnimation";
 
 const AboutSection = () => {
+  const { elementRef: titleRef, isVisible: titleVisible } = useScrollAnimation({ delay: 200 });
+  const { elementRef: profileRef, isVisible: profileVisible } = useScrollAnimation({ delay: 400 });
+  const { elementRef: contactRef, isVisible: contactVisible } = useScrollAnimation({ delay: 600 });
+
   return (
     <section id="about" className="gradient-bg">
       <div className="container mx-auto">
-        <h2 className="section-heading">About Me</h2>
+        <h2 
+          ref={titleRef} 
+          className={`section-heading transition-all duration-800 ${titleVisible ? 'reveal-on-scroll visible' : 'reveal-on-scroll'}`}
+        >
+          About Me
+        </h2>
         
         <div className="equal-height-cards">
           <div className="col-span-2">
-            <div className="glass-card p-8 rounded-lg h-full flex flex-col justify-between">
+            <div 
+              ref={profileRef}
+              className={`glass-card p-8 rounded-lg h-full flex flex-col justify-between transition-all duration-800 ${profileVisible ? 'reveal-left-scroll visible' : 'reveal-left-scroll'}`}
+            >
               <div>
                 <h3 className="text-2xl font-display font-bold mb-4 text-center md:text-left">Profile Summary</h3>
                 <p className="text-muted-foreground mb-6">
@@ -22,16 +35,16 @@ const AboutSection = () => {
               </div>
               
               <div className="flex flex-col gap-4">
-                <div className="flex items-start gap-3">
-                  <Briefcase className="text-primary mt-1 flex-shrink-0" size={20} />
+                <div className="flex items-start gap-3 group">
+                  <Briefcase className="text-primary mt-1 flex-shrink-0 transition-transform duration-300 group-hover:scale-110" size={20} />
                   <div>
                     <h4 className="font-semibold">Current Position</h4>
                     <p className="text-muted-foreground text-sm">Data Analytics and Programming Trainer at Delhi School of Skill Development</p>
                   </div>
                 </div>
                 
-                <div className="flex items-start gap-3">
-                  <GraduationCap className="text-primary mt-1 flex-shrink-0" size={20} />
+                <div className="flex items-start gap-3 group">
+                  <GraduationCap className="text-primary mt-1 flex-shrink-0 transition-transform duration-300 group-hover:scale-110" size={20} />
                   <div>
                     <h4 className="font-semibold">Education</h4>
                     <p className="text-muted-foreground text-sm">B.Sc. Physical Sciences with Computer Science</p>
@@ -42,30 +55,33 @@ const AboutSection = () => {
           </div>
           
           <div>
-            <div className="glass-card p-8 rounded-lg h-full flex flex-col justify-between">
+            <div 
+              ref={contactRef}
+              className={`glass-card p-8 rounded-lg h-full flex flex-col justify-between transition-all duration-800 ${contactVisible ? 'reveal-right-scroll visible' : 'reveal-right-scroll'}`}
+            >
               <div>
                 <h3 className="text-2xl font-display font-bold mb-4 text-center md:text-left">Contact Details</h3>
               </div>
               
               <div className="flex flex-col gap-4">
-                <div className="flex items-start gap-3">
-                  <MapPin className="text-primary mt-1 flex-shrink-0" size={20} />
+                <div className="flex items-start gap-3 group">
+                  <MapPin className="text-primary mt-1 flex-shrink-0 transition-transform duration-300 group-hover:scale-110" size={20} />
                   <div>
                     <h4 className="font-semibold">Location</h4>
                     <p className="text-muted-foreground text-sm">New Delhi, India</p>
                   </div>
                 </div>
                 
-                <div className="flex items-start gap-3">
-                  <Phone className="text-primary mt-1 flex-shrink-0" size={20} />
+                <div className="flex items-start gap-3 group">
+                  <Phone className="text-primary mt-1 flex-shrink-0 transition-transform duration-300 group-hover:scale-110" size={20} />
                   <div>
                     <h4 className="font-semibold">Phone</h4>
                     <p className="text-muted-foreground text-sm">+91 77039-76867</p>
                   </div>
                 </div>
                 
-                <div className="flex items-start gap-3">
-                  <Mail className="text-primary mt-1 flex-shrink-0" size={20} />
+                <div className="flex items-start gap-3 group">
+                  <Mail className="text-primary mt-1 flex-shrink-0 transition-transform duration-300 group-hover:scale-110" size={20} />
                   <div>
                     <h4 className="font-semibold">Email</h4>
                     <a href="mailto:arjunguptain@outlook.com" className="text-muted-foreground text-sm hover:text-primary transition-colors">
