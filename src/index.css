@@ -47,61 +47,61 @@
     --sidebar-ring: 210 100% 56%;
   }
 
-  /* Enhanced animations */
-  @keyframes reveal {
+  /* Hardware-accelerated 60fps animations */
+  @keyframes reveal-smooth {
     from {
       opacity: 0;
-      transform: translateY(30px);
+      transform: translate3d(0, 20px, 0);
     }
     to {
       opacity: 1;
-      transform: translateY(0);
+      transform: translate3d(0, 0, 0);
     }
   }
 
-  @keyframes reveal-left {
+  @keyframes reveal-left-smooth {
     from {
       opacity: 0;
-      transform: translateX(-30px);
+      transform: translate3d(-20px, 0, 0);
     }
     to {
       opacity: 1;
-      transform: translateX(0);
+      transform: translate3d(0, 0, 0);
     }
   }
 
-  @keyframes reveal-right {
+  @keyframes reveal-right-smooth {
     from {
       opacity: 0;
-      transform: translateX(30px);
+      transform: translate3d(20px, 0, 0);
     }
     to {
       opacity: 1;
-      transform: translateX(0);
+      transform: translate3d(0, 0, 0);
     }
   }
 
-  @keyframes float {
+  @keyframes float-smooth {
     0%, 100% {
-      transform: translateY(0);
+      transform: translate3d(0, 0, 0);
     }
     50% {
-      transform: translateY(-15px);
+      transform: translate3d(0, -10px, 0);
     }
   }
 
-  @keyframes scale {
+  @keyframes scale-smooth {
     from {
-      transform: scale(0.95);
+      transform: scale3d(0.96, 0.96, 1);
       opacity: 0;
     }
     to {
-      transform: scale(1);
+      transform: scale3d(1, 1, 1);
       opacity: 1;
     }
   }
 
-  @keyframes gradient-shift {
+  @keyframes gradient-flow {
     0%, 100% {
       background-position: 0% 50%;
     }
@@ -110,23 +110,60 @@
     }
   }
 
-  @keyframes pattern-move {
-    0% {
-      transform: translateX(0) translateY(0);
+  @keyframes contact-item-reveal {
+    from {
+      opacity: 0;
+      transform: translate3d(0, 15px, 0) scale3d(0.95, 0.95, 1);
     }
-    100% {
-      transform: translateX(20px) translateY(20px);
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
     }
   }
 
-  /* Page transition animations */
-  .animate-fade-in {
-    animation: reveal 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  /* Optimized animation classes with hardware acceleration */
+  .reveal-60fps {
+    opacity: 0;
+    animation: reveal-smooth 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    will-change: transform, opacity;
+    transform: translate3d(0, 0, 0);
   }
 
-  .animate-scale {
-    animation: scale 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  .reveal-left-60fps {
+    opacity: 0;
+    animation: reveal-left-smooth 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    will-change: transform, opacity;
+    transform: translate3d(0, 0, 0);
   }
+
+  .reveal-right-60fps {
+    opacity: 0;
+    animation: reveal-right-smooth 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    will-change: transform, opacity;
+    transform: translate3d(0, 0, 0);
+  }
+
+  .scale-60fps {
+    opacity: 0;
+    animation: scale-smooth 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    will-change: transform, opacity;
+    transform: translate3d(0, 0, 0);
+  }
+
+  .contact-reveal {
+    opacity: 0;
+    animation: contact-item-reveal 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    will-change: transform, opacity;
+    transform: translate3d(0, 0, 0);
+  }
+
+  /* Staggered delays */
+  .delay-100 { animation-delay: 0.1s; }
+  .delay-200 { animation-delay: 0.2s; }
+  .delay-300 { animation-delay: 0.3s; }
+  .delay-400 { animation-delay: 0.4s; }
+  .delay-500 { animation-delay: 0.5s; }
+  .delay-600 { animation-delay: 0.6s; }
 
   /* Common styles */
   * {
@@ -136,14 +173,13 @@
 
   body {
     @apply text-foreground antialiased;
-    background: linear-gradient(135deg, 
-      #0f0f0f 0%, 
-      #0f1419 25%, 
-      #1e2a3a 50%, 
-      #0f1419 75%, 
-      #0f0f0f 100%);
-    background-size: 400% 400%;
-    animation: gradient-shift 15s ease infinite;
+    background: radial-gradient(ellipse at top, 
+      hsl(220, 20%, 12%) 0%, 
+      hsl(215, 25%, 8%) 25%, 
+      hsl(210, 30%, 6%) 50%, 
+      hsl(215, 25%, 8%) 75%, 
+      hsl(220, 20%, 12%) 100%);
+    background-attachment: fixed;
     position: relative;
   }
 
@@ -154,13 +190,13 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: 
-      radial-gradient(circle at 25% 25%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
-      radial-gradient(circle at 75% 75%, rgba(14, 165, 233, 0.1) 0%, transparent 50%),
-      radial-gradient(circle at 50% 50%, rgba(6, 182, 212, 0.05) 0%, transparent 50%);
-    background-size: 100% 100%, 80% 80%, 60% 60%;
+    background: 
+      radial-gradient(circle at 25% 25%, rgba(59, 130, 246, 0.08) 0%, transparent 50%),
+      radial-gradient(circle at 75% 75%, rgba(14, 165, 233, 0.06) 0%, transparent 50%),
+      radial-gradient(circle at 50% 50%, rgba(6, 182, 212, 0.04) 0%, transparent 50%);
+    background-size: 150% 150%, 120% 120%, 100% 100%;
     background-position: 0% 0%, 100% 100%, 50% 50%;
-    animation: pattern-move 20s ease-in-out infinite alternate;
+    animation: gradient-flow 20s ease-in-out infinite;
     pointer-events: none;
     z-index: -1;
   }
@@ -173,79 +209,52 @@
     width: 100%;
     height: 100%;
     background-image: 
-      linear-gradient(45deg, transparent 48%, rgba(59, 130, 246, 0.02) 49%, rgba(59, 130, 246, 0.02) 51%, transparent 52%),
-      linear-gradient(-45deg, transparent 48%, rgba(14, 165, 233, 0.02) 49%, rgba(14, 165, 233, 0.02) 51%, transparent 52%);
-    background-size: 60px 60px, 60px 60px;
-    background-position: 0 0, 30px 30px;
+      linear-gradient(45deg, transparent 49%, rgba(59, 130, 246, 0.01) 50%, rgba(59, 130, 246, 0.01) 51%, transparent 52%),
+      linear-gradient(-45deg, transparent 49%, rgba(14, 165, 233, 0.01) 50%, rgba(14, 165, 233, 0.01) 51%, transparent 52%);
+    background-size: 80px 80px, 80px 80px;
+    background-position: 0 0, 40px 40px;
     pointer-events: none;
     z-index: -1;
+    opacity: 0.3;
   }
 
-  /* Animation classes */
-  .reveal {
-    opacity: 0;
-    animation: reveal 1s ease forwards;
-  }
-
-  .reveal-delay-1 {
-    animation-delay: 0.2s;
-  }
-
-  .reveal-delay-2 {
-    animation-delay: 0.4s;
-  }
-
-  .reveal-delay-3 {
-    animation-delay: 0.6s;
-  }
-
-  .reveal-left {
-    opacity: 0;
-    animation: reveal-left 1s ease forwards;
-  }
-
-  .reveal-right {
-    opacity: 0;
-    animation: reveal-right 1s ease forwards;
-  }
-
-  .float-animation {
-    animation: float 6s ease-in-out infinite;
-  }
-
-  /* Section and card styles */
+  /* Section and card styles with improved performance */
   .gradient-bg {
-    @apply relative overflow-hidden transition-all duration-500;
+    @apply relative overflow-hidden;
     background: transparent;
   }
 
   .gradient-bg::before {
     content: '';
-    @apply absolute inset-0 z-[-1] transition-opacity duration-500;
+    @apply absolute inset-0 z-[-1];
     background: linear-gradient(135deg, 
-      rgba(15, 15, 15, 0.8) 0%, 
-      rgba(15, 20, 25, 0.9) 25%, 
-      rgba(30, 42, 58, 0.8) 50%, 
-      rgba(15, 20, 25, 0.9) 75%, 
-      rgba(15, 15, 15, 0.8) 100%);
+      rgba(15, 15, 15, 0.7) 0%, 
+      rgba(15, 20, 25, 0.8) 25%, 
+      rgba(30, 42, 58, 0.7) 50%, 
+      rgba(15, 20, 25, 0.8) 75%, 
+      rgba(15, 15, 15, 0.7) 100%);
   }
 
   .glass-card {
-    @apply backdrop-blur-xl border shadow-2xl rounded-xl transition-all duration-500 hover:shadow-2xl hover:translate-y-[-5px];
-    background: rgba(15, 20, 25, 0.7);
-    border: 1px solid rgba(59, 130, 246, 0.2);
+    @apply backdrop-blur-xl border shadow-2xl rounded-xl;
+    background: rgba(15, 20, 25, 0.8);
+    border: 1px solid rgba(59, 130, 246, 0.15);
     box-shadow: 
-      0 20px 25px -5px rgba(0, 0, 0, 0.3),
-      0 10px 10px -5px rgba(0, 0, 0, 0.2),
+      0 20px 25px -5px rgba(0, 0, 0, 0.25),
+      0 10px 10px -5px rgba(0, 0, 0, 0.15),
       inset 0 1px 0 rgba(59, 130, 246, 0.1);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: transform, box-shadow, border-color;
+    transform: translate3d(0, 0, 0);
   }
 
   .glass-card:hover {
-    border-color: rgba(59, 130, 246, 0.4);
+    transform: translate3d(0, -3px, 0);
+    border-color: rgba(59, 130, 246, 0.3);
     box-shadow: 
-      0 25px 50px -12px rgba(59, 130, 246, 0.1),
-      0 20px 25px -5px rgba(0, 0, 0, 0.4),
-      inset 0 1px 0 rgba(59, 130, 246, 0.2);
+      0 25px 50px -12px rgba(59, 130, 246, 0.08),
+      0 20px 25px -5px rgba(0, 0, 0, 0.3),
+      inset 0 1px 0 rgba(59, 130, 246, 0.15);
   }
   
   .text-gradient {
@@ -253,32 +262,33 @@
   }
 
   .section-heading {
-    @apply text-3xl font-display font-bold mb-12 text-gradient text-center opacity-0 reveal;
+    @apply text-3xl font-display font-bold mb-12 text-gradient text-center;
   }
 
-  /* Interactive elements */
+  /* Interactive elements with 60fps transitions */
   a, button {
-    @apply transition-all duration-300;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: transform;
+    transform: translate3d(0, 0, 0);
   }
 
   a:hover, button:hover {
-    @apply scale-105;
+    transform: translate3d(0, -1px, 0) scale3d(1.02, 1.02, 1);
   }
 
   /* Standardized section spacing */
   section {
-    @apply py-16 md:py-20 px-4 opacity-0;
-    animation: reveal 1s ease forwards;
+    @apply py-16 md:py-20 px-4;
   }
 
   ::selection {
     @apply text-foreground;
-    background: rgba(59, 130, 246, 0.3);
+    background: rgba(59, 130, 246, 0.25);
   }
 
   /* Equal vertical spacing between sections */
   section + section {
-    @apply mt-0;
+    @apply border-t border-secondary/10;
   }
 
   /* Consistent container padding */
@@ -290,36 +300,6 @@
     @apply tracking-tight;
   }
 
-  a {
-    @apply transition-colors duration-200;
-  }
-  
-  /* Consistent spacing classes */
-  .section-container {
-    @apply container mx-auto px-4 md:px-6 lg:px-8 py-12 md:py-16;
-  }
-  
-  .title-spacing {
-    @apply mb-4 md:mb-6;
-  }
-  
-  .subtitle-spacing {
-    @apply mb-3 md:mb-4;
-  }
-  
-  .paragraph-spacing {
-    @apply mb-6 md:mb-8;
-  }
-  
-  .button-spacing {
-    @apply mt-6 md:mt-8;
-  }
-  
-  /* Updated border between sections */
-  section + section {
-    @apply border-t border-secondary/20;
-  }
-
   /* Equal height cards */
   .equal-height-cards {
     @apply grid grid-cols-1 md:grid-cols-3 gap-8;
@@ -327,5 +307,13 @@
   
   .equal-height-cards > div {
     @apply h-full;
+  }
+
+  /* Performance optimizations */
+  .gpu-accelerated {
+    will-change: transform, opacity;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
   }
 }
