@@ -1,22 +1,37 @@
-
 import { CheckCircle, Award, ExternalLink } from "lucide-react";
+import useScrollAnimation from "@/hooks/useScrollAnimation";
 
 const SkillsSection = () => {
+  const { elementRef: titleRef, isVisible: titleVisible } = useScrollAnimation<HTMLHeadingElement>({ delay: 200 });
+  const { elementRef: skillsCardRef, isVisible: skillsCardVisible } = useScrollAnimation<HTMLDivElement>({ delay: 400 });
+  const { elementRef: featuredCardRef, isVisible: featuredCardVisible } = useScrollAnimation<HTMLDivElement>({ delay: 600 });
+  const { elementRef: allCertsRef, isVisible: allCertsVisible } = useScrollAnimation<HTMLDivElement>({ delay: 800 });
+
   const skills = [
-    "Python",
-    "SQL",
-    "Microsoft Excel", 
-    "Microsoft Power BI",
-    "Tableau",
+    "Artificial Intelligence",
+    "C/C++",
+    "Canva",
     "Data Cleaning",
     "Data Visualization",
-    "Statistical Analysis",
-    "C/C++",
     "DSA",
-    "Canva"
+    "Google Looker Studio",
+    "Microsoft Excel", 
+    "Microsoft Power BI",
+    "MySQL/T-SQL",
+    "Python",
+    "Statistical Analysis",
+    "Statistics",
+    "Tableau"
   ];
 
   const featuredCertifications = [
+    {
+      name: "NAB India's Certification Program in Data Analytics - Post Trainer Assessment",
+      issuer: "EduBridge Learning",
+      date: "May 2025",
+      link: "#",
+      description: "Professional certification in data analytics training and assessment, demonstrating expertise in data analysis methodologies and training capabilities"
+    },
     {
       name: "Python for Everybody - Specialization",
       issuer: "University of Michigan & Coursera",
@@ -141,11 +156,19 @@ const SkillsSection = () => {
   return (
     <section id="skills" className="py-16 md:py-24 gradient-bg">
       <div className="container mx-auto px-4">
-        <h2 className="section-heading">Skills & Certifications</h2>
+        <h2 
+          ref={titleRef}
+          className={`section-heading transition-all duration-1000 ${titleVisible ? 'reveal-on-scroll visible' : 'reveal-on-scroll'}`}
+        >
+          Skills & Certifications
+        </h2>
         
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
           <div className="lg:col-span-1">
-            <div className="glass-card p-8 rounded-lg h-full">
+            <div 
+              ref={skillsCardRef}
+              className={`glass-card p-8 rounded-lg h-full transition-all duration-1000 ${skillsCardVisible ? 'reveal-left-scroll visible' : 'reveal-left-scroll'}`}
+            >
               <h3 className="text-2xl font-display font-bold mb-6 text-data-cyan">Technical Skills</h3>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -160,10 +183,13 @@ const SkillsSection = () => {
           </div>
           
           <div className="lg:col-span-2">
-            <div className="glass-card p-8 rounded-lg h-full">
+            <div 
+              ref={featuredCardRef}
+              className={`glass-card p-8 rounded-lg h-full transition-all duration-1000 ${featuredCardVisible ? 'reveal-right-scroll visible' : 'reveal-right-scroll'}`}
+            >
               <h3 className="text-2xl font-display font-bold mb-6 text-data-cyan">Featured Project Certificates</h3>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-1 gap-6">
                 {featuredCertifications.map((cert, index) => (
                   <a 
                     key={index}
@@ -198,27 +224,46 @@ const SkillsSection = () => {
         </div>
         
         {/* All Certificates Section */}
-        <div className="glass-card p-8 rounded-lg">
+        <div 
+          ref={allCertsRef}
+          className={`glass-card p-8 rounded-lg transition-all duration-1000 ${allCertsVisible ? 'reveal-on-scroll visible' : 'reveal-on-scroll'}`}
+        >
           <h3 className="text-2xl font-display font-bold mb-6 text-data-cyan">All Certifications</h3>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {certifications.map((cert, index) => (
-              <a 
-                key={index}
-                href={cert.link}
-                target="_blank"
-                rel="noopener noreferrer" 
-                className="flex items-start p-3 bg-secondary/30 rounded-md hover:bg-secondary/50 transition-colors group"
-              >
-                <Award size={18} className="text-primary mt-0.5 mr-2 flex-shrink-0 group-hover:text-data-cyan transition-colors" />
-                <div className="flex-1">
-                  <h4 className="font-medium text-sm group-hover:text-foreground transition-colors">{cert.name}</h4>
-                  <p className="text-xs text-muted-foreground">{cert.issuer}</p>
-                  {cert.date && <p className="text-xs text-primary/80 mt-1">{cert.date}</p>}
+            {certifications.map((cert, index) => {
+              const isEven = index % 2 === 0;
+              const delay = Math.min(index * 150, 2000);
+              return (
+                <div
+                  key={index}
+                  className={`transition-all duration-1000 ease-out ${
+                    allCertsVisible 
+                      ? `opacity-100 translate-x-0 ${isEven ? 'cert-reveal-left' : 'cert-reveal-right'}` 
+                      : `opacity-0 ${isEven ? '-translate-x-12' : 'translate-x-12'}`
+                  }`}
+                  style={{ 
+                    transitionDelay: `${delay}ms`,
+                    transform: allCertsVisible ? 'translateX(0)' : (isEven ? 'translateX(-48px)' : 'translateX(48px)')
+                  }}
+                >
+                  <a 
+                    href={cert.link}
+                    target="_blank"
+                    rel="noopener noreferrer" 
+                    className="flex items-start p-3 bg-secondary/30 rounded-md hover:bg-secondary/50 transition-all duration-300 ease-out group h-full apple-card transform hover:scale-[1.02] hover:-translate-y-1"
+                  >
+                    <Award size={18} className="text-primary mt-0.5 mr-2 flex-shrink-0 group-hover:text-data-cyan transition-colors duration-300" />
+                    <div className="flex-1">
+                      <h4 className="font-medium text-sm group-hover:text-foreground transition-colors duration-300">{cert.name}</h4>
+                      <p className="text-xs text-muted-foreground">{cert.issuer}</p>
+                      {cert.date && <p className="text-xs text-primary/80 mt-1">{cert.date}</p>}
+                    </div>
+                    <ExternalLink size={14} className="ml-2 text-muted-foreground flex-shrink-0 opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:translate-x-1" />
+                  </a>
                 </div>
-                <ExternalLink size={14} className="ml-2 text-muted-foreground flex-shrink-0 opacity-0 group-hover:opacity-100 transition-opacity" />
-              </a>
-            ))}
+              );
+            })}
           </div>
         </div>
       </div>

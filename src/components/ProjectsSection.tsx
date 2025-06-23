@@ -1,7 +1,12 @@
 
 import { ExternalLink, Github } from "lucide-react";
+import useScrollAnimation from "@/hooks/useScrollAnimation";
 
 const ProjectsSection = () => {
+  const { elementRef: titleRef, isVisible: titleVisible } = useScrollAnimation<HTMLHeadingElement>({ delay: 200 });
+  const { elementRef: gridRef, isVisible: gridVisible } = useScrollAnimation<HTMLDivElement>({ delay: 400 });
+  const { elementRef: certRef, isVisible: certVisible } = useScrollAnimation<HTMLDivElement>({ delay: 600 });
+
   const projects = [
     {
       title: "Finding Numbers in a Haystack",
@@ -32,13 +37,22 @@ const ProjectsSection = () => {
   return (
     <section id="projects" className="py-16 md:py-24 gradient-bg">
       <div className="container mx-auto px-4">
-        <h2 className="section-heading">Projects</h2>
+        <h2 
+          ref={titleRef}
+          className={`section-heading transition-all duration-1000 ${titleVisible ? 'reveal-on-scroll visible' : 'reveal-on-scroll'}`}
+        >
+          Projects
+        </h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div 
+          ref={gridRef}
+          className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 transition-all duration-1000 ${gridVisible ? 'reveal-on-scroll visible' : 'reveal-on-scroll'}`}
+        >
           {projects.map((project, index) => (
             <div 
               key={index} 
               className="glass-card rounded-lg overflow-hidden hover:border-primary/30 transition-colors group h-full flex flex-col"
+              style={{ animationDelay: `${index * 200}ms` }}
             >
               <div className="h-2 bg-gradient-to-r from-data-cyan via-data-purple to-data-magenta"></div>
               <div className="p-6 flex flex-col h-full">
@@ -55,7 +69,7 @@ const ProjectsSection = () => {
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 text-muted-foreground hover:text-primary text-sm transition-colors"
+                    className="inline-flex items-center gap-1 text-muted-foreground hover:text-primary text-sm transition-colors apple-button"
                   >
                     <span>View Project</span>
                     <ExternalLink size={14} />
@@ -66,7 +80,10 @@ const ProjectsSection = () => {
           ))}
         </div>
         
-        <div className="mt-12 text-center">
+        <div 
+          ref={certRef}
+          className={`mt-12 text-center transition-all duration-1000 ${certVisible ? 'reveal-on-scroll visible' : 'reveal-on-scroll'}`}
+        >
           <h3 className="text-xl font-display font-bold mb-2">Data Visualization: Empowering Business with Effective Insights</h3>
           <p className="text-muted-foreground mb-4">Job Simulation by Tata Group | Apr 2024</p>
           <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
@@ -79,7 +96,7 @@ const ProjectsSection = () => {
             href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/Tata/MyXvBcppsW2FkNYCX_Tata%20Group_cGrwSBrZsvt4G2TsM_1712085625682_completion_certificate.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors"
+            className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors apple-button"
           >
             <span>View Certificate</span>
             <ExternalLink size={16} />

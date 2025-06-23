@@ -1,18 +1,30 @@
 
 import { Calendar } from "lucide-react";
+import useScrollAnimation from "@/hooks/useScrollAnimation";
 
 const ExperienceSection = () => {
+  const { elementRef: titleRef, isVisible: titleVisible } = useScrollAnimation<HTMLHeadingElement>({ delay: 200 });
+  const { elementRef: cardRef, isVisible: cardVisible } = useScrollAnimation<HTMLDivElement>({ delay: 400 });
+
   return (
-    <section id="experience" className="gradient-bg reveal">
+    <section id="experience" className="gradient-bg">
       <div className="container mx-auto px-4">
-        <h2 className="section-heading">Work Experience</h2>
+        <h2 
+          ref={titleRef}
+          className={`section-heading transition-all duration-1000 ${titleVisible ? 'reveal-on-scroll visible' : 'reveal-on-scroll'}`}
+        >
+          Work Experience
+        </h2>
         
-        <div className="glass-card p-6 md:p-8 rounded-lg reveal-left">
+        <div 
+          ref={cardRef}
+          className={`glass-card p-6 md:p-8 rounded-lg transition-all duration-1000 ${cardVisible ? 'reveal-left-scroll visible' : 'reveal-left-scroll'}`}
+        >
           <div className="flex flex-col md:flex-row justify-between mb-4">
             <div>
               <h3 className="text-2xl font-display font-bold text-blue-400">Data Analytics & Programming Trainer</h3>
               <p className="text-lg text-muted-foreground">
-                <a href="https://www.dssd.in/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">
+                <a href="https://www.dssd.in/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors apple-button">
                   Delhi School of Skill Development
                 </a>
                 , Delhi, India
