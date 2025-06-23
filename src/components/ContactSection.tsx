@@ -7,15 +7,27 @@ import useScrollAnimation from "@/hooks/useScrollAnimation";
 
 const ContactSection = () => {
   const { toast } = useToast();
-  const { elementRef: titleRef, isVisible: titleVisible } = useScrollAnimation<HTMLHeadingElement>({ delay: 200 });
-  const { elementRef: cardRef, isVisible: cardVisible } = useScrollAnimation<HTMLDivElement>({ delay: 400 });
+  const { elementRef: titleRef, isVisible: titleVisible } = useScrollAnimation<HTMLHeadingElement>({ 
+    delay: 200,
+    duration: 1200 
+  });
+  const { elementRef: cardRef, isVisible: cardVisible } = useScrollAnimation<HTMLDivElement>({ 
+    delay: 400,
+    duration: 1400 
+  });
 
   return (
     <section id="contact" className="py-16 md:py-24 gradient-bg">
       <div className="container mx-auto px-4">
         <h2 
           ref={titleRef}
-          className={`section-heading text-center transition-all duration-1000 ease-out ${titleVisible ? 'reveal-on-scroll visible' : 'reveal-on-scroll'}`}
+          className={`section-heading text-center transition-all duration-[1200ms] ease-out ${
+            titleVisible ? 'reveal-on-scroll visible' : 'reveal-on-scroll'
+          }`}
+          style={{ 
+            transitionTimingFunction: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)',
+            willChange: 'transform, opacity'
+          }}
         >
           Get-In Touch
         </h2>
@@ -23,11 +35,17 @@ const ContactSection = () => {
         <div className="max-w-3xl mx-auto mt-12">
           <div 
             ref={cardRef}
-            className={`glass-card p-8 rounded-lg transition-all duration-1200 ease-out ${cardVisible ? 'reveal-on-scroll visible' : 'reveal-on-scroll'}`}
+            className={`glass-card p-8 rounded-lg transition-all duration-[1400ms] ease-out ${
+              cardVisible ? 'reveal-on-scroll visible' : 'reveal-on-scroll'
+            }`}
+            style={{ 
+              transitionTimingFunction: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)',
+              willChange: 'transform, opacity'
+            }}
           >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="flex items-start gap-4 group">
-                <div className="w-12 h-12 rounded-full bg-secondary/50 backdrop-blur-sm flex items-center justify-center border border-blue-500/30 transition-all duration-500 ease-out group-hover:scale-110 group-hover:border-blue-400/50">
+                <div className="w-12 h-12 rounded-full bg-secondary/50 backdrop-blur-sm flex items-center justify-center border border-blue-500/30 transition-all duration-500 ease-out group-hover:scale-110 group-hover:border-blue-400/50 apple-button">
                   <MapPin className="text-blue-400 transition-all duration-300" size={20} />
                 </div>
                 <div>
@@ -37,36 +55,36 @@ const ContactSection = () => {
               </div>
               
               <div className="flex items-start gap-4 group">
-                <div className="w-12 h-12 rounded-full bg-secondary/50 backdrop-blur-sm flex items-center justify-center border border-blue-500/30 transition-all duration-500 ease-out group-hover:scale-110 group-hover:border-blue-400/50">
+                <div className="w-12 h-12 rounded-full bg-secondary/50 backdrop-blur-sm flex items-center justify-center border border-blue-500/30 transition-all duration-500 ease-out group-hover:scale-110 group-hover:border-blue-400/50 apple-button">
                   <Mail className="text-blue-400 transition-all duration-300" size={20} />
                 </div>
                 <div>
                   <h4 className="font-semibold text-lg">Email</h4>
-                  <a href="mailto:arjunguptain@outlook.com" className="text-muted-foreground hover:text-blue-400 transition-colors duration-300 mt-1 block">
+                  <a href="mailto:arjunguptain@outlook.com" className="text-muted-foreground hover:text-blue-400 transition-colors duration-300 mt-1 block apple-button">
                     arjunguptain@outlook.com
                   </a>
                 </div>
               </div>
               
               <div className="flex items-start gap-4 group">
-                <div className="w-12 h-12 rounded-full bg-secondary/50 backdrop-blur-sm flex items-center justify-center border border-blue-500/30 transition-all duration-500 ease-out group-hover:scale-110 group-hover:border-blue-400/50">
+                <div className="w-12 h-12 rounded-full bg-secondary/50 backdrop-blur-sm flex items-center justify-center border border-blue-500/30 transition-all duration-500 ease-out group-hover:scale-110 group-hover:border-blue-400/50 apple-button">
                   <Phone className="text-blue-400 transition-all duration-300" size={20} />
                 </div>
                 <div>
                   <h4 className="font-semibold text-lg">Phone</h4>
-                  <a href="tel:+917703976867" className="text-muted-foreground hover:text-blue-400 transition-colors duration-300 mt-1 block">
+                  <a href="tel:+917703976867" className="text-muted-foreground hover:text-blue-400 transition-colors duration-300 mt-1 block apple-button">
                     +91 77039-76867
                   </a>
                 </div>
               </div>
               
               <div className="flex items-start gap-4 group">
-                <div className="w-12 h-12 rounded-full bg-secondary/50 backdrop-blur-sm flex items-center justify-center border border-blue-500/30 transition-all duration-500 ease-out group-hover:scale-110 group-hover:border-blue-400/50">
+                <div className="w-12 h-12 rounded-full bg-secondary/50 backdrop-blur-sm flex items-center justify-center border border-blue-500/30 transition-all duration-500 ease-out group-hover:scale-110 group-hover:border-blue-400/50 apple-button">
                   <Linkedin className="text-blue-400 transition-all duration-300" size={20} />
                 </div>
                 <div>
                   <h4 className="font-semibold text-lg">LinkedIn</h4>
-                  <a href="https://www.linkedin.com/in/arjunguptain/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-blue-400 transition-colors duration-300 mt-1 block">
+                  <a href="https://www.linkedin.com/in/arjunguptain/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-blue-400 transition-colors duration-300 mt-1 block apple-button">
                     linkedin.com/in/arjunguptain
                   </a>
                 </div>
@@ -74,10 +92,10 @@ const ContactSection = () => {
             </div>
             
             <div className="mt-8 text-center">
-              <p className="text-muted-foreground mb-4">
+              <p className="text-muted-foreground mb-6 leading-relaxed">
                 Interested in working together or have a question? Feel free to reach out!
               </p>
-              <Button asChild className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white border-0 shadow-lg apple-button">
+              <Button asChild className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white border-0 shadow-lg apple-button px-8 py-3">
                 <a href="mailto:arjunguptain@outlook.com">
                   Send Email
                 </a>

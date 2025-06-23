@@ -3,16 +3,27 @@ import { Briefcase, GraduationCap, MapPin, Phone, Mail } from "lucide-react";
 import useScrollAnimation from "@/hooks/useScrollAnimation";
 
 const AboutSection = () => {
-  const { elementRef: titleRef, isVisible: titleVisible } = useScrollAnimation<HTMLHeadingElement>({ delay: 300 });
-  const { elementRef: profileRef, isVisible: profileVisible } = useScrollAnimation<HTMLDivElement>({ delay: 500 });
-  const { elementRef: contactRef, isVisible: contactVisible } = useScrollAnimation<HTMLDivElement>({ delay: 700 });
+  const { elementRef: titleRef, isVisible: titleVisible } = useScrollAnimation<HTMLHeadingElement>({ 
+    delay: 200,
+    duration: 1200 
+  });
+  const { elementRef: profileRef, isVisible: profileVisible } = useScrollAnimation<HTMLDivElement>({ 
+    delay: 400,
+    duration: 1400 
+  });
+  const { elementRef: contactRef, isVisible: contactVisible } = useScrollAnimation<HTMLDivElement>({ 
+    delay: 600,
+    duration: 1400 
+  });
 
   return (
     <section id="about" className="py-16 md:py-24 gradient-bg">
       <div className="container mx-auto px-4">
         <h2 
           ref={titleRef} 
-          className={`section-heading transition-all duration-1000 ease-out ${titleVisible ? 'reveal-on-scroll visible' : 'reveal-on-scroll'}`}
+          className={`section-heading transition-all duration-[1200ms] ease-out ${
+            titleVisible ? 'reveal-on-scroll visible' : 'reveal-on-scroll'
+          }`}
         >
           About Me
         </h2>
@@ -21,11 +32,17 @@ const AboutSection = () => {
           <div className="md:col-span-2">
             <div 
               ref={profileRef}
-              className={`glass-card p-8 rounded-lg h-full flex flex-col justify-between transition-all duration-1200 ease-out ${profileVisible ? 'reveal-left-scroll visible' : 'reveal-left-scroll'}`}
+              className={`glass-card p-8 rounded-lg h-full flex flex-col justify-between transition-all duration-[1400ms] ease-out ${
+                profileVisible ? 'reveal-left-scroll visible' : 'reveal-left-scroll'
+              }`}
+              style={{ 
+                transitionTimingFunction: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)',
+                willChange: 'transform, opacity'
+              }}
             >
               <div>
                 <h3 className="text-2xl font-display font-bold mb-4 text-center md:text-left">Profile Summary</h3>
-                <p className="text-muted-foreground mb-6">
+                <p className="text-muted-foreground mb-6 leading-relaxed">
                   Dedicated to mentoring aspiring analysts and developers through practical, hands-on training in Artificial Intelligence, C, C++, Data Structures and Algorithms, Google Looker Studio, Microsoft Excel, Microsoft Power BI, Python, Microsoft SQL Server, Statistics and Tableau. I specialize in breaking down complex data concepts into easy-to-understand modules, enabling learners to transform raw data into strategic insights. 
 
                   In my role, I design and deliver comprehensive training sessions, guiding students to build interactive dashboards and insightful reports that support data-driven decision-making. My focus is on nurturing both technical skills and analytical thinking. 
@@ -34,20 +51,24 @@ const AboutSection = () => {
                 </p>
               </div>
               
-              <div className="flex flex-col gap-4">
-                <div className="flex items-start gap-3 group">
-                  <Briefcase className="text-primary mt-1 flex-shrink-0 transition-transform duration-500 ease-out group-hover:scale-110" size={20} />
+              <div className="flex flex-col gap-6">
+                <div className="flex items-start gap-4 group">
+                  <div className="w-12 h-12 rounded-full bg-secondary/50 backdrop-blur-sm flex items-center justify-center border border-blue-500/30 transition-all duration-500 ease-out group-hover:scale-110 group-hover:border-blue-400/50 apple-button">
+                    <Briefcase className="text-blue-400 transition-all duration-300" size={20} />
+                  </div>
                   <div>
-                    <h4 className="font-semibold">Current Position</h4>
-                    <p className="text-muted-foreground text-sm">Data Analytics and Programming Trainer at Delhi School of Skill Development</p>
+                    <h4 className="font-semibold text-lg">Current Position</h4>
+                    <p className="text-muted-foreground">Data Analytics and Programming Trainer at Delhi School of Skill Development</p>
                   </div>
                 </div>
                 
-                <div className="flex items-start gap-3 group">
-                  <GraduationCap className="text-primary mt-1 flex-shrink-0 transition-transform duration-500 ease-out group-hover:scale-110" size={20} />
+                <div className="flex items-start gap-4 group">
+                  <div className="w-12 h-12 rounded-full bg-secondary/50 backdrop-blur-sm flex items-center justify-center border border-blue-500/30 transition-all duration-500 ease-out group-hover:scale-110 group-hover:border-blue-400/50 apple-button">
+                    <GraduationCap className="text-blue-400 transition-all duration-300" size={20} />
+                  </div>
                   <div>
-                    <h4 className="font-semibold">Education</h4>
-                    <p className="text-muted-foreground text-sm">B.Sc. Physical Sciences with Computer Science</p>
+                    <h4 className="font-semibold text-lg">Education</h4>
+                    <p className="text-muted-foreground">B.Sc. Physical Sciences with Computer Science</p>
                   </div>
                 </div>
               </div>
@@ -57,34 +78,46 @@ const AboutSection = () => {
           <div className="md:col-span-1">
             <div 
               ref={contactRef}
-              className={`glass-card p-8 rounded-lg h-full flex flex-col justify-between transition-all duration-1200 ease-out ${contactVisible ? 'reveal-right-scroll visible' : 'reveal-right-scroll'}`}
+              className={`glass-card p-8 rounded-lg h-full flex flex-col justify-between transition-all duration-[1400ms] ease-out ${
+                contactVisible ? 'reveal-right-scroll visible' : 'reveal-right-scroll'
+              }`}
+              style={{ 
+                transitionTimingFunction: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)',
+                willChange: 'transform, opacity'
+              }}
             >
               <div>
-                <h3 className="text-2xl font-display font-bold mb-4 text-center md:text-left">Contact Details</h3>
+                <h3 className="text-2xl font-display font-bold mb-6 text-center md:text-left">Contact Details</h3>
               </div>
               
-              <div className="flex flex-col gap-4">
-                <div className="flex items-start gap-3 group">
-                  <MapPin className="text-primary mt-1 flex-shrink-0 transition-transform duration-500 ease-out group-hover:scale-110" size={20} />
+              <div className="flex flex-col gap-6">
+                <div className="flex items-start gap-4 group">
+                  <div className="w-12 h-12 rounded-full bg-secondary/50 backdrop-blur-sm flex items-center justify-center border border-blue-500/30 transition-all duration-500 ease-out group-hover:scale-110 group-hover:border-blue-400/50 apple-button">
+                    <MapPin className="text-blue-400 transition-all duration-300" size={20} />
+                  </div>
                   <div>
-                    <h4 className="font-semibold">Location</h4>
-                    <p className="text-muted-foreground text-sm">New Delhi, India</p>
+                    <h4 className="font-semibold text-lg">Location</h4>
+                    <p className="text-muted-foreground">New Delhi, India</p>
                   </div>
                 </div>
                 
-                <div className="flex items-start gap-3 group">
-                  <Phone className="text-primary mt-1 flex-shrink-0 transition-transform duration-500 ease-out group-hover:scale-110" size={20} />
+                <div className="flex items-start gap-4 group">
+                  <div className="w-12 h-12 rounded-full bg-secondary/50 backdrop-blur-sm flex items-center justify-center border border-blue-500/30 transition-all duration-500 ease-out group-hover:scale-110 group-hover:border-blue-400/50 apple-button">
+                    <Phone className="text-blue-400 transition-all duration-300" size={20} />
+                  </div>
                   <div>
-                    <h4 className="font-semibold">Phone</h4>
-                    <p className="text-muted-foreground text-sm">+91 77039-76867</p>
+                    <h4 className="font-semibold text-lg">Phone</h4>
+                    <p className="text-muted-foreground">+91 77039-76867</p>
                   </div>
                 </div>
                 
-                <div className="flex items-start gap-3 group">
-                  <Mail className="text-primary mt-1 flex-shrink-0 transition-transform duration-500 ease-out group-hover:scale-110" size={20} />
+                <div className="flex items-start gap-4 group">
+                  <div className="w-12 h-12 rounded-full bg-secondary/50 backdrop-blur-sm flex items-center justify-center border border-blue-500/30 transition-all duration-500 ease-out group-hover:scale-110 group-hover:border-blue-400/50 apple-button">
+                    <Mail className="text-blue-400 transition-all duration-300" size={20} />
+                  </div>
                   <div>
-                    <h4 className="font-semibold">Email</h4>
-                    <a href="mailto:arjunguptain@outlook.com" className="text-muted-foreground text-sm hover:text-primary transition-colors duration-300">
+                    <h4 className="font-semibold text-lg">Email</h4>
+                    <a href="mailto:arjunguptain@outlook.com" className="text-muted-foreground hover:text-blue-400 transition-colors duration-300 apple-button">
                       arjunguptain@outlook.com
                     </a>
                   </div>
