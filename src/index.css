@@ -47,61 +47,61 @@
     --sidebar-ring: 210 100% 56%;
   }
 
-  /* Apple-like smooth animations */
-  @keyframes reveal {
+  /* 60fps optimized animations with will-change and transform3d */
+  @keyframes reveal-60fps {
     from {
       opacity: 0;
-      transform: translateY(30px);
+      transform: translate3d(0, 30px, 0);
     }
     to {
       opacity: 1;
-      transform: translateY(0);
+      transform: translate3d(0, 0, 0);
     }
   }
 
-  @keyframes reveal-left {
+  @keyframes reveal-left-60fps {
     from {
       opacity: 0;
-      transform: translateX(-40px);
+      transform: translate3d(-40px, 0, 0);
     }
     to {
       opacity: 1;
-      transform: translateX(0);
+      transform: translate3d(0, 0, 0);
     }
   }
 
-  @keyframes reveal-right {
+  @keyframes reveal-right-60fps {
     from {
       opacity: 0;
-      transform: translateX(40px);
+      transform: translate3d(40px, 0, 0);
     }
     to {
       opacity: 1;
-      transform: translateX(0);
+      transform: translate3d(0, 0, 0);
     }
   }
 
-  @keyframes float {
+  @keyframes float-60fps {
     0%, 100% {
-      transform: translateY(0);
+      transform: translate3d(0, 0, 0);
     }
     50% {
-      transform: translateY(-15px);
+      transform: translate3d(0, -15px, 0);
     }
   }
 
-  @keyframes scale {
+  @keyframes scale-60fps {
     from {
-      transform: scale(0.9);
+      transform: scale3d(0.9, 0.9, 1);
       opacity: 0;
     }
     to {
-      transform: scale(1);
+      transform: scale3d(1, 1, 1);
       opacity: 1;
     }
   }
 
-  @keyframes gradient-shift {
+  @keyframes gradient-shift-60fps {
     0%, 100% {
       background-position: 0% 50%;
     }
@@ -110,38 +110,38 @@
     }
   }
 
-  @keyframes pattern-move {
+  @keyframes pattern-move-60fps {
     0% {
-      transform: translateX(0) translateY(0);
+      transform: translate3d(0, 0, 0);
     }
     100% {
-      transform: translateX(15px) translateY(15px);
+      transform: translate3d(15px, 15px, 0);
     }
   }
 
-  @keyframes slide-up {
+  @keyframes slide-up-60fps {
     from {
       opacity: 0;
-      transform: translateY(60px);
+      transform: translate3d(0, 60px, 0);
     }
     to {
       opacity: 1;
-      transform: translateY(0);
+      transform: translate3d(0, 0, 0);
     }
   }
 
-  @keyframes slide-down {
+  @keyframes slide-down-60fps {
     from {
       opacity: 0;
-      transform: translateY(-60px);
+      transform: translate3d(0, -60px, 0);
     }
     to {
       opacity: 1;
-      transform: translateY(0);
+      transform: translate3d(0, 0, 0);
     }
   }
 
-  @keyframes fade-in-slow {
+  @keyframes fade-in-60fps {
     from {
       opacity: 0;
     }
@@ -150,51 +150,46 @@
     }
   }
 
-  @keyframes gentle-hover {
+  @keyframes rotate-slow-60fps {
+    from {
+      transform: rotate3d(0, 0, 1, 0deg);
+    }
+    to {
+      transform: rotate3d(0, 0, 1, 360deg);
+    }
+  }
+
+  @keyframes pulse-glow {
     0%, 100% {
-      transform: translateY(0);
+      box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
     }
     50% {
-      transform: translateY(-3px);
+      box-shadow: 0 0 40px rgba(59, 130, 246, 0.5);
     }
   }
 
-  @keyframes rotate-slow {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
+  /* 60fps optimized animation classes */
+  .animate-fade-in-60fps {
+    animation: fade-in-60fps 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: opacity;
   }
 
-  @keyframes smooth-scale {
-    from {
-      transform: scale(1);
-    }
-    to {
-      transform: scale(1.05);
-    }
+  .animate-scale-60fps {
+    animation: scale-60fps 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: transform, opacity;
   }
 
-  /* Apple-style page transition animations */
-  .animate-fade-in {
-    animation: fade-in-slow 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  .animate-slide-up-60fps {
+    animation: slide-up-60fps 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: transform, opacity;
   }
 
-  .animate-scale {
-    animation: scale 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  .animate-slide-down-60fps {
+    animation: slide-down-60fps 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: transform, opacity;
   }
 
-  .animate-slide-up {
-    animation: slide-up 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  }
-
-  .animate-slide-down {
-    animation: slide-down 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  }
-
-  /* Common styles */
+  /* Common styles with GPU acceleration */
   * {
     @apply border-border;
     scroll-behavior: smooth;
@@ -202,16 +197,24 @@
 
   body {
     @apply text-foreground antialiased;
-    background: linear-gradient(135deg, 
-      #0f0f0f 0%, 
-      #0f1419 25%, 
-      #1e2a3a 50%, 
-      #0f1419 75%, 
-      #0f0f0f 100%);
-    background-size: 400% 400%;
-    animation: gradient-shift 25s ease infinite;
+    background: 
+      radial-gradient(circle at 20% 20%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(14, 165, 233, 0.15) 0%, transparent 50%),
+      radial-gradient(circle at 40% 90%, rgba(6, 182, 212, 0.1) 0%, transparent 50%),
+      linear-gradient(135deg, 
+        #0a0a0a 0%, 
+        #0f1419 15%, 
+        #1a1f2e 30%, 
+        #0f1419 50%, 
+        #1e2a3a 70%, 
+        #0f1419 85%, 
+        #0a0a0a 100%);
+    background-size: 100% 100%, 80% 80%, 60% 60%, 400% 400%;
+    background-attachment: fixed;
+    animation: gradient-shift-60fps 20s ease infinite;
     position: relative;
     overflow-x: hidden;
+    will-change: background-position;
   }
 
   body::before {
@@ -227,9 +230,10 @@
       radial-gradient(circle at 50% 50%, rgba(6, 182, 212, 0.04) 0%, transparent 50%);
     background-size: 100% 100%, 80% 80%, 60% 60%;
     background-position: 0% 0%, 100% 100%, 50% 50%;
-    animation: pattern-move 30s ease-in-out infinite alternate;
+    animation: pattern-move-60fps 25s ease-in-out infinite alternate;
     pointer-events: none;
     z-index: -1;
+    will-change: transform;
   }
 
   body::after {
@@ -240,29 +244,57 @@
     width: 100%;
     height: 100%;
     background-image: 
-      linear-gradient(45deg, transparent 48%, rgba(59, 130, 246, 0.015) 49%, rgba(59, 130, 246, 0.015) 51%, transparent 52%),
-      linear-gradient(-45deg, transparent 48%, rgba(14, 165, 233, 0.015) 49%, rgba(14, 165, 233, 0.015) 51%, transparent 52%);
-    background-size: 80px 80px, 80px 80px;
-    background-position: 0 0, 40px 40px;
+      linear-gradient(45deg, transparent 48%, rgba(59, 130, 246, 0.02) 49%, rgba(59, 130, 246, 0.02) 51%, transparent 52%),
+      linear-gradient(-45deg, transparent 48%, rgba(14, 165, 233, 0.02) 49%, rgba(14, 165, 233, 0.02) 51%, transparent 52%);
+    background-size: 60px 60px, 60px 60px;
+    background-position: 0 0, 30px 30px;
     pointer-events: none;
     z-index: -1;
+    opacity: 0.7;
   }
 
-  /* Apple-like animation classes */
-  .reveal {
-    opacity: 0;
-    animation: reveal 1.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-  }
-
+  /* 60fps optimized scroll animations */
   .reveal-on-scroll {
     opacity: 0;
-    transform: translateY(30px);
-    transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transform: translate3d(0, 30px, 0);
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: transform, opacity;
   }
 
   .reveal-on-scroll.visible {
     opacity: 1;
-    transform: translateY(0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  .reveal-left-scroll {
+    opacity: 0;
+    transform: translate3d(-40px, 0, 0);
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: transform, opacity;
+  }
+
+  .reveal-left-scroll.visible {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+
+  .reveal-right-scroll {
+    opacity: 0;
+    transform: translate3d(40px, 0, 0);
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: transform, opacity;
+  }
+
+  .reveal-right-scroll.visible {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+
+  /* 60fps optimized reveal animations */
+  .reveal {
+    opacity: 0;
+    animation: reveal-60fps 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+    will-change: transform, opacity;
   }
 
   .reveal-delay-1 {
@@ -283,141 +315,129 @@
 
   .reveal-left {
     opacity: 0;
-    animation: reveal-left 1.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-  }
-
-  .reveal-left-scroll {
-    opacity: 0;
-    transform: translateX(-40px);
-    transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  }
-
-  .reveal-left-scroll.visible {
-    opacity: 1;
-    transform: translateX(0);
+    animation: reveal-left-60fps 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+    will-change: transform, opacity;
   }
 
   .reveal-right {
     opacity: 0;
-    animation: reveal-right 1.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-  }
-
-  .reveal-right-scroll {
-    opacity: 0;
-    transform: translateX(40px);
-    transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  }
-
-  .reveal-right-scroll.visible {
-    opacity: 1;
-    transform: translateX(0);
+    animation: reveal-right-60fps 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+    will-change: transform, opacity;
   }
 
   .float-animation {
-    animation: float 12s ease-in-out infinite;
-  }
-
-  .gentle-hover {
-    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  }
-
-  .gentle-hover:hover {
-    transform: translateY(-3px);
+    animation: float-60fps 8s ease-in-out infinite;
+    will-change: transform;
   }
 
   .rotate-slow {
-    animation: rotate-slow 30s linear infinite;
+    animation: rotate-slow-60fps 20s linear infinite;
+    will-change: transform;
   }
 
-  /* Apple-style interactive elements */
+  /* 60fps optimized interactive elements */
   .apple-button {
     transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: transform;
   }
 
   .apple-button:hover {
-    transform: scale(1.02) translateY(-1px);
+    transform: translate3d(0, -2px, 0) scale(1.02);
   }
 
   .apple-card {
     transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: transform, box-shadow;
   }
 
   .apple-card:hover {
-    transform: scale(1.02) translateY(-4px);
+    transform: translate3d(0, -4px, 0) scale(1.02);
   }
 
-  /* Section and card styles */
+  .gentle-hover {
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: transform;
+  }
+
+  .gentle-hover:hover {
+    transform: translate3d(0, -3px, 0);
+  }
+
+  /* Enhanced section and card styles */
   .gradient-bg {
-    @apply relative overflow-hidden transition-all duration-700;
+    @apply relative overflow-hidden;
     background: transparent;
+    will-change: transform;
   }
 
   .gradient-bg::before {
     content: '';
-    @apply absolute inset-0 z-[-1] transition-opacity duration-700;
+    @apply absolute inset-0 z-[-1];
     background: linear-gradient(135deg, 
-      rgba(15, 15, 15, 0.8) 0%, 
-      rgba(15, 20, 25, 0.9) 25%, 
-      rgba(30, 42, 58, 0.8) 50%, 
-      rgba(15, 20, 25, 0.9) 75%, 
-      rgba(15, 15, 15, 0.8) 100%);
+      rgba(10, 10, 10, 0.9) 0%, 
+      rgba(15, 20, 25, 0.95) 25%, 
+      rgba(26, 31, 46, 0.9) 50%, 
+      rgba(15, 20, 25, 0.95) 75%, 
+      rgba(10, 10, 10, 0.9) 100%);
+    backdrop-filter: blur(2px);
+    transition: opacity 0.5s ease;
   }
 
   .glass-card {
     @apply backdrop-blur-xl border shadow-2xl rounded-xl apple-card;
-    background: rgba(15, 20, 25, 0.7);
-    border: 1px solid rgba(59, 130, 246, 0.2);
+    background: rgba(15, 20, 25, 0.8);
+    border: 1px solid rgba(59, 130, 246, 0.3);
     box-shadow: 
-      0 20px 25px -5px rgba(0, 0, 0, 0.3),
-      0 10px 10px -5px rgba(0, 0, 0, 0.2),
-      inset 0 1px 0 rgba(59, 130, 246, 0.1);
+      0 20px 25px -5px rgba(0, 0, 0, 0.4),
+      0 10px 10px -5px rgba(0, 0, 0, 0.3),
+      inset 0 1px 0 rgba(59, 130, 246, 0.15);
+    will-change: transform, box-shadow, border-color;
   }
 
   .glass-card:hover {
-    border-color: rgba(59, 130, 246, 0.4);
+    border-color: rgba(59, 130, 246, 0.5);
     box-shadow: 
-      0 25px 50px -12px rgba(59, 130, 246, 0.15),
-      0 20px 25px -5px rgba(0, 0, 0, 0.4),
-      inset 0 1px 0 rgba(59, 130, 246, 0.2);
+      0 25px 50px -12px rgba(59, 130, 246, 0.2),
+      0 20px 25px -5px rgba(0, 0, 0, 0.5),
+      inset 0 1px 0 rgba(59, 130, 246, 0.25);
+    animation: pulse-glow 2s ease-in-out infinite;
   }
   
   .text-gradient {
     @apply bg-gradient-to-r from-blue-400 via-cyan-500 to-teal-400 bg-clip-text text-transparent;
     background-size: 200% 200%;
-    animation: gradient-shift 6s ease infinite;
+    animation: gradient-shift-60fps 4s ease infinite;
+    will-change: background-position;
   }
 
   .section-heading {
     @apply text-3xl font-display font-bold mb-12 text-gradient text-center;
   }
 
-  /* Apple-style interactive elements */
-  a, button {
-    @apply apple-button;
-  }
-
-  /* Standardized section spacing */
+  /* Performance optimizations */
   section {
     @apply py-16 md:py-20 px-4;
+    contain: layout style paint;
   }
 
+  /* Enhanced selection */
   ::selection {
     @apply text-foreground;
-    background: rgba(59, 130, 246, 0.3);
+    background: rgba(59, 130, 246, 0.4);
   }
 
-  /* Equal vertical spacing between sections */
+  /* Consistent spacing */
   section + section {
-    @apply mt-0 border-t border-secondary/20;
+    @apply mt-0 border-t border-secondary/30;
   }
 
-  /* Consistent container padding */
   .container {
     @apply px-4 md:px-6 lg:px-8 mx-auto max-w-7xl;
   }
 
   h1, h2, h3, h4, h5, h6 {
     @apply tracking-tight;
+    text-rendering: optimizeLegibility;
   }
 
   a {
@@ -454,10 +474,36 @@
     @apply h-full;
   }
 
-  /* Parallax effect */
+  /* 60fps parallax effect */
   .parallax {
-    transform: translateZ(0);
+    transform: translate3d(0, 0, 0);
     backface-visibility: hidden;
     perspective: 1000px;
+    will-change: transform;
+  }
+
+  /* Custom certificate animation for skills section */
+  .cert-reveal-left {
+    transform: translate3d(0, 0, 0);
+  }
+
+  .cert-reveal-right {
+    transform: translate3d(0, 0, 0);
+  }
+
+  /* Smooth scrolling enhancement */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Reduce motion for accessibility */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
   }
 }
