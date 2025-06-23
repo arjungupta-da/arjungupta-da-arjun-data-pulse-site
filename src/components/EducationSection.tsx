@@ -3,16 +3,16 @@ import { Calendar } from "lucide-react";
 import useScrollAnimation from "@/hooks/useScrollAnimation";
 
 const EducationSection = () => {
-  const { elementRef: titleRef, isVisible: titleVisible } = useScrollAnimation<HTMLHeadingElement>({ delay: 200 });
-  const { elementRef: firstCardRef, isVisible: firstCardVisible } = useScrollAnimation<HTMLDivElement>({ delay: 400 });
-  const { elementRef: secondCardRef, isVisible: secondCardVisible } = useScrollAnimation<HTMLDivElement>({ delay: 600 });
+  const { elementRef: titleRef, isVisible: titleVisible } = useScrollAnimation<HTMLHeadingElement>({ delay: 100 });
+  const { elementRef: firstCardRef, isVisible: firstCardVisible } = useScrollAnimation<HTMLDivElement>({ delay: 200 });
+  const { elementRef: secondCardRef, isVisible: secondCardVisible } = useScrollAnimation<HTMLDivElement>({ delay: 300 });
 
   return (
     <section id="education" className="gradient-bg">
       <div className="container mx-auto">
         <h2 
           ref={titleRef}
-          className={`section-heading transition-all duration-1000 ${titleVisible ? 'reveal-on-scroll visible' : 'reveal-on-scroll'}`}
+          className={`section-heading transition-all duration-700 ${titleVisible ? 'reveal-on-scroll visible' : 'reveal-on-scroll'}`}
         >
           Education
         </h2>
@@ -20,7 +20,7 @@ const EducationSection = () => {
         <div className="space-y-8">
           <div 
             ref={firstCardRef}
-            className={`glass-card p-8 rounded-lg transition-all duration-1000 ${firstCardVisible ? 'reveal-left-scroll visible' : 'reveal-left-scroll'}`}
+            className={`glass-card p-8 rounded-lg transition-all duration-700 ${firstCardVisible ? 'reveal-left-scroll visible' : 'reveal-left-scroll'}`}
           >
             <div className="flex flex-col md:flex-row justify-between mb-4">
               <div>
@@ -44,7 +44,7 @@ const EducationSection = () => {
           
           <div 
             ref={secondCardRef}
-            className={`glass-card p-8 rounded-lg transition-all duration-1000 ${secondCardVisible ? 'reveal-right-scroll visible' : 'reveal-right-scroll'}`}
+            className={`glass-card p-8 rounded-lg transition-all duration-700 ${secondCardVisible ? 'reveal-right-scroll visible' : 'reveal-right-scroll'}`}
           >
             <div className="flex flex-col md:flex-row justify-between mb-4">
               <div>

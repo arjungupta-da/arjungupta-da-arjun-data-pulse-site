@@ -9,34 +9,24 @@
   :root {
     --background: 12 15% 8%;
     --foreground: 0 0% 98%;
-
     --card: 12 12% 10%;
     --card-foreground: 0 0% 98%;
-
     --popover: 12 12% 10%;
     --popover-foreground: 0 0% 98%;
-
     --primary: 210 100% 56%;
     --primary-foreground: 12 15% 8%;
-
     --secondary: 12 10% 15%;
     --secondary-foreground: 0 0% 98%;
-
     --muted: 12 8% 20%;
     --muted-foreground: 12 5% 70%;
-
     --accent: 185 84% 44%;
     --accent-foreground: 0 0% 98%;
-
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
-
     --border: 12 10% 18%;
     --input: 12 10% 18%;
     --ring: 210 100% 56%;
-
     --radius: 0.75rem;
-
     --sidebar-background: 12 15% 8%;
     --sidebar-foreground: 0 0% 98%;
     --sidebar-primary: 210 100% 56%;
@@ -47,154 +37,85 @@
     --sidebar-ring: 210 100% 56%;
   }
 
-  /* Apple-style 60fps optimized animations */
-  @keyframes apple-reveal {
-    0% {
+  /* Performance-optimized animations */
+  @keyframes slideUp {
+    from {
       opacity: 0;
-      transform: translate3d(0, 40px, 0) scale3d(0.95, 0.95, 1);
+      transform: translate3d(0, 30px, 0);
     }
-    100% {
+    to {
       opacity: 1;
-      transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+      transform: translate3d(0, 0, 0);
     }
   }
 
-  @keyframes apple-reveal-left {
-    0% {
+  @keyframes slideLeft {
+    from {
       opacity: 0;
-      transform: translate3d(-60px, 20px, 0) scale3d(0.9, 0.9, 1);
+      transform: translate3d(-40px, 0, 0);
     }
-    100% {
+    to {
       opacity: 1;
-      transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+      transform: translate3d(0, 0, 0);
     }
   }
 
-  @keyframes apple-reveal-right {
-    0% {
+  @keyframes slideRight {
+    from {
       opacity: 0;
-      transform: translate3d(60px, 20px, 0) scale3d(0.9, 0.9, 1);
+      transform: translate3d(40px, 0, 0);
     }
-    100% {
+    to {
       opacity: 1;
-      transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+      transform: translate3d(0, 0, 0);
     }
   }
 
-  @keyframes apple-float {
+  @keyframes float {
     0%, 100% {
-      transform: translate3d(0, 0, 0) rotate3d(0, 0, 1, 0deg);
-    }
-    25% {
-      transform: translate3d(0, -8px, 0) rotate3d(0, 0, 1, 1deg);
+      transform: translate3d(0, 0, 0);
     }
     50% {
-      transform: translate3d(0, -12px, 0) rotate3d(0, 0, 1, 0deg);
-    }
-    75% {
-      transform: translate3d(0, -8px, 0) rotate3d(0, 0, 1, -1deg);
+      transform: translate3d(0, -10px, 0);
     }
   }
 
-  @keyframes apple-gradient-shift {
+  @keyframes gradientShift {
     0%, 100% {
       background-position: 0% 50%;
     }
-    25% {
+    50% {
       background-position: 100% 50%;
     }
-    50% {
-      background-position: 100% 100%;
-    }
-    75% {
-      background-position: 0% 100%;
-    }
   }
 
-  @keyframes apple-orb-float {
-    0%, 100% {
-      transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
-    }
-    33% {
-      transform: translate3d(20px, -15px, 0) scale3d(1.1, 1.1, 1);
-    }
-    66% {
-      transform: translate3d(-15px, -25px, 0) scale3d(0.9, 0.9, 1);
-    }
-  }
-
-  @keyframes apple-pulse-glow {
-    0%, 100% {
-      box-shadow: 
-        0 0 30px rgba(59, 130, 246, 0.3),
-        0 0 60px rgba(14, 165, 233, 0.2),
-        inset 0 1px 0 rgba(255, 255, 255, 0.1);
-    }
-    50% {
-      box-shadow: 
-        0 0 50px rgba(59, 130, 246, 0.5),
-        0 0 100px rgba(14, 165, 233, 0.3),
-        inset 0 1px 0 rgba(255, 255, 255, 0.15);
-    }
-  }
-
-  /* Apple-style animation classes */
-  .apple-reveal {
-    opacity: 0;
-    animation: apple-reveal 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-    will-change: transform, opacity;
-  }
-
-  .apple-reveal-left {
-    opacity: 0;
-    animation: apple-reveal-left 1.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-    will-change: transform, opacity;
-  }
-
-  .apple-reveal-right {
-    opacity: 0;
-    animation: apple-reveal-right 1.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-    will-change: transform, opacity;
-  }
-
-  .apple-float {
-    animation: apple-float 6s ease-in-out infinite;
-    will-change: transform;
-  }
-
-  /* Enhanced body background - Apple-inspired */
   * {
     @apply border-border;
     scroll-behavior: smooth;
   }
 
+  /* Unified, performance-optimized background */
   body {
     @apply text-foreground antialiased;
-    background: 
-      radial-gradient(circle at 20% 20%, rgba(59, 130, 246, 0.12) 0%, transparent 50%),
-      radial-gradient(circle at 80% 80%, rgba(14, 165, 233, 0.12) 0%, transparent 50%),
-      radial-gradient(circle at 40% 90%, rgba(6, 182, 212, 0.08) 0%, transparent 50%),
-      linear-gradient(135deg, 
-        #0a0a0a 0%, 
-        #0f1419 10%, 
-        #1a202c 20%,
-        #0f1419 30%, 
-        #1e2a3a 40%,
-        #0f1419 50%,
-        #2d3748 60%,
-        #0f1419 70%,
-        #1a202c 80%,
-        #0f1419 90%,
-        #0a0a0a 100%);
-    background-size: 120% 120%, 100% 100%, 80% 80%, 300% 300%;
+    background: linear-gradient(
+      135deg,
+      #0a0a0b 0%,
+      #0f1419 15%,
+      #1a202c 30%,
+      #0f1419 45%,
+      #1e2a3a 60%,
+      #0f1419 75%,
+      #0a0a0b 100%
+    );
+    background-size: 400% 400%;
     background-attachment: fixed;
-    animation: apple-gradient-shift 25s ease infinite;
+    animation: gradientShift 20s ease infinite;
     position: relative;
     overflow-x: hidden;
     will-change: background-position;
   }
 
-  /* Floating orbs background */
+  /* Single overlay for subtle effects */
   body::before {
     content: '';
     position: fixed;
@@ -202,162 +123,132 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: 
-      radial-gradient(circle at 25% 25%, rgba(59, 130, 246, 0.06) 0%, transparent 50%),
-      radial-gradient(circle at 75% 75%, rgba(14, 165, 233, 0.06) 0%, transparent 50%),
-      radial-gradient(circle at 50% 10%, rgba(6, 182, 212, 0.04) 0%, transparent 50%),
-      radial-gradient(circle at 10% 90%, rgba(139, 92, 246, 0.04) 0%, transparent 50%),
-      radial-gradient(circle at 90% 10%, rgba(236, 72, 153, 0.04) 0%, transparent 50%);
-    background-size: 150% 150%, 120% 120%, 100% 100%, 80% 80%, 60% 60%;
-    animation: apple-orb-float 30s ease-in-out infinite;
+    background: 
+      radial-gradient(circle at 20% 30%, rgba(59, 130, 246, 0.08) 0%, transparent 50%),
+      radial-gradient(circle at 80% 70%, rgba(14, 165, 233, 0.06) 0%, transparent 50%);
+    background-size: 100% 100%;
     pointer-events: none;
     z-index: -1;
     will-change: transform;
   }
 
-  /* Subtle grid overlay */
-  body::after {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: 
-      linear-gradient(45deg, transparent 48%, rgba(59, 130, 246, 0.015) 49%, rgba(59, 130, 246, 0.015) 51%, transparent 52%),
-      linear-gradient(-45deg, transparent 48%, rgba(14, 165, 233, 0.015) 49%, rgba(14, 165, 233, 0.015) 51%, transparent 52%);
-    background-size: 80px 80px, 80px 80px;
-    background-position: 0 0, 40px 40px;
-    pointer-events: none;
-    z-index: -1;
-    opacity: 0.8;
-  }
-
-  /* Apple-style scroll animations */
+  /* Optimized scroll animations */
   .reveal-on-scroll {
     opacity: 0;
-    transform: translate3d(0, 40px, 0) scale3d(0.95, 0.95, 1);
-    transition: all 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    will-change: transform, opacity;
+    transform: translate3d(0, 30px, 0);
+    transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: opacity, transform;
   }
 
   .reveal-on-scroll.visible {
     opacity: 1;
-    transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+    transform: translate3d(0, 0, 0);
   }
 
   .reveal-left-scroll {
     opacity: 0;
-    transform: translate3d(-60px, 20px, 0) scale3d(0.9, 0.9, 1);
-    transition: all 1.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    will-change: transform, opacity;
+    transform: translate3d(-40px, 0, 0);
+    transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: opacity, transform;
   }
 
   .reveal-left-scroll.visible {
     opacity: 1;
-    transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+    transform: translate3d(0, 0, 0);
   }
 
   .reveal-right-scroll {
     opacity: 0;
-    transform: translate3d(60px, 20px, 0) scale3d(0.9, 0.9, 1);
-    transition: all 1.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    will-change: transform, opacity;
+    transform: translate3d(40px, 0, 0);
+    transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: opacity, transform;
   }
 
   .reveal-right-scroll.visible {
     opacity: 1;
-    transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+    transform: translate3d(0, 0, 0);
   }
 
-  /* Enhanced reveal animations */
+  /* Initial animations */
   .reveal {
     opacity: 0;
-    animation: apple-reveal 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-    will-change: transform, opacity;
+    animation: slideUp 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+    will-change: opacity, transform;
   }
 
-  .reveal-delay-1 { animation-delay: 0.2s; }
-  .reveal-delay-2 { animation-delay: 0.4s; }
-  .reveal-delay-3 { animation-delay: 0.6s; }
-  .reveal-delay-4 { animation-delay: 0.8s; }
+  .reveal-delay-1 { animation-delay: 0.1s; }
+  .reveal-delay-2 { animation-delay: 0.2s; }
+  .reveal-delay-3 { animation-delay: 0.3s; }
+  .reveal-delay-4 { animation-delay: 0.4s; }
 
   .reveal-left {
     opacity: 0;
-    animation: apple-reveal-left 1.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-    will-change: transform, opacity;
+    animation: slideLeft 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+    will-change: opacity, transform;
   }
 
   .reveal-right {
     opacity: 0;
-    animation: apple-reveal-right 1.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-    will-change: transform, opacity;
+    animation: slideRight 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+    will-change: opacity, transform;
   }
 
   .float-animation {
-    animation: apple-float 6s ease-in-out infinite;
+    animation: float 4s ease-in-out infinite;
     will-change: transform;
   }
 
-  .rotate-slow {
-    animation: rotate3d(0, 0, 1, 360deg) 20s linear infinite;
-    will-change: transform;
-  }
-
-  /* Apple-style interactive elements */
+  /* Optimized interactive elements */
   .apple-button {
-    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    will-change: transform, box-shadow;
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: transform;
   }
 
   .apple-button:hover {
-    transform: translate3d(0, -3px, 0) scale3d(1.02, 1.02, 1);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    transform: translate3d(0, -2px, 0);
   }
 
   .apple-card {
-    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    will-change: transform, box-shadow, border-color;
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                box-shadow 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: transform, box-shadow;
   }
 
   .apple-card:hover {
-    transform: translate3d(0, -6px, 0) scale3d(1.02, 1.02, 1);
-    box-shadow: 
-      0 25px 50px rgba(0, 0, 0, 0.4),
-      0 15px 35px rgba(59, 130, 246, 0.1);
+    transform: translate3d(0, -4px, 0);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
   }
 
   .gentle-hover {
-    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     will-change: transform;
   }
 
   .gentle-hover:hover {
-    transform: translate3d(0, -4px, 0);
+    transform: translate3d(0, -3px, 0);
   }
 
-  /* Enhanced glass card with Apple aesthetics */
+  /* Optimized glass card */
   .glass-card {
-    @apply backdrop-blur-xl border shadow-2xl rounded-xl apple-card;
-    background: rgba(15, 20, 25, 0.85);
+    @apply backdrop-blur-md border shadow-xl rounded-xl apple-card;
+    background: rgba(15, 20, 25, 0.8);
     border: 1px solid rgba(59, 130, 246, 0.2);
-    box-shadow: 
-      0 25px 50px -12px rgba(0, 0, 0, 0.5),
-      0 20px 25px -5px rgba(0, 0, 0, 0.4),
-      inset 0 1px 0 rgba(255, 255, 255, 0.1);
-    will-change: transform, box-shadow, border-color;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    will-change: transform, box-shadow;
   }
 
   .glass-card:hover {
-    border-color: rgba(59, 130, 246, 0.4);
-    background: rgba(15, 20, 25, 0.9);
-    animation: apple-pulse-glow 3s ease-in-out infinite;
+    border-color: rgba(59, 130, 246, 0.3);
+    background: rgba(15, 20, 25, 0.85);
   }
   
   .text-gradient {
     @apply bg-gradient-to-r from-blue-400 via-cyan-500 to-teal-400 bg-clip-text text-transparent;
     background-size: 200% 200%;
-    animation: apple-gradient-shift 5s ease infinite;
+    animation: gradientShift 4s ease infinite;
     will-change: background-position;
   }
 
@@ -368,10 +259,9 @@
   /* Performance optimizations */
   section {
     @apply py-16 md:py-20 px-4;
-    contain: layout style paint;
+    contain: layout;
   }
 
-  /* Enhanced selection */
   ::selection {
     @apply text-foreground;
     background: rgba(59, 130, 246, 0.4);
@@ -387,10 +277,10 @@
   }
 
   a {
-    @apply transition-colors duration-300;
+    @apply transition-colors duration-200;
   }
 
-  /* Apple-style spacing classes */
+  /* Optimized spacing classes */
   .section-container {
     @apply container mx-auto px-4 md:px-6 lg:px-8 py-12 md:py-16;
   }
@@ -400,24 +290,10 @@
   .paragraph-spacing { @apply mb-6 md:mb-8; }
   .button-spacing { @apply mt-6 md:mt-8; }
 
-  /* Enhanced gradient background for sections */
+  /* Simplified gradient background for sections */
   .gradient-bg {
     @apply relative overflow-hidden;
     background: transparent;
-    will-change: transform;
-  }
-
-  .gradient-bg::before {
-    content: '';
-    @apply absolute inset-0 z-[-1];
-    background: linear-gradient(135deg, 
-      rgba(10, 10, 10, 0.95) 0%, 
-      rgba(15, 20, 25, 0.98) 25%, 
-      rgba(26, 31, 46, 0.95) 50%, 
-      rgba(15, 20, 25, 0.98) 75%, 
-      rgba(10, 10, 10, 0.95) 100%);
-    backdrop-filter: blur(1px);
-    transition: opacity 0.6s ease;
   }
 
   /* Smooth scrolling enhancement */

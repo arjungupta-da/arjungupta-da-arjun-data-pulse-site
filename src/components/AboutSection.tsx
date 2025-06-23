@@ -4,16 +4,13 @@ import useScrollAnimation from "@/hooks/useScrollAnimation";
 
 const AboutSection = () => {
   const { elementRef: titleRef, isVisible: titleVisible } = useScrollAnimation<HTMLHeadingElement>({ 
-    delay: 200,
-    duration: 1200 
+    delay: 100
   });
   const { elementRef: profileRef, isVisible: profileVisible } = useScrollAnimation<HTMLDivElement>({ 
-    delay: 400,
-    duration: 1400 
+    delay: 200
   });
   const { elementRef: contactRef, isVisible: contactVisible } = useScrollAnimation<HTMLDivElement>({ 
-    delay: 600,
-    duration: 1400 
+    delay: 300
   });
 
   return (
@@ -21,7 +18,7 @@ const AboutSection = () => {
       <div className="container mx-auto px-4">
         <h2 
           ref={titleRef} 
-          className={`section-heading transition-all duration-[1200ms] ease-out ${
+          className={`section-heading transition-all duration-700 ease-out ${
             titleVisible ? 'reveal-on-scroll visible' : 'reveal-on-scroll'
           }`}
         >
@@ -32,13 +29,9 @@ const AboutSection = () => {
           <div className="md:col-span-2">
             <div 
               ref={profileRef}
-              className={`glass-card p-8 rounded-lg h-full flex flex-col justify-between transition-all duration-[1400ms] ease-out ${
+              className={`glass-card p-8 rounded-lg h-full flex flex-col justify-between transition-all duration-700 ease-out ${
                 profileVisible ? 'reveal-left-scroll visible' : 'reveal-left-scroll'
               }`}
-              style={{ 
-                transitionTimingFunction: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)',
-                willChange: 'transform, opacity'
-              }}
             >
               <div>
                 <h3 className="text-2xl font-display font-bold mb-4 text-center md:text-left">Profile Summary</h3>
@@ -53,8 +46,8 @@ const AboutSection = () => {
               
               <div className="flex flex-col gap-6">
                 <div className="flex items-start gap-4 group">
-                  <div className="w-12 h-12 rounded-full bg-secondary/50 backdrop-blur-sm flex items-center justify-center border border-blue-500/30 transition-all duration-500 ease-out group-hover:scale-110 group-hover:border-blue-400/50 apple-button">
-                    <Briefcase className="text-blue-400 transition-all duration-300" size={20} />
+                  <div className="w-12 h-12 rounded-full bg-secondary/50 backdrop-blur-sm flex items-center justify-center border border-blue-500/30 transition-all duration-300 ease-out group-hover:scale-105 group-hover:border-blue-400/50 apple-button">
+                    <Briefcase className="text-blue-400 transition-all duration-200" size={20} />
                   </div>
                   <div>
                     <h4 className="font-semibold text-lg">Current Position</h4>
@@ -63,8 +56,8 @@ const AboutSection = () => {
                 </div>
                 
                 <div className="flex items-start gap-4 group">
-                  <div className="w-12 h-12 rounded-full bg-secondary/50 backdrop-blur-sm flex items-center justify-center border border-blue-500/30 transition-all duration-500 ease-out group-hover:scale-110 group-hover:border-blue-400/50 apple-button">
-                    <GraduationCap className="text-blue-400 transition-all duration-300" size={20} />
+                  <div className="w-12 h-12 rounded-full bg-secondary/50 backdrop-blur-sm flex items-center justify-center border border-blue-500/30 transition-all duration-300 ease-out group-hover:scale-105 group-hover:border-blue-400/50 apple-button">
+                    <GraduationCap className="text-blue-400 transition-all duration-200" size={20} />
                   </div>
                   <div>
                     <h4 className="font-semibold text-lg">Education</h4>
@@ -78,13 +71,9 @@ const AboutSection = () => {
           <div className="md:col-span-1">
             <div 
               ref={contactRef}
-              className={`glass-card p-8 rounded-lg h-full flex flex-col justify-between transition-all duration-[1400ms] ease-out ${
+              className={`glass-card p-8 rounded-lg h-full flex flex-col justify-between transition-all duration-700 ease-out ${
                 contactVisible ? 'reveal-right-scroll visible' : 'reveal-right-scroll'
               }`}
-              style={{ 
-                transitionTimingFunction: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)',
-                willChange: 'transform, opacity'
-              }}
             >
               <div>
                 <h3 className="text-2xl font-display font-bold mb-6 text-center md:text-left">Contact Details</h3>
@@ -92,8 +81,8 @@ const AboutSection = () => {
               
               <div className="flex flex-col gap-6">
                 <div className="flex items-start gap-4 group">
-                  <div className="w-12 h-12 rounded-full bg-secondary/50 backdrop-blur-sm flex items-center justify-center border border-blue-500/30 transition-all duration-500 ease-out group-hover:scale-110 group-hover:border-blue-400/50 apple-button">
-                    <MapPin className="text-blue-400 transition-all duration-300" size={20} />
+                  <div className="w-12 h-12 rounded-full bg-secondary/50 backdrop-blur-sm flex items-center justify-center border border-blue-500/30 transition-all duration-300 ease-out group-hover:scale-105 group-hover:border-blue-400/50 apple-button">
+                    <MapPin className="text-blue-400 transition-all duration-200" size={20} />
                   </div>
                   <div>
                     <h4 className="font-semibold text-lg">Location</h4>
@@ -102,8 +91,8 @@ const AboutSection = () => {
                 </div>
                 
                 <div className="flex items-start gap-4 group">
-                  <div className="w-12 h-12 rounded-full bg-secondary/50 backdrop-blur-sm flex items-center justify-center border border-blue-500/30 transition-all duration-500 ease-out group-hover:scale-110 group-hover:border-blue-400/50 apple-button">
-                    <Phone className="text-blue-400 transition-all duration-300" size={20} />
+                  <div className="w-12 h-12 rounded-full bg-secondary/50 backdrop-blur-sm flex items-center justify-center border border-blue-500/30 transition-all duration-300 ease-out group-hover:scale-105 group-hover:border-blue-400/50 apple-button">
+                    <Phone className="text-blue-400 transition-all duration-200" size={20} />
                   </div>
                   <div>
                     <h4 className="font-semibold text-lg">Phone</h4>
@@ -112,12 +101,12 @@ const AboutSection = () => {
                 </div>
                 
                 <div className="flex items-start gap-4 group">
-                  <div className="w-12 h-12 rounded-full bg-secondary/50 backdrop-blur-sm flex items-center justify-center border border-blue-500/30 transition-all duration-500 ease-out group-hover:scale-110 group-hover:border-blue-400/50 apple-button">
-                    <Mail className="text-blue-400 transition-all duration-300" size={20} />
+                  <div className="w-12 h-12 rounded-full bg-secondary/50 backdrop-blur-sm flex items-center justify-center border border-blue-500/30 transition-all duration-300 ease-out group-hover:scale-105 group-hover:border-blue-400/50 apple-button">
+                    <Mail className="text-blue-400 transition-all duration-200" size={20} />
                   </div>
                   <div>
                     <h4 className="font-semibold text-lg">Email</h4>
-                    <a href="mailto:arjunguptain@outlook.com" className="text-muted-foreground hover:text-blue-400 transition-colors duration-300 apple-button">
+                    <a href="mailto:arjunguptain@outlook.com" className="text-muted-foreground hover:text-blue-400 transition-colors duration-200 apple-button">
                       arjunguptain@outlook.com
                     </a>
                   </div>

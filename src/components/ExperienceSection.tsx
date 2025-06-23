@@ -3,22 +3,22 @@ import { Calendar } from "lucide-react";
 import useScrollAnimation from "@/hooks/useScrollAnimation";
 
 const ExperienceSection = () => {
-  const { elementRef: titleRef, isVisible: titleVisible } = useScrollAnimation<HTMLHeadingElement>({ delay: 200 });
-  const { elementRef: cardRef, isVisible: cardVisible } = useScrollAnimation<HTMLDivElement>({ delay: 400 });
+  const { elementRef: titleRef, isVisible: titleVisible } = useScrollAnimation<HTMLHeadingElement>({ delay: 100 });
+  const { elementRef: cardRef, isVisible: cardVisible } = useScrollAnimation<HTMLDivElement>({ delay: 200 });
 
   return (
     <section id="experience" className="gradient-bg">
       <div className="container mx-auto px-4">
         <h2 
           ref={titleRef}
-          className={`section-heading transition-all duration-1000 ${titleVisible ? 'reveal-on-scroll visible' : 'reveal-on-scroll'}`}
+          className={`section-heading transition-all duration-700 ${titleVisible ? 'reveal-on-scroll visible' : 'reveal-on-scroll'}`}
         >
           Work Experience
         </h2>
         
         <div 
           ref={cardRef}
-          className={`glass-card p-6 md:p-8 rounded-lg transition-all duration-1000 ${cardVisible ? 'reveal-left-scroll visible' : 'reveal-left-scroll'}`}
+          className={`glass-card p-6 md:p-8 rounded-lg transition-all duration-700 ${cardVisible ? 'reveal-left-scroll visible' : 'reveal-left-scroll'}`}
         >
           <div className="flex flex-col md:flex-row justify-between mb-4">
             <div>
