@@ -34,6 +34,7 @@ const EducationSection = () => {
               </div>
             </div>
             
+            <p className="text-muted-foreground">Overall CGPA: 7.121</p>
             <p className="text-muted-foreground mb-4">Major in Computer Science, Mathematics and Physics</p>
             
             <div>
