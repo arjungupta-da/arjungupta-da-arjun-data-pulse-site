@@ -1,15 +1,11 @@
-
 import { Linkedin, Mail } from "lucide-react";
-
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-
-  return (
-    <footer className="bg-secondary/30 backdrop-blur-sm border-t border-blue-500/20 py-8">
+  return <footer className="bg-secondary/30 backdrop-blur-sm border-t border-blue-500/20 py-8">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center justify-between">
           <div className="mb-4 md:mb-0">
-            <p className="text-gradient font-display font-bold text-xl">ARJUN GUPTA</p>
+            <p className="text-gradient font-display font-bold text-xl text-center">ARJUN GUPTA</p>
             <p className="text-sm text-muted-foreground">Data Analytics and Programming Trainer</p>
           </div>
           
@@ -35,8 +31,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
