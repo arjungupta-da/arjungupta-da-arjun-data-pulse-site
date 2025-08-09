@@ -33,7 +33,7 @@ const ContactSection = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="flex items-start gap-4 group">
                 <div className="w-12 h-12 rounded-full bg-secondary/50 backdrop-blur-sm flex items-center justify-center border border-blue-500/30 transition-all duration-300 ease-out group-hover:scale-105 group-hover:border-blue-400/50 apple-button">
-                  <MapPin className="text-blue-400 transition-all duration-200" size={20} />
+                  <MapPin className="text-primary transition-all duration-200" size={20} aria-hidden="true" focusable="false" />
                 </div>
                 <div>
                   <h4 className="font-semibold text-lg">Location</h4>
@@ -43,7 +43,7 @@ const ContactSection = () => {
               
               <div className="flex items-start gap-4 group">
                 <div className="w-12 h-12 rounded-full bg-secondary/50 backdrop-blur-sm flex items-center justify-center border border-blue-500/30 transition-all duration-300 ease-out group-hover:scale-105 group-hover:border-blue-400/50 apple-button">
-                  <Mail className="text-blue-400 transition-all duration-200" size={20} />
+                  <Mail className="text-primary transition-all duration-200" size={20} aria-hidden="true" focusable="false" />
                 </div>
                 <div>
                   <h4 className="font-semibold text-lg">Email</h4>
@@ -55,7 +55,7 @@ const ContactSection = () => {
               
               <div className="flex items-start gap-4 group">
                 <div className="w-12 h-12 rounded-full bg-secondary/50 backdrop-blur-sm flex items-center justify-center border border-blue-500/30 transition-all duration-300 ease-out group-hover:scale-105 group-hover:border-blue-400/50 apple-button">
-                  <Phone className="text-blue-400 transition-all duration-200" size={20} />
+                  <Phone className="text-primary transition-all duration-200" size={20} aria-hidden="true" focusable="false" />
                 </div>
                 <div>
                   <h4 className="font-semibold text-lg">Phone</h4>
@@ -67,7 +67,7 @@ const ContactSection = () => {
               
               <div className="flex items-start gap-4 group">
                 <div className="w-12 h-12 rounded-full bg-secondary/50 backdrop-blur-sm flex items-center justify-center border border-blue-500/30 transition-all duration-300 ease-out group-hover:scale-105 group-hover:border-blue-400/50 apple-button">
-                  <Linkedin className="text-blue-400 transition-all duration-200" size={20} />
+                  <Linkedin className="text-primary transition-all duration-200" size={20} aria-hidden="true" focusable="false" />
                 </div>
                 <div>
                   <h4 className="font-semibold text-lg">LinkedIn</h4>
