@@ -5,19 +5,43 @@ import { useEffect } from "react";
 
 const HeroSection = () => {
   useEffect(() => {
-    // Load LinkedIn badge script
-    const script = document.createElement('script');
-    script.src = 'https://platform.linkedin.com/badges/js/profile.js';
-    script.async = true;
-    script.defer = true;
-    script.type = 'text/javascript';
-    document.head.appendChild(script);
-    return () => {
-      // Cleanup script on unmount
-      const existingScript = document.querySelector('script[src="https://platform.linkedin.com/badges/js/profile.js"]');
-      if (existingScript) {
-        document.head.removeChild(existingScript);
+    // Defer loading LinkedIn script until user intent (hover/focus on any LinkedIn link)
+    let loaded = false;
+    const src = 'https://platform.linkedin.com/badges/js/profile.js';
+
+    const loadScript = () => {
+      if (loaded || document.querySelector(`script[src="${src}"]`)) return;
+      loaded = true;
+      const script = document.createElement('script');
+      script.src = src;
+      script.async = true;
+      script.defer = true;
+      script.type = 'text/javascript';
+      document.head.appendChild(script);
+    };
+
+    const handler = (e: Event) => {
+      const target = e.target as HTMLElement | null;
+      const anchor = target?.closest?.('a[href*="linkedin.com"]');
+      if (anchor) {
+        // Load as soon as the user interacts with any LinkedIn link
+        loadScript();
+        removeListeners();
       }
+    };
+
+    const removeListeners = () => {
+      document.removeEventListener('mouseover', handler, true);
+      document.removeEventListener('focusin', handler, true);
+      document.removeEventListener('touchstart', handler, true);
+    };
+
+    document.addEventListener('mouseover', handler, true);
+    document.addEventListener('focusin', handler, true);
+    document.addEventListener('touchstart', handler, true);
+
+    return () => {
+      removeListeners();
     };
   }, []);
 
