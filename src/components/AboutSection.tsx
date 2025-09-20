@@ -36,30 +36,28 @@ const AboutSection = () => {
               <div>
                 <h3 className="text-2xl font-display font-bold mb-4 text-center md:text-left">Profile Summary</h3>
                 <p className="text-muted-foreground mb-6 leading-relaxed">
-                  Experienced Data Analyst and Programming Trainer specializing in transforming complex datasets into actionable business insights. With expertise in Python, SQL, Excel, Power BI, and data visualization tools, I help organizations make data-driven decisions that drive growth and efficiency.
+                  Dedicated to mentoring aspiring analysts and developers through practical, hands-on training in Artificial Intelligence, C, C++, Data Structures and Algorithms, Google Looker Studio, Microsoft Excel, Microsoft Power BI, Python, Microsoft SQL Server, Statistics and Tableau. I specialize in breaking down complex data concepts into easy-to-understand modules, enabling learners to transform raw data into strategic insights. 
 
-                  As a certified trainer at Delhi School of Skill Development, I mentor aspiring data analysts and developers through comprehensive hands-on training programs. My curriculum covers Python programming, SQL database management, Microsoft Excel advanced analytics, Power BI dashboard creation, Google Sheets automation, Tableau visualization, and statistical analysis. I focus on practical, real-world applications that prepare students for immediate industry impact.
+                  In my role, I design and deliver comprehensive training sessions, guiding students to build interactive dashboards and insightful reports that support data-driven decision-making. My focus is on nurturing both technical skills and analytical thinking. 
 
-                  My approach combines technical expertise with effective teaching methodologies, breaking down complex data science concepts into digestible modules. I guide students through building interactive dashboards, creating automated reports, and developing analytical frameworks that support strategic decision-making.
-
-                  I hold a Bachelor of Science in Physical Sciences with Computer Science from Keshav Mahavidyalaya (2024), which provides a strong foundation in both analytical thinking and technical implementation. This background enables me to bridge the gap between theoretical data science concepts and practical business applications.
+                  I hold a Bachelor of Science in Physical Sciences with Computer Science from Keshav Mahavidyalaya, completed in June 2024. This academic background strengthens my teaching by blending computer science fundamentals with a deep understanding of analytical frameworks and real-world applications.
                 </p>
               </div>
               
               <div className="flex flex-col gap-6">
                 <div className="flex items-start gap-4 group">
-                    <div className="w-12 h-12 rounded-full bg-secondary/50 backdrop-blur-sm flex items-center justify-center border border-primary/30 transition-all duration-300 ease-out group-hover:scale-105 group-hover:border-primary/50 apple-button">
-                      <Briefcase className="text-primary transition-all duration-200" size={20} />
+                  <div className="w-12 h-12 rounded-full bg-secondary/50 backdrop-blur-sm flex items-center justify-center border border-blue-500/30 transition-all duration-300 ease-out group-hover:scale-105 group-hover:border-blue-400/50 apple-button">
+                    <Briefcase className="text-blue-400 transition-all duration-200" size={20} />
                   </div>
                   <div>
                     <h4 className="font-semibold text-lg">Current Position</h4>
-                    <p className="text-muted-foreground">Data Analyst & Programming Trainer at Delhi School of Skill Development</p>
+                    <p className="text-muted-foreground">Data Analytics and Programming Trainer at Delhi School of Skill Development</p>
                   </div>
                 </div>
                 
                 <div className="flex items-start gap-4 group">
-                    <div className="w-12 h-12 rounded-full bg-secondary/50 backdrop-blur-sm flex items-center justify-center border border-primary/30 transition-all duration-300 ease-out group-hover:scale-105 group-hover:border-primary/50 apple-button">
-                      <GraduationCap className="text-primary transition-all duration-200" size={20} />
+                  <div className="w-12 h-12 rounded-full bg-secondary/50 backdrop-blur-sm flex items-center justify-center border border-blue-500/30 transition-all duration-300 ease-out group-hover:scale-105 group-hover:border-blue-400/50 apple-button">
+                    <GraduationCap className="text-blue-400 transition-all duration-200" size={20} />
                   </div>
                   <div>
                     <h4 className="font-semibold text-lg">Education</h4>
@@ -83,8 +81,8 @@ const AboutSection = () => {
               
               <div className="flex flex-col gap-6">
                 <div className="flex items-start gap-4 group">
-                    <div className="w-12 h-12 rounded-full bg-secondary/50 backdrop-blur-sm flex items-center justify-center border border-primary/30 transition-all duration-300 ease-out group-hover:scale-105 group-hover:border-primary/50 apple-button">
-                      <MapPin className="text-primary transition-all duration-200" size={20} />
+                  <div className="w-12 h-12 rounded-full bg-secondary/50 backdrop-blur-sm flex items-center justify-center border border-blue-500/30 transition-all duration-300 ease-out group-hover:scale-105 group-hover:border-blue-400/50 apple-button">
+                    <MapPin className="text-blue-400 transition-all duration-200" size={20} />
                   </div>
                   <div>
                     <h4 className="font-semibold text-lg">Location</h4>
@@ -93,8 +91,8 @@ const AboutSection = () => {
                 </div>
                 
                 <div className="flex items-start gap-4 group">
-                    <div className="w-12 h-12 rounded-full bg-secondary/50 backdrop-blur-sm flex items-center justify-center border border-primary/30 transition-all duration-300 ease-out group-hover:scale-105 group-hover:border-primary/50 apple-button">
-                      <Phone className="text-primary transition-all duration-200" size={20} />
+                  <div className="w-12 h-12 rounded-full bg-secondary/50 backdrop-blur-sm flex items-center justify-center border border-blue-500/30 transition-all duration-300 ease-out group-hover:scale-105 group-hover:border-blue-400/50 apple-button">
+                    <Phone className="text-blue-400 transition-all duration-200" size={20} />
                   </div>
                   <div>
                     <h4 className="font-semibold text-lg">Phone</h4>
@@ -103,12 +101,12 @@ const AboutSection = () => {
                 </div>
                 
                 <div className="flex items-start gap-4 group">
-                    <div className="w-12 h-12 rounded-full bg-secondary/50 backdrop-blur-sm flex items-center justify-center border border-primary/30 transition-all duration-300 ease-out group-hover:scale-105 group-hover:border-primary/50 apple-button">
-                      <Mail className="text-primary transition-all duration-200" size={20} />
+                  <div className="w-12 h-12 rounded-full bg-secondary/50 backdrop-blur-sm flex items-center justify-center border border-blue-500/30 transition-all duration-300 ease-out group-hover:scale-105 group-hover:border-blue-400/50 apple-button">
+                    <Mail className="text-blue-400 transition-all duration-200" size={20} />
                   </div>
                   <div>
                     <h4 className="font-semibold text-lg">Email</h4>
-                    <a href="mailto:arjunguptain@outlook.com" className="text-muted-foreground hover:text-primary transition-colors duration-200 apple-button">
+                    <a href="mailto:arjunguptain@outlook.com" className="text-muted-foreground hover:text-blue-400 transition-colors duration-200 apple-button">
                       arjunguptain@outlook.com
                     </a>
                   </div>
