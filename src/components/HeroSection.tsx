@@ -50,12 +50,12 @@ const HeroSection = () => {
       <div className="section-container flex flex-col md:flex-row gap-12 items-center relative z-10">
         <div className="flex-1 order-2 md:order-1 max-w-xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-extrabold title-spacing reveal reveal-delay-1">
-            <span className="text-gradient">Arjun Gupta Data Analyst</span>
+            <span className="text-gradient">Arjun Gupta</span>
           </h1>
           
           <div className="flex w-full justify-center reveal reveal-delay-2">
             <h2 className="text-xl md:text-2xl font-bold subtitle-spacing text-primary">
-              Data Analytics & Programming Trainer
+              Data Analyst & Analytics Trainer
             </h2>
           </div>
           
@@ -102,23 +102,26 @@ const HeroSection = () => {
         
         <div className="flex-1 order-1 md:order-2 flex justify-center reveal-right reveal-delay-2">
           <div className="relative">
-            <div className="hero-avatar float-animation relative group apple-card">
-              <picture>
-                <source type="image/avif" srcSet="/src/assets/images/avatars/avatar-base.avif" />
-                <source type="image/webp" srcSet="/src/assets/images/avatars/avatar-base.webp" />
+            <div className="w-36 h-36 sm:w-56 sm:h-56 md:w-72 md:h-72 lg:w-80 lg:h-80 xl:w-96 xl:h-96 rounded-full overflow-hidden shadow-2xl shadow-primary/30 float-animation relative group apple-card"
+                 style={{
+                   background: `linear-gradient(135deg, hsl(var(--accent)) 0%, hsl(178 50% 85%) 100%)`,
+                   padding: '4px'
+                 }}>
+              <div className="w-full h-full rounded-full overflow-hidden bg-background">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-accent/20 pointer-events-none transition-opacity duration-500 group-hover:opacity-75 rounded-full"></div>
                 <img 
-                  src="/src/assets/images/avatars/avatar-base.png" 
+                  src="/src/assets/arjun-portrait.png" 
                   alt="Arjun Gupta Data Analyst profile picture" 
-                  className="transition-transform duration-700 group-hover:scale-110" 
-                  loading="eager"
+                  className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-110 rounded-full" 
                   style={{ aspectRatio: '1/1' }} 
                 />
-              </picture>
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-accent/20 pointer-events-none transition-opacity duration-500 group-hover:opacity-75 rounded-full"></div>
+              </div>
             </div>
             
-            <div className="avatar-monogram float-animation">
-              <span className="font-display font-bold">DA</span>
+            <div className="absolute -bottom-2 -right-2 bg-secondary/90 backdrop-blur-sm p-2 rounded-full float-animation shadow-xl border border-primary/30">
+              <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full bg-gradient-to-r from-primary to-accent flex items-center justify-center shadow-lg">
+                <span className="font-display font-bold text-xs sm:text-sm md:text-base text-white">DA</span>
+              </div>
             </div>
           </div>
         </div>

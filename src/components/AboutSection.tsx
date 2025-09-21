@@ -22,7 +22,7 @@ const AboutSection = () => {
             titleVisible ? 'reveal-on-scroll visible' : 'reveal-on-scroll'
           }`}
         >
-          About Arjun Gupta Data Analyst
+          About Me
         </h2>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -36,13 +36,13 @@ const AboutSection = () => {
               <div>
                 <h3 className="text-2xl font-display font-bold mb-4 text-center md:text-left">Profile Summary</h3>
                 <p className="text-muted-foreground mb-6 leading-relaxed">
-                  Arjun Gupta is a Data Analyst & Analytics Trainer based in Delhi, India. He specializes in Python, SQL, Excel, Power BI and Google Sheets to deliver dashboards, automation, and clear data visualizations that drive decisions. As a trainer, Arjun has led hands-on cohorts and corporate sessions teaching programming and analytics fundamentals, helping learners build production-ready dashboards and automation pipelines.
+                  Experienced Data Analyst and Programming Trainer specializing in transforming complex datasets into actionable business insights. With expertise in Python, SQL, Excel, Power BI, and data visualization tools, I help organizations make data-driven decisions that drive growth and efficiency.
 
-                  With expertise in Python programming, SQL database management, Microsoft Excel advanced analytics, Power BI dashboard development, Google Sheets automation, Tableau visualization, and statistical analysis, Arjun delivers comprehensive training that prepares students for immediate industry impact. His approach combines technical expertise with effective teaching methodologies, breaking down complex data science concepts into digestible modules.
+                  As a certified trainer at Delhi School of Skill Development, I mentor aspiring data analysts and developers through comprehensive hands-on training programs. My curriculum covers Python programming, SQL database management, Microsoft Excel advanced analytics, Power BI dashboard creation, Google Sheets automation, Tableau visualization, and statistical analysis. I focus on practical, real-world applications that prepare students for immediate industry impact.
 
-                  As a certified Data Analytics & Programming Trainer at Delhi School of Skill Development, Arjun guides students through building interactive dashboards, creating automated reports, and developing analytical frameworks that support strategic decision-making. Selected collaborations include training simulations with National Australia Bank (data visualization & simulation) and CSR training programs with Infosys.
+                  My approach combines technical expertise with effective teaching methodologies, breaking down complex data science concepts into digestible modules. I guide students through building interactive dashboards, creating automated reports, and developing analytical frameworks that support strategic decision-making.
 
-                  Arjun holds a Bachelor of Science in Physical Sciences with Computer Science from Keshav Mahavidyalaya (2024), which provides a strong foundation in both analytical thinking and technical implementation. This background enables him to bridge the gap between theoretical data science concepts and practical business applications, making him an expert Data Analytics Trainer in Delhi and across India.
+                  I hold a Bachelor of Science in Physical Sciences with Computer Science from Keshav Mahavidyalaya (2024), which provides a strong foundation in both analytical thinking and technical implementation. This background enables me to bridge the gap between theoretical data science concepts and practical business applications.
                 </p>
               </div>
               

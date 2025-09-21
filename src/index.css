@@ -7,52 +7,49 @@
 
 @layer base {
   :root {
-    /* Global theme variables based on new color scheme */
-    --bg-dark: 7 16 35; /* #071023 */
-    --text-offwhite: 248 250 252; /* #F8FAFC */
-    --primary-teal: 69 162 158; /* #45A29E */
-    --highlight-cyan: 102 252 241; /* #66FCF1 */
-    --skin-accent: 231 201 176; /* #E7C9B0 */
-    --muted-alpha: rgba(255,255,255,0.08);
-    --max-width: 1200px;
-    --avatar-gradient-start: 59 211 255; /* #3bd3ff - azure */
-    --avatar-gradient-end: 139 232 255; /* #8be8ff - pale blue */
-    --ring-width: 6px;
-
-    /* Original design system mappings */
-    --background: var(--bg-dark);
-    --foreground: var(--text-offwhite);
-    --card: var(--bg-dark);
-    --card-foreground: var(--text-offwhite);
-    --popover: var(--bg-dark);
-    --popover-foreground: var(--text-offwhite);
-    --primary: var(--primary-teal);
-    --primary-foreground: var(--text-offwhite);
-    --secondary: 37 99 235; /* #2563eb */
-    --secondary-foreground: var(--text-offwhite);
-    --muted: 23 23 23; /* #171717 */
-    --muted-foreground: 161 161 170; /* #a1a1aa */
-    --accent: var(--highlight-cyan);
-    --accent-foreground: var(--bg-dark);
-    --destructive: 239 68 68; /* #ef4444 */
-    --destructive-foreground: var(--text-offwhite);
-    --border: 39 39 42; /* #27272a */
-    --input: 39 39 42; /* #27272a */
-    --ring: var(--primary-teal);
+    /* Dark background base */
+    --background: 222 84% 5%;
+    --foreground: 210 40% 98%;
+    --card: 222 84% 5%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222 84% 5%;
+    --popover-foreground: 210 40% 98%;
+    
+    /* Primary: Teal-blue accent #45A29E */
+    --primary: 178 39% 46%;
+    --primary-foreground: 210 40% 98%;
+    
+    --secondary: 217 33% 18%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217 33% 18%;
+    --muted-foreground: 215 20% 65%;
+    
+    /* Accent: Softer cyan highlights #66FCF1 */
+    --accent: 177 97% 69%;
+    --accent-foreground: 222 84% 5%;
+    
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217 33% 18%;
+    --input: 217 33% 18%;
+    --ring: 178 39% 46%;
     --radius: 0.75rem;
     
     /* Sidebar colors */
-    --sidebar-background: var(--bg-dark);
-    --sidebar-foreground: 148 163 184; /* #94a3b8 */
-    --sidebar-primary: 241 245 249; /* #f1f5f9 */
-    --sidebar-primary-foreground: 15 23 42; /* #0f172a */
-    --sidebar-accent: 226 232 240; /* #e2e8f0 */
-    --sidebar-accent-foreground: 15 23 42; /* #0f172a */
-    --sidebar-border: 148 163 184; /* #94a3b8 */
-    --sidebar-ring: 148 163 184; /* #94a3b8 */
+    --sidebar-background: 222 84% 5%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 178 39% 46%;
+    --sidebar-primary-foreground: 222 84% 5%;
+    --sidebar-accent: 217 33% 18%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 217 33% 18%;
+    --sidebar-ring: 178 39% 46%;
     
     /* Gradient variables for avatar border */
     --gradient-avatar: linear-gradient(135deg, hsl(var(--accent)) 0%, hsl(178 50% 85%) 100%);
+    
+    /* Skin tone accent for balance */
+    --skin-accent: 28 76% 67%;
   }
 
   /* Performance-optimized animations */
@@ -317,53 +314,6 @@
   /* Smooth scrolling enhancement */
   html {
     scroll-behavior: smooth;
-  }
-
-  /* Hero avatar visual styles */
-  .hero-avatar {
-    position: relative;
-    display: inline-block;
-    border-radius: 50%;
-    padding: calc(var(--ring-width));
-    background: linear-gradient(135deg, hsl(var(--avatar-gradient-start)), hsl(var(--avatar-gradient-end)));
-    box-shadow: 0 8px 30px rgba(0,0,0,0.6);
-  }
-
-  .hero-avatar img {
-    display: block;
-    border-radius: 50%;
-    width: 100%;
-    height: auto;
-    background: hsl(var(--bg-dark));
-  }
-
-  /* Responsive avatar sizes */
-  :root { --avatar-size: 360px; }
-  @media (max-width: 1024px) { :root { --avatar-size: 220px; } }
-  @media (max-width: 480px) { :root { --avatar-size: 140px; } }
-
-  .hero-avatar { 
-    width: var(--avatar-size); 
-    height: var(--avatar-size); 
-  }
-
-  /* Monogram badge */
-  .avatar-monogram {
-    position: absolute;
-    right: -8px;
-    bottom: -8px;
-    width: 40px; 
-    height: 40px;
-    border-radius: 50%;
-    background: linear-gradient(180deg, hsl(var(--primary-teal)), hsl(var(--highlight-cyan)));
-    color: hsl(var(--text-offwhite));
-    display: flex; 
-    align-items: center; 
-    justify-content: center;
-    font-weight: 700; 
-    font-size: 14px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
-    border: 2px solid rgba(255,255,255,0.06);
   }
 
   /* Accessibility - reduced motion */
