@@ -1,14 +1,11 @@
-
 import { Linkedin, Mail, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect } from "react";
-
 const HeroSection = () => {
   useEffect(() => {
     // Defer loading LinkedIn script until user intent (hover/focus on any LinkedIn link)
     let loaded = false;
     const src = 'https://platform.linkedin.com/badges/js/profile.js';
-
     const loadScript = () => {
       if (loaded || document.querySelector(`script[src="${src}"]`)) return;
       loaded = true;
@@ -19,7 +16,6 @@ const HeroSection = () => {
       script.type = 'text/javascript';
       document.head.appendChild(script);
     };
-
     const handler = (e: Event) => {
       const target = e.target as HTMLElement | null;
       const anchor = target?.closest?.('a[href*="linkedin.com"]');
@@ -29,24 +25,19 @@ const HeroSection = () => {
         removeListeners();
       }
     };
-
     const removeListeners = () => {
       document.removeEventListener('mouseover', handler, true);
       document.removeEventListener('focusin', handler, true);
       document.removeEventListener('touchstart', handler, true);
     };
-
     document.addEventListener('mouseover', handler, true);
     document.addEventListener('focusin', handler, true);
     document.addEventListener('touchstart', handler, true);
-
     return () => {
       removeListeners();
     };
   }, []);
-
-  return (
-    <section id="home" className="min-h-screen flex items-center justify-center gradient-bg relative overflow-hidden">
+  return <section id="home" className="min-h-screen flex items-center justify-center gradient-bg relative overflow-hidden">
       <div className="section-container flex flex-col md:flex-row gap-12 items-center relative z-10">
         <div className="flex-1 order-2 md:order-1 max-w-xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-extrabold title-spacing reveal reveal-delay-1">
@@ -54,9 +45,7 @@ const HeroSection = () => {
           </h1>
           
           <div className="flex w-full justify-center reveal reveal-delay-2">
-            <h2 className="text-xl md:text-2xl font-bold subtitle-spacing text-primary">
-              Data Analyst & Analytics Trainer
-            </h2>
+            <h2 className="text-xl md:text-2xl font-bold subtitle-spacing text-primary">Data Analyst & Programming Trainer</h2>
           </div>
           
           <p className="text-muted-foreground text-base md:text-lg paragraph-spacing max-w-xl mx-auto reveal reveal-delay-3">
@@ -80,21 +69,11 @@ const HeroSection = () => {
           </div>
           
           <div className="flex gap-4 mt-8 justify-center reveal reveal-delay-4">
-            <a 
-              href="https://in.linkedin.com/in/arjunguptain" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="w-12 h-12 rounded-full flex items-center justify-center bg-secondary/50 backdrop-blur-sm hover:bg-primary/20 text-muted-foreground hover:text-primary transition-all duration-500 border border-primary/20 hover:border-primary/40 gentle-hover"
-              aria-label="LinkedIn"
-            >
+            <a href="https://in.linkedin.com/in/arjunguptain" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full flex items-center justify-center bg-secondary/50 backdrop-blur-sm hover:bg-primary/20 text-muted-foreground hover:text-primary transition-all duration-500 border border-primary/20 hover:border-primary/40 gentle-hover" aria-label="LinkedIn">
               <Linkedin size={22} />
             </a>
             
-            <a 
-              href="mailto:arjunguptain@outlook.com" 
-              className="w-12 h-12 rounded-full flex items-center justify-center bg-secondary/50 backdrop-blur-sm hover:bg-primary/20 text-muted-foreground hover:text-primary transition-all duration-500 border border-primary/20 hover:border-primary/40 gentle-hover" 
-              aria-label="Email"
-            >
+            <a href="mailto:arjunguptain@outlook.com" className="w-12 h-12 rounded-full flex items-center justify-center bg-secondary/50 backdrop-blur-sm hover:bg-primary/20 text-muted-foreground hover:text-primary transition-all duration-500 border border-primary/20 hover:border-primary/40 gentle-hover" aria-label="Email">
               <Mail size={22} />
             </a>
           </div>
@@ -102,19 +81,15 @@ const HeroSection = () => {
         
         <div className="flex-1 order-1 md:order-2 flex justify-center reveal-right reveal-delay-2">
           <div className="relative">
-            <div className="w-36 h-36 sm:w-56 sm:h-56 md:w-72 md:h-72 lg:w-80 lg:h-80 xl:w-96 xl:h-96 rounded-full overflow-hidden shadow-2xl shadow-primary/30 float-animation relative group apple-card"
-                 style={{
-                   background: `linear-gradient(135deg, hsl(var(--accent)) 0%, hsl(178 50% 85%) 100%)`,
-                   padding: '4px'
-                 }}>
+            <div className="w-36 h-36 sm:w-56 sm:h-56 md:w-72 md:h-72 lg:w-80 lg:h-80 xl:w-96 xl:h-96 rounded-full overflow-hidden shadow-2xl shadow-primary/30 float-animation relative group apple-card" style={{
+            background: `linear-gradient(135deg, hsl(var(--accent)) 0%, hsl(178 50% 85%) 100%)`,
+            padding: '4px'
+          }}>
               <div className="w-full h-full rounded-full overflow-hidden bg-background">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-accent/20 pointer-events-none transition-opacity duration-500 group-hover:opacity-75 rounded-full"></div>
-                <img 
-                  src="/src/assets/arjun-portrait.png" 
-                  alt="Arjun Gupta Data Analyst profile picture" 
-                  className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-110 rounded-full" 
-                  style={{ aspectRatio: '1/1' }} 
-                />
+                <img src="/src/assets/arjun-portrait.png" alt="Arjun Gupta Data Analyst profile picture" className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-110 rounded-full" style={{
+                aspectRatio: '1/1'
+              }} />
               </div>
             </div>
             
@@ -131,8 +106,6 @@ const HeroSection = () => {
       <div className="absolute top-20 left-10 w-2 h-2 bg-blue-400/30 rounded-full animate-pulse"></div>
       <div className="absolute top-40 right-20 w-3 h-3 bg-cyan-400/30 rounded-full animate-pulse animation-delay-1000"></div>
       <div className="absolute bottom-20 left-20 w-1 h-1 bg-teal-400/30 rounded-full animate-pulse animation-delay-2000"></div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;
