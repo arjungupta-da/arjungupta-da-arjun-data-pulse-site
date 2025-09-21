@@ -69,7 +69,8 @@ export default {
 					magenta: '#D946EF',
 					orange: '#F97316',
 					amber: '#FBBF24'
-				}
+				},
+				"skin-accent": "hsl(var(--skin-accent))"
 			},
 			fontFamily: {
 				sans: ['Inter', 'sans-serif'],

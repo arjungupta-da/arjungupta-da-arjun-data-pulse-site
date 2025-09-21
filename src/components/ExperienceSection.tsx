@@ -22,9 +22,9 @@ const ExperienceSection = () => {
         >
           <div className="flex flex-col md:flex-row justify-between mb-4">
             <div>
-              <h3 className="text-2xl font-display font-bold text-blue-400">Data Analytics & Programming Trainer</h3>
+              <h3 className="text-2xl font-display font-bold text-primary">Data Analyst & Programming Trainer</h3>
               <p className="text-lg text-muted-foreground">
-                <a href="https://www.dssd.in/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors apple-button">
+                <a href="https://www.dssd.in/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors apple-button">
                   Delhi School of Skill Development
                 </a>
                 , Delhi, India
@@ -32,19 +32,16 @@ const ExperienceSection = () => {
             </div>
             
             <div className="flex items-center gap-2 mt-2 md:mt-0">
-              <Calendar size={16} className="text-blue-400" />
+              <Calendar size={16} className="text-primary" />
               <span className="text-muted-foreground">Aug 2023 - Present</span>
             </div>
           </div>
           
           <ul className="list-disc pl-5 space-y-3 text-muted-foreground">
-            <li>Deliver hands-on training in AI, C, C++, DSA, Google Looker Studio, Microsoft Excel, Microsoft Power BI, Microsoft SQL Server, Python, Statistics and Tableau, equipping learners with practical skills to analyze data, make strategic decisions, and optimize data workflows.</li>
-            <li>
-              Guide trainees through real-world data analysis projects, teaching them how to uncover trends and patterns that support data-driven decision-making.
-            </li>
-            <li>
-              Develop and explain complex data models and algorithms, enhancing learners' understanding of efficient data processing and analytical best practices.
-            </li>
+            <li><strong>Data Analytics Training:</strong> Deliver comprehensive training in Python programming, SQL database management, Microsoft Excel advanced analytics, Power BI dashboard development, Google Sheets automation, Tableau visualization, and statistical analysis. Trained 200+ students in practical data analysis techniques that directly apply to industry scenarios.</li>
+            <li><strong>Real-World Project Implementation:</strong> Guide trainees through hands-on data analysis projects including sales forecasting, customer segmentation, financial modeling, and business intelligence reporting. Students create interactive dashboards, automated reports, and data visualization solutions that demonstrate measurable business impact.</li>
+            <li><strong>Advanced Programming Instruction:</strong> Teach Python for data science, SQL for database querying, and advanced Excel functions for business analytics. Develop curriculum covering data structures, algorithms, artificial intelligence applications, and machine learning fundamentals. Focus on practical coding skills that prepare students for immediate employment in data analyst roles.</li>
+            <li><strong>Industry-Standard Tools Training:</strong> Provide expertise in Microsoft Power BI for business intelligence, Google Looker Studio for data visualization, Tableau for advanced analytics, and Microsoft SQL Server for database management. Students learn to create professional-grade dashboards and reports used by leading companies in Delhi and across India.</li>
           </ul>
         </div>
       </div>

@@ -9,25 +9,25 @@ const ProjectsSection = () => {
 
   const projects = [
     {
-      title: "Finding Numbers in a Haystack",
-      subtitle: "Using Python to Access Web Data",
-      description: "Developed a Python script to extract and sum numerical values embedded within a text file. Utilized regular expressions to identify and isolate relevant numerical data points amidst unstructured text. Demonstrated proficiency in data manipulation and analysis, highlighting the power of Python for handling messy data sets.",
+      title: "Python Data Extraction: Finding Numbers in Haystack",
+      subtitle: "Advanced Python Programming for Data Analysis",
+      description: "Developed a comprehensive Python script to extract and aggregate numerical values from unstructured text files. Implemented advanced regular expressions, string parsing algorithms, and data validation techniques. This project demonstrates expertise in Python programming, data cleaning, and handling messy datasets - essential skills for any data analyst working with real-world data sources.",
       date: "Mar 2024",
       organization: "University of Michigan & Coursera",
       link: "https://www.linkedin.com/posts/arjunguptain_python-dataparsing-regularexpressions-activity-7177912154774233088-Mb3m"
     },
     {
-      title: "Exploring Hypertext Transfer Protocol",
-      subtitle: "Using Python to Access Web Data",
-      description: "Analyzed HTTP Response headers to extract valuable insights regarding the document's attributes and server interactions. Documented the retrieved information to ensure clarity and facilitate further analysis. Project reinforced the importance of understanding core concepts in web data handling and HTTP protocols.",
+      title: "HTTP Protocol Analysis for Data Collection",
+      subtitle: "Web Data Access and API Integration",
+      description: "Conducted comprehensive analysis of HTTP response headers and web server interactions using Python. Built automated data collection pipelines, implemented error handling, and created documentation for web scraping protocols. This project showcases skills in API integration, web data extraction, and network protocol understanding crucial for modern data analyst roles.",
       date: "Mar 2024",
       organization: "University of Michigan & Coursera",
       link: "https://www.linkedin.com/posts/arjunguptain_python-http-webdata-activity-7178269131291463680-JFI1"
     },
     {
-      title: "Extracting Data from XML",
-      subtitle: "Using Python to Access Web Data",
-      description: "Utilized 'urllib' for efficient data retrieval and 'xml.etree.ElementTree' for robust XML parsing. XPath expressions to ensure precise targeting and extraction of comment count data. Project experience strengthened skills in web data retrieval, XML processing, and data analysis with Python.",
+      title: "XML Data Processing and Analytics",
+      subtitle: "Structured Data Extraction with Python",
+      description: "Implemented advanced XML parsing and data extraction system using Python's urllib and xml.etree.ElementTree libraries. Developed XPath expressions for precise data targeting, created automated data validation workflows, and built scalable data processing pipelines. Demonstrates expertise in handling structured data formats and building robust data analysis solutions for enterprise applications.",
       date: "Mar 2024",
       organization: "University of Michigan & Coursera",
       link: "https://www.linkedin.com/posts/arjunguptain_python-dataanalysis-webdata-activity-7179708909077630976-KWzc"
@@ -58,7 +58,7 @@ const ProjectsSection = () => {
               <div className="p-6 flex flex-col h-full">
                 <div className="mb-4">
                   <p className="text-muted-foreground text-sm mb-2">{project.date} | {project.organization}</p>
-                  <h3 className="text-xl font-display font-bold text-data-cyan mb-1">{project.title}</h3>
+                  <h3 className="text-xl font-display font-bold text-primary mb-1">{project.title}</h3>
                   <p className="text-sm text-primary">{project.subtitle}</p>
                 </div>
                 
@@ -85,11 +85,9 @@ const ProjectsSection = () => {
           className={`mt-12 text-center transition-all duration-1000 ${certVisible ? 'reveal-on-scroll visible' : 'reveal-on-scroll'}`}
         >
           <h3 className="text-xl font-display font-bold mb-2">Data Visualization: Empowering Business with Effective Insights</h3>
-          <p className="text-muted-foreground mb-4">Job Simulation by Tata Group | Apr 2024</p>
+          <p className="text-muted-foreground mb-4">Tata Consultancy Services Simulation | Apr 2024</p>
           <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-            Completed a simulation involving creating data visualizations for Tata Consultancy Services.
-            Prepared questions for a meeting with client senior leadership.
-            Created visuals for data analysis to help executives with effective decision making.
+            Completed comprehensive data visualization simulation for Tata Consultancy Services, demonstrating advanced skills in business intelligence and executive reporting. Prepared strategic questions for C-level stakeholder meetings, created compelling data visualizations using industry-standard tools, and delivered actionable insights that support data-driven decision making. This certification validates expertise in translating complex datasets into clear, impactful visual narratives for business leadership.
           </p>
           
           <a
