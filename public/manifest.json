@@ -1,11 +1,11 @@
 {
-  "name": "Arjun Gupta Data Analyst",
+  "name": "Arjun Gupta | Data Analyst & Analytics Trainer",
   "short_name": "Arjun Gupta",
-  "description": "Portfolio of Arjun Gupta - Data Analyst and Programming Trainer specializing in Python, SQL, Excel, Power BI.",
+  "description": "Portfolio of Arjun Gupta - Certified Data Analyst and Programming Trainer in Delhi. Expert in Python, SQL, Excel, Power BI.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#0d1017",
-  "theme_color": "#2563eb",
+  "background_color": "#0a0a0b",
+  "theme_color": "#45A29E",
   "orientation": "portrait-primary",
   "icons": [
     {
