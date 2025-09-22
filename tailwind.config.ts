@@ -70,7 +70,11 @@ export default {
 					orange: '#F97316',
 					amber: '#FBBF24'
 				},
-				"skin-accent": "hsl(var(--skin-accent))"
+				"skin-accent": "hsl(var(--skin-accent))",
+				"primary-teal": "hsl(var(--primary-teal))",
+				"highlight-cyan": "hsl(var(--highlight-cyan))",
+				"bg-dark": "hsl(var(--bg-dark))",
+				"text-offwhite": "hsl(var(--text-offwhite))"
 			},
 			fontFamily: {
 				sans: ['Inter', 'sans-serif'],
