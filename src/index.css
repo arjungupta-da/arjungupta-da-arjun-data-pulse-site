@@ -7,38 +7,38 @@
 
 @layer base {
   :root {
-    /* Global theme variables based on new color scheme */
-    --bg-dark: 7 16 35; /* #071023 */
-    --text-offwhite: 248 250 252; /* #F8FAFC */
-    --primary-teal: 69 162 158; /* #45A29E */
-    --highlight-cyan: 102 252 241; /* #66FCF1 */
-    --skin-accent: 231 201 176; /* #E7C9B0 */
+    /* Professional color scheme based on new portrait */
+    --bg-dark: 13 16 23; /* #0D1017 - Deep professional dark */
+    --text-offwhite: 250 250 250; /* #FAFAFA - Clean white text */
+    --primary-blue: 37 99 235; /* #2563EB - Professional blue */
+    --accent-gold: 245 158 11; /* #F59E0B - Warm gold accent */
+    --neutral-warm: 120 113 108; /* #78716C - Warm neutral from portrait */
     --muted-alpha: rgba(255,255,255,0.08);
     --max-width: 1200px;
-    --avatar-gradient-start: 59 211 255; /* #3bd3ff - azure */
-    --avatar-gradient-end: 139 232 255; /* #8be8ff - pale blue */
-    --ring-width: 6px;
+    --avatar-gradient-start: 37 99 235; /* Professional blue */
+    --avatar-gradient-end: 245 158 11; /* Warm gold */
+    --ring-width: 4px;
 
-    /* Original design system mappings */
+    /* Professional design system mappings */
     --background: var(--bg-dark);
     --foreground: var(--text-offwhite);
     --card: var(--bg-dark);
     --card-foreground: var(--text-offwhite);
     --popover: var(--bg-dark);
     --popover-foreground: var(--text-offwhite);
-    --primary: var(--primary-teal);
+    --primary: var(--primary-blue);
     --primary-foreground: var(--text-offwhite);
-    --secondary: 37 99 235; /* #2563eb */
+    --secondary: var(--neutral-warm);
     --secondary-foreground: var(--text-offwhite);
-    --muted: 23 23 23; /* #171717 */
-    --muted-foreground: 161 161 170; /* #a1a1aa */
-    --accent: var(--highlight-cyan);
+    --muted: 30 30 30; /* #1E1E1E */
+    --muted-foreground: 156 163 175; /* #9CA3AF */
+    --accent: var(--accent-gold);
     --accent-foreground: var(--bg-dark);
     --destructive: 239 68 68; /* #ef4444 */
     --destructive-foreground: var(--text-offwhite);
-    --border: 39 39 42; /* #27272a */
-    --input: 39 39 42; /* #27272a */
-    --ring: var(--primary-teal);
+    --border: 55 65 81; /* #374151 */
+    --input: 55 65 81; /* #374151 */
+    --ring: var(--primary-blue);
     --radius: 0.75rem;
     
     /* Sidebar colors */
@@ -51,8 +51,8 @@
     --sidebar-border: 148 163 184; /* #94a3b8 */
     --sidebar-ring: 148 163 184; /* #94a3b8 */
     
-    /* Gradient variables for avatar border */
-    --gradient-avatar: linear-gradient(135deg, hsl(var(--accent)) 0%, hsl(178 50% 85%) 100%);
+    /* Professional gradient variables */
+    --gradient-avatar: linear-gradient(135deg, hsl(var(--primary-blue)) 0%, hsl(var(--accent-gold)) 100%);
   }
 
   /* Performance-optimized animations */
@@ -112,18 +112,18 @@
     scroll-behavior: smooth;
   }
 
-  /* Unified, performance-optimized background */
+  /* Professional background gradient */
   body {
     @apply text-foreground antialiased;
     background: linear-gradient(
       135deg,
-      #0a0a0b 0%,
-      #0f1419 15%,
-      #1a202c 30%,
-      #0f1419 45%,
-      #1e2a3a 60%,
-      #0f1419 75%,
-      #0a0a0b 100%
+      #0d1017 0%,
+      #1a1f2e 15%,
+      #2d3748 30%,
+      #1a1f2e 45%,
+      #374151 60%,
+      #1a1f2e 75%,
+      #0d1017 100%
     );
     background-size: 400% 400%;
     background-attachment: fixed;
@@ -133,7 +133,7 @@
     will-change: background-position;
   }
 
-  /* Single overlay for subtle effects */
+  /* Professional overlay effects */
   body::before {
     content: '';
     position: fixed;
@@ -142,8 +142,8 @@
     width: 100%;
     height: 100%;
     background: 
-      radial-gradient(circle at 20% 30%, rgba(59, 130, 246, 0.08) 0%, transparent 50%),
-      radial-gradient(circle at 80% 70%, rgba(14, 165, 233, 0.06) 0%, transparent 50%);
+      radial-gradient(circle at 20% 30%, rgba(37, 99, 235, 0.08) 0%, transparent 50%),
+      radial-gradient(circle at 80% 70%, rgba(245, 158, 11, 0.06) 0%, transparent 50%);
     background-size: 100% 100%;
     pointer-events: none;
     z-index: -1;
@@ -264,7 +264,7 @@
   }
   
   .text-gradient {
-    @apply bg-gradient-to-r from-blue-400 via-cyan-500 to-teal-400 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-primary-blue via-accent-gold to-primary-blue bg-clip-text text-transparent;
     background-size: 200% 200%;
     animation: gradientShift 4s ease infinite;
     will-change: background-position;
@@ -282,7 +282,7 @@
 
   ::selection {
     @apply text-foreground;
-    background: rgba(59, 130, 246, 0.4);
+    background: rgba(37, 99, 235, 0.4);
   }
 
   .container {
@@ -320,12 +320,13 @@
   }
 
   /* Hero avatar visual styles */
+  /* Professional avatar gradient ring */
   .hero-avatar {
     position: relative;
     display: inline-block;
     border-radius: 50%;
     padding: calc(var(--ring-width));
-    background: linear-gradient(135deg, hsl(var(--avatar-gradient-start)), hsl(var(--avatar-gradient-end)));
+    background: linear-gradient(135deg, hsl(var(--primary-blue)), hsl(var(--accent-gold)));
     box-shadow: 0 8px 30px rgba(0,0,0,0.6);
   }
 
@@ -347,7 +348,7 @@
     height: var(--avatar-size); 
   }
 
-  /* Monogram badge */
+  /* Professional monogram badge styling */
   .avatar-monogram {
     position: absolute;
     right: -8px;
@@ -355,7 +356,7 @@
     width: 40px; 
     height: 40px;
     border-radius: 50%;
-    background: linear-gradient(180deg, hsl(var(--primary-teal)), hsl(var(--highlight-cyan)));
+    background: linear-gradient(180deg, hsl(var(--primary-blue)), hsl(var(--accent-gold)));
     color: hsl(var(--text-offwhite));
     display: flex; 
     align-items: center; 

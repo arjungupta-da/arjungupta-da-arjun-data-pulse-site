@@ -102,20 +102,16 @@ const HeroSection = () => {
         
         <div className="flex-1 order-1 md:order-2 flex justify-center reveal-right reveal-delay-2">
           <div className="relative">
-            <div className="hero-avatar float-animation relative group apple-card">
-              <picture>
-                <source type="image/avif" srcSet="/src/assets/images/avatars/avatar-base.avif" />
-                <source type="image/webp" srcSet="/src/assets/images/avatars/avatar-base.webp" />
-                <img 
-                  src="/src/assets/images/avatars/avatar-base.png" 
-                  alt="Arjun Gupta Data Analyst profile picture" 
-                  className="transition-transform duration-700 group-hover:scale-110" 
-                  loading="eager"
-                  style={{ aspectRatio: '1/1' }} 
-                />
-              </picture>
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-accent/20 pointer-events-none transition-opacity duration-500 group-hover:opacity-75 rounded-full"></div>
-            </div>
+			<div className="hero-avatar float-animation relative group apple-card">
+			  <img 
+			    src="/src/assets/images/avatars/avatar-base.png" 
+			    alt="Arjun Gupta Data Analyst profile picture" 
+			    className="transition-transform duration-700 group-hover:scale-110" 
+			    loading="eager"
+			    style={{ aspectRatio: '1/1' }} 
+			  />
+			  <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-accent/20 pointer-events-none transition-opacity duration-500 group-hover:opacity-75 rounded-full"></div>
+			</div>
             
             <div className="avatar-monogram float-animation">
               <span className="font-display font-bold">DA</span>
@@ -125,9 +121,9 @@ const HeroSection = () => {
       </div>
       
       {/* Animated background elements */}
-      <div className="absolute top-20 left-10 w-2 h-2 bg-blue-400/30 rounded-full animate-pulse"></div>
-      <div className="absolute top-40 right-20 w-3 h-3 bg-cyan-400/30 rounded-full animate-pulse animation-delay-1000"></div>
-      <div className="absolute bottom-20 left-20 w-1 h-1 bg-teal-400/30 rounded-full animate-pulse animation-delay-2000"></div>
+      <div className="absolute top-20 left-10 w-2 h-2 bg-primary/30 rounded-full animate-pulse"></div>
+      <div className="absolute top-40 right-20 w-3 h-3 bg-accent/30 rounded-full animate-pulse animation-delay-1000"></div>
+      <div className="absolute bottom-20 left-20 w-1 h-1 bg-primary/20 rounded-full animate-pulse animation-delay-2000"></div>
     </section>
   );
 };
