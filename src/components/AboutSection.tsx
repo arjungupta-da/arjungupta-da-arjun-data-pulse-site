@@ -58,37 +58,37 @@ const AboutSection = () => {
           </div>
           
           <div className="md:col-span-1">
-            <div ref={contactRef} className={`glass-card p-8 rounded-lg h-full flex flex-col justify-center items-center transition-all duration-700 ease-out ${contactVisible ? 'reveal-right-scroll visible' : 'reveal-right-scroll'}`}>
+            <div ref={contactRef} className={`glass-card p-8 rounded-lg h-full flex flex-col transition-all duration-700 ease-out ${contactVisible ? 'reveal-right-scroll visible' : 'reveal-right-scroll'}`}>
               <div className="text-center mb-8">
                 <h3 className="text-2xl font-display font-bold">Contact Details</h3>
               </div>
               
-              <div className="flex flex-col gap-6 items-center">
-                <div className="flex items-start gap-4 group">
-                    <div className="w-12 h-12 rounded-full bg-secondary/50 backdrop-blur-sm flex items-center justify-center border border-primary/30 transition-all duration-300 ease-out group-hover:scale-105 group-hover:border-primary/50 apple-button">
+              <div className="flex flex-col gap-6 flex-1 justify-center">
+                <div className="flex items-center gap-4 group">
+                    <div className="w-12 h-12 rounded-full bg-secondary/50 backdrop-blur-sm flex items-center justify-center border border-primary/30 transition-all duration-300 ease-out group-hover:scale-105 group-hover:border-primary/50 apple-button flex-shrink-0">
                       <MapPin className="text-primary transition-all duration-200" size={20} />
                   </div>
-                  <div>
+                  <div className="flex-1">
                     <h4 className="font-semibold text-lg">Location</h4>
                     <p className="text-muted-foreground">New Delhi, India</p>
                   </div>
                 </div>
                 
-                <div className="flex items-start gap-4 group">
-                    <div className="w-12 h-12 rounded-full bg-secondary/50 backdrop-blur-sm flex items-center justify-center border border-primary/30 transition-all duration-300 ease-out group-hover:scale-105 group-hover:border-primary/50 apple-button">
+                <div className="flex items-center gap-4 group">
+                    <div className="w-12 h-12 rounded-full bg-secondary/50 backdrop-blur-sm flex items-center justify-center border border-primary/30 transition-all duration-300 ease-out group-hover:scale-105 group-hover:border-primary/50 apple-button flex-shrink-0">
                       <Phone className="text-primary transition-all duration-200" size={20} />
                   </div>
-                  <div>
+                  <div className="flex-1">
                     <h4 className="font-semibold text-lg">Phone</h4>
                     <p className="text-muted-foreground">+91 77039-76867</p>
                   </div>
                 </div>
                 
-                <div className="flex items-start gap-4 group">
-                    <div className="w-12 h-12 rounded-full bg-secondary/50 backdrop-blur-sm flex items-center justify-center border border-primary/30 transition-all duration-300 ease-out group-hover:scale-105 group-hover:border-primary/50 apple-button">
+                <div className="flex items-center gap-4 group">
+                    <div className="w-12 h-12 rounded-full bg-secondary/50 backdrop-blur-sm flex items-center justify-center border border-primary/30 transition-all duration-300 ease-out group-hover:scale-105 group-hover:border-primary/50 apple-button flex-shrink-0">
                       <Mail className="text-primary transition-all duration-200" size={20} />
                   </div>
-                  <div>
+                  <div className="flex-1">
                     <h4 className="font-semibold text-lg">Email</h4>
                     <a href="mailto:arjunguptain@outlook.com" className="text-muted-foreground hover:text-primary transition-colors duration-200 apple-button">
                       arjunguptain@outlook.com
