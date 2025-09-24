@@ -7,49 +7,49 @@
 
 @layer base {
   :root {
-    /* Dark background base */
-    --background: 222 84% 5%;
-    --foreground: 210 40% 98%;
-    --card: 222 84% 5%;
-    --card-foreground: 210 40% 98%;
-    --popover: 222 84% 5%;
-    --popover-foreground: 210 40% 98%;
+    /* Dark background base with warmer undertones */
+    --background: 25 15% 8%;
+    --foreground: 45 25% 95%;
+    --card: 25 15% 8%;
+    --card-foreground: 45 25% 95%;
+    --popover: 25 15% 8%;
+    --popover-foreground: 45 25% 95%;
     
-    /* Primary: Teal-blue accent #45A29E */
-    --primary: 178 39% 46%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary: Warm bronze-gold #C59849 */
+    --primary: 38 52% 55%;
+    --primary-foreground: 25 15% 8%;
     
-    --secondary: 217 33% 18%;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 217 33% 18%;
-    --muted-foreground: 215 20% 65%;
+    --secondary: 25 20% 15%;
+    --secondary-foreground: 45 25% 95%;
+    --muted: 25 20% 15%;
+    --muted-foreground: 35 15% 65%;
     
-    /* Accent: Softer cyan highlights #66FCF1 */
-    --accent: 177 97% 69%;
-    --accent-foreground: 222 84% 5%;
+    /* Accent: Soft cream highlights #F4E4BC */
+    --accent: 45 60% 85%;
+    --accent-foreground: 25 15% 8%;
     
     --destructive: 0 63% 31%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 217 33% 18%;
-    --input: 217 33% 18%;
-    --ring: 178 39% 46%;
+    --destructive-foreground: 45 25% 95%;
+    --border: 25 20% 15%;
+    --input: 25 20% 15%;
+    --ring: 38 52% 55%;
     --radius: 0.75rem;
     
     /* Sidebar colors */
-    --sidebar-background: 222 84% 5%;
-    --sidebar-foreground: 210 40% 98%;
-    --sidebar-primary: 178 39% 46%;
-    --sidebar-primary-foreground: 222 84% 5%;
-    --sidebar-accent: 217 33% 18%;
-    --sidebar-accent-foreground: 210 40% 98%;
-    --sidebar-border: 217 33% 18%;
-    --sidebar-ring: 178 39% 46%;
+    --sidebar-background: 25 15% 8%;
+    --sidebar-foreground: 45 25% 95%;
+    --sidebar-primary: 38 52% 55%;
+    --sidebar-primary-foreground: 25 15% 8%;
+    --sidebar-accent: 25 20% 15%;
+    --sidebar-accent-foreground: 45 25% 95%;
+    --sidebar-border: 25 20% 15%;
+    --sidebar-ring: 38 52% 55%;
     
     /* Gradient variables for avatar border */
-    --gradient-avatar: linear-gradient(135deg, hsl(var(--accent)) 0%, hsl(178 50% 85%) 100%);
+    --gradient-avatar: linear-gradient(135deg, hsl(var(--accent)) 0%, hsl(35 45% 75%) 100%);
     
     /* Skin tone accent for balance */
-    --skin-accent: 28 76% 67%;
+    --skin-accent: 28 45% 65%;
   }
 
   /* Performance-optimized animations */
@@ -109,18 +109,18 @@
     scroll-behavior: smooth;
   }
 
-  /* Unified, performance-optimized background */
+  /* Unified, performance-optimized background with warm tones */
   body {
     @apply text-foreground antialiased;
     background: linear-gradient(
       135deg,
-      #0a0a0b 0%,
-      #0f1419 15%,
-      #1a202c 30%,
-      #0f1419 45%,
-      #1e2a3a 60%,
-      #0f1419 75%,
-      #0a0a0b 100%
+      #1a1512 0%,
+      #2a1f18 15%,
+      #1f1c16 30%,
+      #2a1f18 45%,
+      #251e17 60%,
+      #2a1f18 75%,
+      #1a1512 100%
     );
     background-size: 400% 400%;
     background-attachment: fixed;
@@ -130,7 +130,7 @@
     will-change: background-position;
   }
 
-  /* Single overlay for subtle effects */
+  /* Single overlay for subtle warm effects */
   body::before {
     content: '';
     position: fixed;
@@ -139,8 +139,8 @@
     width: 100%;
     height: 100%;
     background: 
-      radial-gradient(circle at 20% 30%, rgba(59, 130, 246, 0.08) 0%, transparent 50%),
-      radial-gradient(circle at 80% 70%, rgba(14, 165, 233, 0.06) 0%, transparent 50%);
+      radial-gradient(circle at 20% 30%, rgba(197, 152, 73, 0.08) 0%, transparent 50%),
+      radial-gradient(circle at 80% 70%, rgba(244, 228, 188, 0.06) 0%, transparent 50%);
     background-size: 100% 100%;
     pointer-events: none;
     z-index: -1;
@@ -246,22 +246,22 @@
     transform: translate3d(0, -3px, 0);
   }
 
-  /* Optimized glass card */
+  /* Optimized glass card with warm tones */
   .glass-card {
     @apply backdrop-blur-md border shadow-xl rounded-xl apple-card;
-    background: rgba(15, 20, 25, 0.8);
-    border: 1px solid rgba(59, 130, 246, 0.2);
+    background: rgba(26, 21, 18, 0.8);
+    border: 1px solid rgba(197, 152, 73, 0.2);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
     will-change: transform, box-shadow;
   }
 
   .glass-card:hover {
-    border-color: rgba(59, 130, 246, 0.3);
-    background: rgba(15, 20, 25, 0.85);
+    border-color: rgba(197, 152, 73, 0.3);
+    background: rgba(26, 21, 18, 0.85);
   }
   
   .text-gradient {
-    @apply bg-gradient-to-r from-blue-400 via-cyan-500 to-teal-400 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-yellow-400 via-amber-500 to-orange-400 bg-clip-text text-transparent;
     background-size: 200% 200%;
     animation: gradientShift 4s ease infinite;
     will-change: background-position;

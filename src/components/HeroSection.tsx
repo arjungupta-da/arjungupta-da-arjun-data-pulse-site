@@ -85,7 +85,7 @@ const HeroSection = () => {
           }}>
               <div className="w-full h-full rounded-full overflow-hidden bg-background">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-accent/20 pointer-events-none transition-opacity duration-500 group-hover:opacity-75 rounded-full"></div>
-                <img src="/src/assets/arjun-portrait.png" alt="Arjun Gupta Data Analyst profile picture" className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-110 rounded-full" style={{
+                <img src="/src/assets/arjun-portrait-new.jpg" alt="Arjun Gupta Data Analyst profile picture" className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-110 rounded-full" style={{
                 aspectRatio: '1/1'
               }} />
               </div>
