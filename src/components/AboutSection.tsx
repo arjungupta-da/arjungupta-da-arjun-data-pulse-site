@@ -1,49 +1,36 @@
-
 import { Briefcase, GraduationCap, MapPin, Phone, Mail } from "lucide-react";
 import useScrollAnimation from "@/hooks/useScrollAnimation";
-
 const AboutSection = () => {
-  const { elementRef: titleRef, isVisible: titleVisible } = useScrollAnimation<HTMLHeadingElement>({ 
+  const {
+    elementRef: titleRef,
+    isVisible: titleVisible
+  } = useScrollAnimation<HTMLHeadingElement>({
     delay: 100
   });
-  const { elementRef: profileRef, isVisible: profileVisible } = useScrollAnimation<HTMLDivElement>({ 
+  const {
+    elementRef: profileRef,
+    isVisible: profileVisible
+  } = useScrollAnimation<HTMLDivElement>({
     delay: 200
   });
-  const { elementRef: contactRef, isVisible: contactVisible } = useScrollAnimation<HTMLDivElement>({ 
+  const {
+    elementRef: contactRef,
+    isVisible: contactVisible
+  } = useScrollAnimation<HTMLDivElement>({
     delay: 300
   });
-
-  return (
-    <section id="about" className="py-16 md:py-24 gradient-bg">
+  return <section id="about" className="py-16 md:py-24 gradient-bg">
       <div className="container mx-auto px-4">
-        <h2 
-          ref={titleRef} 
-          className={`section-heading transition-all duration-700 ease-out ${
-            titleVisible ? 'reveal-on-scroll visible' : 'reveal-on-scroll'
-          }`}
-        >
+        <h2 ref={titleRef} className={`section-heading transition-all duration-700 ease-out ${titleVisible ? 'reveal-on-scroll visible' : 'reveal-on-scroll'}`}>
           About Me
         </h2>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="md:col-span-2">
-            <div 
-              ref={profileRef}
-              className={`glass-card p-8 rounded-lg h-full flex flex-col justify-between transition-all duration-700 ease-out ${
-                profileVisible ? 'reveal-left-scroll visible' : 'reveal-left-scroll'
-              }`}
-            >
+            <div ref={profileRef} className={`glass-card p-8 rounded-lg h-full flex flex-col justify-between transition-all duration-700 ease-out ${profileVisible ? 'reveal-left-scroll visible' : 'reveal-left-scroll'}`}>
               <div>
                 <h3 className="text-2xl font-display font-bold mb-4 text-center md:text-left">Profile Summary</h3>
-                <p className="text-muted-foreground mb-6 leading-relaxed">
-                  Experienced Data Analyst and Programming Trainer specializing in transforming complex datasets into actionable business insights. With expertise in Python, SQL, Excel, Power BI, and data visualization tools, I help organizations make data-driven decisions that drive growth and efficiency.
-
-                  As a certified trainer at Delhi School of Skill Development, I mentor aspiring data analysts and developers through comprehensive hands-on training programs. My curriculum covers Python programming, SQL database management, Microsoft Excel advanced analytics, Power BI dashboard creation, Google Sheets automation, Tableau visualization, and statistical analysis. I focus on practical, real-world applications that prepare students for immediate industry impact.
-
-                  My approach combines technical expertise with effective teaching methodologies, breaking down complex data science concepts into digestible modules. I guide students through building interactive dashboards, creating automated reports, and developing analytical frameworks that support strategic decision-making.
-
-                  I hold a Bachelor of Science in Physical Sciences with Computer Science from Keshav Mahavidyalaya (2024), which provides a strong foundation in both analytical thinking and technical implementation. This background enables me to bridge the gap between theoretical data science concepts and practical business applications.
-                </p>
+                <p className="text-muted-foreground mb-6 leading-relaxed">Experienced Data Analytics and Programming Trainer specializing in transforming complex datasets into actionable business insights. With expertise in Python, SQL, Excel, Power BI, and data visualization tools, I help organizations make data-driven decisions that drive growth and efficiency. As a certified trainer at Delhi School of Skill Development, I mentor aspiring data analysts and developers through comprehensive hands-on training programs. My curriculum covers Python programming, SQL database management, Microsoft Excel advanced analytics, Power BI dashboard creation, Google Sheets automation, Tableau visualization, and statistical analysis. I focus on practical, real-world applications that prepare students for immediate industry impact. My approach combines technical expertise with effective teaching methodologies, breaking down complex data science concepts into digestible modules. I guide students through building interactive dashboards, creating automated reports, and developing analytical frameworks that support strategic decision-making. I hold a Bachelor of Science in Physical Sciences with Computer Science from Keshav Mahavidyalaya (2024), which provides a strong foundation in both analytical thinking and technical implementation. This background enables me to bridge the gap between theoretical data science concepts and practical business applications.</p>
               </div>
               
               <div className="flex flex-col gap-6">
@@ -53,7 +40,7 @@ const AboutSection = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-lg">Current Position</h4>
-                    <p className="text-muted-foreground">Data Analyst & Programming Trainer at Delhi School of Skill Development</p>
+                    <p className="text-muted-foreground">Data Analytics and Programming Trainer at Delhi School of Skill Development</p>
                   </div>
                 </div>
                 
@@ -71,12 +58,7 @@ const AboutSection = () => {
           </div>
           
           <div className="md:col-span-1">
-            <div 
-              ref={contactRef}
-              className={`glass-card p-8 rounded-lg h-full flex flex-col justify-between transition-all duration-700 ease-out ${
-                contactVisible ? 'reveal-right-scroll visible' : 'reveal-right-scroll'
-              }`}
-            >
+            <div ref={contactRef} className={`glass-card p-8 rounded-lg h-full flex flex-col justify-between transition-all duration-700 ease-out ${contactVisible ? 'reveal-right-scroll visible' : 'reveal-right-scroll'}`}>
               <div>
                 <h3 className="text-2xl font-display font-bold mb-6 text-center md:text-left">Contact Details</h3>
               </div>
@@ -118,8 +100,6 @@ const AboutSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default AboutSection;

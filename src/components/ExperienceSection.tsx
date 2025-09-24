@@ -1,28 +1,28 @@
-
 import { Calendar } from "lucide-react";
 import useScrollAnimation from "@/hooks/useScrollAnimation";
-
 const ExperienceSection = () => {
-  const { elementRef: titleRef, isVisible: titleVisible } = useScrollAnimation<HTMLHeadingElement>({ delay: 100 });
-  const { elementRef: cardRef, isVisible: cardVisible } = useScrollAnimation<HTMLDivElement>({ delay: 200 });
-
-  return (
-    <section id="experience" className="gradient-bg">
+  const {
+    elementRef: titleRef,
+    isVisible: titleVisible
+  } = useScrollAnimation<HTMLHeadingElement>({
+    delay: 100
+  });
+  const {
+    elementRef: cardRef,
+    isVisible: cardVisible
+  } = useScrollAnimation<HTMLDivElement>({
+    delay: 200
+  });
+  return <section id="experience" className="gradient-bg">
       <div className="container mx-auto px-4">
-        <h2 
-          ref={titleRef}
-          className={`section-heading transition-all duration-700 ${titleVisible ? 'reveal-on-scroll visible' : 'reveal-on-scroll'}`}
-        >
+        <h2 ref={titleRef} className={`section-heading transition-all duration-700 ${titleVisible ? 'reveal-on-scroll visible' : 'reveal-on-scroll'}`}>
           Work Experience
         </h2>
         
-        <div 
-          ref={cardRef}
-          className={`glass-card p-6 md:p-8 rounded-lg transition-all duration-700 ${cardVisible ? 'reveal-left-scroll visible' : 'reveal-left-scroll'}`}
-        >
+        <div ref={cardRef} className={`glass-card p-6 md:p-8 rounded-lg transition-all duration-700 ${cardVisible ? 'reveal-left-scroll visible' : 'reveal-left-scroll'}`}>
           <div className="flex flex-col md:flex-row justify-between mb-4">
             <div>
-              <h3 className="text-2xl font-display font-bold text-primary">Data Analyst & Programming Trainer</h3>
+              <h3 className="text-2xl font-display font-bold text-primary">Data Analytics and Programming Trainer</h3>
               <p className="text-lg text-muted-foreground">
                 <a href="https://www.dssd.in/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors apple-button">
                   Delhi School of Skill Development
@@ -45,8 +45,6 @@ const ExperienceSection = () => {
           </ul>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default ExperienceSection;
