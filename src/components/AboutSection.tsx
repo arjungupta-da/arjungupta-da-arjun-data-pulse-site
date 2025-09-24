@@ -58,12 +58,12 @@ const AboutSection = () => {
           </div>
           
           <div className="md:col-span-1">
-            <div ref={contactRef} className={`glass-card p-8 rounded-lg h-full flex flex-col justify-between transition-all duration-700 ease-out ${contactVisible ? 'reveal-right-scroll visible' : 'reveal-right-scroll'}`}>
-              <div>
-                <h3 className="text-2xl font-display font-bold mb-6 text-center">Contact Details</h3>
+            <div ref={contactRef} className={`glass-card p-8 rounded-lg h-full flex flex-col justify-center items-center transition-all duration-700 ease-out ${contactVisible ? 'reveal-right-scroll visible' : 'reveal-right-scroll'}`}>
+              <div className="text-center mb-8">
+                <h3 className="text-2xl font-display font-bold">Contact Details</h3>
               </div>
               
-              <div className="flex flex-col gap-6 md:items-center">
+              <div className="flex flex-col gap-6 items-center">
                 <div className="flex items-start gap-4 group">
                     <div className="w-12 h-12 rounded-full bg-secondary/50 backdrop-blur-sm flex items-center justify-center border border-primary/30 transition-all duration-300 ease-out group-hover:scale-105 group-hover:border-primary/50 apple-button">
                       <MapPin className="text-primary transition-all duration-200" size={20} />
