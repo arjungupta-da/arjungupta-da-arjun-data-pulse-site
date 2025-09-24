@@ -48,9 +48,7 @@ const HeroSection = () => {
             <h2 className="text-xl md:text-2xl font-bold subtitle-spacing text-primary">Data Analytics and Programming Trainer</h2>
           </div>
           
-          <p className="text-muted-foreground text-base md:text-lg paragraph-spacing max-w-xl mx-auto reveal reveal-delay-3">
-            Expert in Python, SQL, Excel, Power BI & Data Visualization | Certified Trainer | 5-Star HackerRank Professional
-          </p>
+          <p className="text-muted-foreground text-base md:text-lg paragraph-spacing max-w-xl mx-auto reveal reveal-delay-3">Expert in Python, SQL, Excel, Power BI & Data Visualization | Certified CSR Trainer | 5-Star HackerRank Professional</p>
           
           <div className="flex flex-wrap gap-4 button-spacing justify-center reveal reveal-delay-4">
             <Button asChild className="bg-gradient-to-r from-primary to-accent hover:from-primary/80 hover:to-accent/80 text-white border-0 shadow-lg hover:shadow-xl apple-button">
