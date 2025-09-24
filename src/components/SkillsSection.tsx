@@ -169,12 +169,12 @@ const SkillsSection = () => {
               ref={skillsCardRef}
               className={`glass-card p-8 rounded-lg h-full transition-all duration-1000 ${skillsCardVisible ? 'reveal-left-scroll visible' : 'reveal-left-scroll'}`}
             >
-              <h3 className="text-2xl font-display font-bold mb-6 text-data-cyan">Technical Skills</h3>
+              <h3 className="text-2xl font-display font-bold mb-6 text-primary">Technical Skills</h3>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {skills.map((skill, index) => (
                   <div key={index} className="flex items-center gap-2 group">
-                    <CheckCircle size={18} className="text-primary group-hover:text-data-cyan transition-colors" />
+                    <CheckCircle size={18} className="text-primary group-hover:text-accent transition-colors" />
                     <span className="text-muted-foreground group-hover:text-foreground transition-colors">{skill}</span>
                   </div>
                 ))}
@@ -187,7 +187,7 @@ const SkillsSection = () => {
               ref={featuredCardRef}
               className={`glass-card p-8 rounded-lg h-full transition-all duration-1000 ${featuredCardVisible ? 'reveal-right-scroll visible' : 'reveal-right-scroll'}`}
             >
-              <h3 className="text-2xl font-display font-bold mb-6 text-data-cyan">Featured Project Certificates</h3>
+              <h3 className="text-2xl font-display font-bold mb-6 text-primary">Featured Project Certificates</h3>
               
               <div className="grid grid-cols-1 md:grid-cols-1 gap-6">
                 {featuredCertifications.map((cert, index) => (
@@ -228,7 +228,7 @@ const SkillsSection = () => {
           ref={allCertsRef}
           className={`glass-card p-8 rounded-lg transition-all duration-1000 ${allCertsVisible ? 'reveal-on-scroll visible' : 'reveal-on-scroll'}`}
         >
-          <h3 className="text-2xl font-display font-bold mb-6 text-data-cyan">All Certifications</h3>
+          <h3 className="text-2xl font-display font-bold mb-6 text-primary">All Certifications</h3>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {certifications.map((cert, index) => {
@@ -253,7 +253,7 @@ const SkillsSection = () => {
                     rel="noopener noreferrer" 
                     className="flex items-start p-3 bg-secondary/30 rounded-md hover:bg-secondary/50 transition-all duration-300 ease-out group h-full apple-card transform hover:scale-[1.02] hover:-translate-y-1"
                   >
-                    <Award size={18} className="text-primary mt-0.5 mr-2 flex-shrink-0 group-hover:text-data-cyan transition-colors duration-300" />
+                    <Award size={18} className="text-primary mt-0.5 mr-2 flex-shrink-0 group-hover:text-accent transition-colors duration-300" />
                     <div className="flex-1">
                       <h4 className="font-medium text-sm group-hover:text-foreground transition-colors duration-300">{cert.name}</h4>
                       <p className="text-xs text-muted-foreground">{cert.issuer}</p>

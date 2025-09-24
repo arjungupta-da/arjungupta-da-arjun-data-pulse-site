@@ -101,9 +101,9 @@ const HeroSection = () => {
       </div>
       
       {/* Animated background elements */}
-      <div className="absolute top-20 left-10 w-2 h-2 bg-blue-400/30 rounded-full animate-pulse"></div>
-      <div className="absolute top-40 right-20 w-3 h-3 bg-cyan-400/30 rounded-full animate-pulse animation-delay-1000"></div>
-      <div className="absolute bottom-20 left-20 w-1 h-1 bg-teal-400/30 rounded-full animate-pulse animation-delay-2000"></div>
+      <div className="absolute top-20 left-10 w-2 h-2 bg-primary/30 rounded-full animate-pulse"></div>
+      <div className="absolute top-40 right-20 w-3 h-3 bg-accent/30 rounded-full animate-pulse animation-delay-1000"></div>
+      <div className="absolute bottom-20 left-20 w-1 h-1 bg-primary/40 rounded-full animate-pulse animation-delay-2000"></div>
     </section>;
 };
 export default HeroSection;

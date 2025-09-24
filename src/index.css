@@ -279,7 +279,7 @@
 
   ::selection {
     @apply text-foreground;
-    background: rgba(59, 130, 246, 0.4);
+    background: rgba(197, 152, 73, 0.4);
   }
 
   .container {
