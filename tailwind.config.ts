@@ -64,11 +64,11 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				data: {
-					cyan: '#33C3F0',
-					purple: '#9b87f5',
-					magenta: '#D946EF',
-					orange: '#F97316',
-					amber: '#FBBF24'
+					bronze: '#B8860B',
+					gold: '#C59849',
+					amber: '#D4A574',
+					copper: '#B87333',
+					cream: '#F4E4BC'
 				},
 				"skin-accent": "hsl(var(--skin-accent))"
 			},

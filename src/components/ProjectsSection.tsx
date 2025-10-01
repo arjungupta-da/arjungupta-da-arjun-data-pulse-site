@@ -54,7 +54,7 @@ const ProjectsSection = () => {
               className="glass-card rounded-lg overflow-hidden hover:border-primary/30 transition-colors group h-full flex flex-col"
               style={{ animationDelay: `${index * 200}ms` }}
             >
-              <div className="h-2 bg-gradient-to-r from-data-cyan via-data-purple to-data-magenta"></div>
+              <div className="h-2 bg-gradient-to-r from-data-bronze via-data-gold to-data-amber"></div>
               <div className="p-6 flex flex-col h-full">
                 <div className="mb-4">
                   <p className="text-muted-foreground text-sm mb-2">{project.date} | {project.organization}</p>
