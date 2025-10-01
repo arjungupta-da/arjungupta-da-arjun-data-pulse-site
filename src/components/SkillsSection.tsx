@@ -53,7 +53,7 @@ const SkillsSection = () => {
       name: "Capstone: Retrieving, Processing, and Visualizing Data with Python",
       issuer: "Coursera",
       date: "Mar 2024",
-      link: "https://coursera.org/share/9c081e108ba55532d79b70b2e57b1930"
+      link: "https://www.coursera.org/account/accomplishments/verify/HLP4VUVJ3TF8"
     },
     {
       name: "SQL Advanced",
@@ -83,7 +83,7 @@ const SkillsSection = () => {
       name: "Using Databases with Python",
       issuer: "Coursera", 
       date: "Nov 2023",
-      link: "https://www.coursera.org/account/accomplishments/verify/HLP4VUVJ3TF8"
+      link: "https://coursera.org/share/9c081e108ba55532d79b70b2e57b1930"
     },
     {
       name: "Using Python to Access Web Data",
