@@ -52,17 +52,17 @@ const HeroSection = () => {
           <p className="text-muted-foreground text-base md:text-lg paragraph-spacing max-w-xl mx-auto reveal reveal-delay-3">Expert in Python, SQL, Excel, Power BI & Data Visualization | Certified CSR Trainer | 5-Star HackerRank Professional</p>
           
           <div className="flex flex-wrap gap-4 button-spacing justify-center reveal reveal-delay-4">
-            <Button asChild className="bg-gradient-to-r from-primary to-accent hover:from-primary/80 hover:to-accent/80 text-white border-0 shadow-lg hover:shadow-xl apple-button">
-              <a href="#contact">Get-In Touch</a>
+            <Button asChild variant="premium" size="lg">
+              <a href="#contact">Get In Touch</a>
             </Button>
             
-            <Button asChild variant="outline" className="border-primary/50 text-primary hover:bg-primary/10 backdrop-blur-sm bg-primary/5 apple-button">
+            <Button asChild variant="elegant-outline" size="lg">
               <a href="#projects">View Projects</a>
             </Button>
             
-            <Button asChild variant="secondary" className="bg-gradient-to-r from-accent/80 to-primary/80 hover:from-accent hover:to-primary text-white shadow-lg apple-button">
+            <Button asChild variant="elegant" size="lg">
               <a href="https://drive.google.com/file/d/12JjGkllEiRqHpWPInmoN_LWVjJ4Mem61/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-                <Download size={18} className="mr-1" /> Resume
+                <Download size={18} /> Resume
               </a>
             </Button>
           </div>

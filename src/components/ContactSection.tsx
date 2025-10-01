@@ -82,9 +82,9 @@ const ContactSection = () => {
               <p className="text-muted-foreground mb-6 leading-relaxed">
                 Interested in working together or have a question? Feel free to reach out!
               </p>
-              <Button asChild className="bg-gradient-to-r from-primary to-accent hover:from-primary/80 hover:to-accent/80 text-white border-0 shadow-lg apple-button px-8 py-3">
+              <Button asChild variant="premium" size="lg">
                 <a href="mailto:arjunguptain@outlook.com">
-                  Send Email
+                  <Mail size={18} /> Send Email
                 </a>
               </Button>
             </div>
