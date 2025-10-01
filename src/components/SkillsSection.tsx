@@ -53,7 +53,7 @@ const SkillsSection = () => {
       name: "Capstone: Retrieving, Processing, and Visualizing Data with Python",
       issuer: "Coursera",
       date: "Mar 2024",
-      link: "https://www.coursera.org/account/accomplishments/verify/HLP4VUVJ3TF8"
+      link: "https://www.coursera.org/account/accomplishments/specialization/L2C8WHHHFT7E"
     },
     {
       name: "SQL Advanced",
@@ -77,7 +77,7 @@ const SkillsSection = () => {
       name: "Python Data Structures",
       issuer: "Coursera",
       date: "Oct 2023",
-      link: "https://www.coursera.org/account/accomplishments/records/54QB6WL83DV7"
+      link: "#"
     },
     {
       name: "Using Databases with Python",
@@ -107,7 +107,7 @@ const SkillsSection = () => {
       name: "Foundations: Data, Data, Everywhere",
       issuer: "Coursera",
       date: "Oct 2023",
-      link: "#"
+      link: "https://www.coursera.org/account/accomplishments/verify/54QB6WL83DV7"
     },
     {
       name: "Get Started with Microsoft Fabric",
