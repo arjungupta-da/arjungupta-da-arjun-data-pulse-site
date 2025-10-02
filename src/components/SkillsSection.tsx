@@ -29,7 +29,7 @@ const SkillsSection = () => {
       name: "NAB India's Certification Program in Data Analytics - Post Trainer Assessment",
       issuer: "EduBridge Learning",
       date: "May 2025",
-      link: "#",
+      link: "https://doselect.com/test-report/ylgl1",
       description: "Professional certification in data analytics training and assessment, demonstrating expertise in data analysis methodologies and training capabilities"
     },
     {
@@ -53,13 +53,13 @@ const SkillsSection = () => {
       name: "Capstone: Retrieving, Processing, and Visualizing Data with Python",
       issuer: "Coursera",
       date: "Mar 2024",
-      link: "https://www.coursera.org/account/accomplishments/verify/HLP4VUVJ3TF8"
+      link: "https://www.coursera.org/account/accomplishments/records/MNNUCGTBTR4B"
     },
     {
       name: "Completed Gold Level (5-stars) in both Python and SQL",
       issuer: "HackerRank",
       date: "2024",
-      link: "https://www.hackerrank.com/profile/arjunguptain"
+      link: "https://www.hackerrank.com/profile/indian_arjun_gu1"
     },
     {
       name: "Data Analysis with Python",
@@ -71,19 +71,25 @@ const SkillsSection = () => {
       name: "Data Analytics Essentials",
       issuer: "Cisco",
       date: "Feb 2024",
-      link: "#"
+      link: "https://www.credly.com/badges/f7d32538-5b17-4456-9340-1daa362e4276"
+    },
+    {
+      name: "Data Visualization: Empowering Business with Effective Insights",
+      issuer: "Tata Group",
+      date: "Apr 2024",
+      link: "https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/Tata/MyXvBcppsW2FkNYCX_Tata%20Group_cGrwSBrZsvt4G2TsM_1712085625682_completion_certificate.pdf"
     },
     {
       name: "EduBridge 4 Employment - Train the Trainer Program",
       issuer: "EduBridge",
       date: "2024",
-      link: "#"
+      link: "https://s3.ap-south-1.amazonaws.com/cdn.edubridgeindia.com/students/certificates/EON480351S1330.pdf"
     },
     {
       name: "EduBridge 4 Employment - Certification Program in Data Entry Operator - Train the Trainer Program",
       issuer: "EduBridge",
       date: "2024",
-      link: "#"
+      link: "https://s3.ap-south-1.amazonaws.com/cdn.edubridgeindia.com/students/certificates/EON480351S1393.pdf"
     },
     {
       name: "Excel Data MasterMind with GenAI",
@@ -125,25 +131,25 @@ const SkillsSection = () => {
       name: "Introduction to Generative AI",
       issuer: "Google",
       date: "Apr 2024",
-      link: "https://www.cloudskillsboost.google/public_profiles/8932209c-8a91-49ca-b7d4-46fd5e52f2c2/badges/8161414"
+      link: "https://www.cloudskillsboost.google/public_profiles/8932209c-8a91-49ca-b7d4-46fd5e52f2c2/badges/8161414?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share"
     },
     {
       name: "Master Data Management",
       issuer: "TCS iON",
       date: "Jan 2024",
-      link: "https://www.tcsion.com/LX/vcgrade_categories/download_certificate_hub?course_id=71279&c_id=master-data-management-batch-01"
+      link: "https://www.tcsion.com/LX/vcgrade_categories/download_certificate_hub?course_id=71279&c_id=master-data-management-batch-01&mtop_sec_key=nR%2BfP1QJxx3GOTwa9lrvD0b5nDDW1JkKzWhAK%2FDPP3up0oFh4cMfbii65f5mHqM5"
     },
     {
       name: "NAB India's Certification Program in Data Analytics - Post Trainer Assessment",
       issuer: "National Australia Bank",
       date: "May 2025",
-      link: "#"
+      link: "https://doselect.com/test-report/ylgl1"
     },
     {
       name: "Preparing Data for Analysis with Microsoft Excel",
       issuer: "Coursera",
       date: "Jan 2024",
-      link: "https://www.coursera.org/account/accomplishments/verify/E1G7ZTMALRWE"
+      link: "https://www.coursera.org/account/accomplishments/verify/E1G7ZTMALRWE?utm_source%3Dandroid%26utm_medium%3Dcertificate%26utm_content%3Dcert_image%26utm_campaign%3Dsharing_cta%26utm_product%3Dcourse"
     },
     {
       name: "Python & Artificial Intelligence Bootcamp",
@@ -161,19 +167,19 @@ const SkillsSection = () => {
       name: "Python Data Structures",
       issuer: "Coursera",
       date: "Oct 2023",
-      link: "https://www.coursera.org/account/accomplishments/records/54QB6WL83DV7"
+      link: "http://www.coursera.org/account/accomplishments/verify/WG3BJRVDDFFN"
     },
     {
       name: "SQL Advanced",
       issuer: "HackerRank",
       date: "Feb 2024",
-      link: "https://www.hackerrank.com/certificates/f37838992364"
+      link: "https://www.hackerrank.com/certificates/257d8d878d81"
     },
     {
       name: "SQL Basic",
       issuer: "HackerRank",
       date: "Jan 2024",
-      link: "https://www.hackerrank.com/certificates/257d8d878d81"
+      link: "https://www.hackerrank.com/certificates/f37838992364"
     },
     {
       name: "Using Databases with Python",
@@ -185,7 +191,7 @@ const SkillsSection = () => {
       name: "Using Python to Access Web Data",
       issuer: "Coursera",
       date: "Dec 2023",
-      link: "https://www.coursera.org/account/accomplishments/verify/5RHYTFU8566C"
+      link: "https://www.coursera.org/account/accomplishments/verify/5RHYTFU8566C?utm_source%3Dandroid%26utm_medium%3Dcertificate%26utm_content%3Dcert_image%26utm_campaign%3Dsharing_cta%26utm_product%3Dcourse"
     }
   ];
 
