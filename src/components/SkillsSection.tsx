@@ -53,19 +53,19 @@ const SkillsSection = () => {
       name: "Capstone: Retrieving, Processing, and Visualizing Data with Python",
       issuer: "Coursera",
       date: "Mar 2024",
-      link: "#"
+      link: "https://www.coursera.org/account/accomplishments/verify/HLP4VUVJ3TF8"
     },
     {
       name: "Completed Gold Level (5-stars) in both Python and SQL",
       issuer: "HackerRank",
       date: "2024",
-      link: "#"
+      link: "https://www.hackerrank.com/profile/arjunguptain"
     },
     {
       name: "Data Analysis with Python",
       issuer: "Coursera",
       date: "Nov 2023",
-      link: "#"
+      link: "https://www.credly.com/badges/4ba5a3e7-2e99-4910-a913-281bd41c91a1/public_url"
     },
     {
       name: "Data Analytics Essentials",
@@ -95,43 +95,43 @@ const SkillsSection = () => {
       name: "Foundations: Data, Data, Everywhere",
       issuer: "Coursera",
       date: "Oct 2023",
-      link: "#"
+      link: "https://www.coursera.org/account/accomplishments/verify/54QB6WL83DV7"
     },
     {
       name: "Get Started with Microsoft Fabric",
       issuer: "Microsoft Learn",
       date: "Mar 2024",
-      link: "#"
+      link: "https://learn.microsoft.com/api/achievements/share/en-us/arjunguptain/NZRZRVZF"
     },
     {
       name: "Getting Started with Python",
       issuer: "Coursera",
       date: "Sept 2023",
-      link: "#"
+      link: "https://www.coursera.org/account/accomplishments/verify/Q72KS2U7UX43"
     },
     {
       name: "Implement a Lakehouse with Microsoft Fabric",
       issuer: "Microsoft Learn",
       date: "Mar 2024",
-      link: "#"
+      link: "https://learn.microsoft.com/api/achievements/share/en-us/arjunguptain/8AXACKHW"
     },
     {
       name: "Ingest data with Microsoft Fabric",
       issuer: "Microsoft Learn",
       date: "Mar 2024",
-      link: "#"
+      link: "https://learn.microsoft.com/api/achievements/share/en-us/arjunguptain/45J5YPMK"
     },
     {
       name: "Introduction to Generative AI",
       issuer: "Google",
       date: "Apr 2024",
-      link: "#"
+      link: "https://www.cloudskillsboost.google/public_profiles/8932209c-8a91-49ca-b7d4-46fd5e52f2c2/badges/8161414"
     },
     {
       name: "Master Data Management",
       issuer: "TCS iON",
       date: "Jan 2024",
-      link: "#"
+      link: "https://www.tcsion.com/LX/vcgrade_categories/download_certificate_hub?course_id=71279&c_id=master-data-management-batch-01"
     },
     {
       name: "NAB India's Certification Program in Data Analytics - Post Trainer Assessment",
@@ -143,49 +143,49 @@ const SkillsSection = () => {
       name: "Preparing Data for Analysis with Microsoft Excel",
       issuer: "Coursera",
       date: "Jan 2024",
-      link: "#"
+      link: "https://www.coursera.org/account/accomplishments/verify/E1G7ZTMALRWE"
     },
     {
       name: "Python & Artificial Intelligence Bootcamp",
       issuer: "DevTown",
       date: "Dec 2023",
-      link: "#"
+      link: "https://cert.devtown.in/verify/1699td"
     },
     {
       name: "Python Basic",
       issuer: "HackerRank",
       date: "Jan 2024",
-      link: "#"
+      link: "https://www.hackerrank.com/certificates/8b38ec7876c7"
     },
     {
       name: "Python Data Structures",
       issuer: "Coursera",
       date: "Oct 2023",
-      link: "#"
+      link: "https://www.coursera.org/account/accomplishments/records/54QB6WL83DV7"
     },
     {
       name: "SQL Advanced",
       issuer: "HackerRank",
       date: "Feb 2024",
-      link: "#"
+      link: "https://www.hackerrank.com/certificates/f37838992364"
     },
     {
       name: "SQL Basic",
       issuer: "HackerRank",
       date: "Jan 2024",
-      link: "#"
+      link: "https://www.hackerrank.com/certificates/257d8d878d81"
     },
     {
       name: "Using Databases with Python",
       issuer: "Coursera", 
       date: "Nov 2023",
-      link: "#"
+      link: "https://coursera.org/share/9c081e108ba55532d79b70b2e57b1930"
     },
     {
       name: "Using Python to Access Web Data",
       issuer: "Coursera",
       date: "Dec 2023",
-      link: "#"
+      link: "https://www.coursera.org/account/accomplishments/verify/5RHYTFU8566C"
     }
   ];
 
