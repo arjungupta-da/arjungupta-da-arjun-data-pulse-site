@@ -79,6 +79,7 @@ const NavBar = () => {
         <button 
           className="md:hidden text-muted-foreground hover:text-primary transition-all duration-300" 
           onClick={() => setIsOpen(!isOpen)}
+          aria-label={isOpen ? "Close menu" : "Open menu"}
         >
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
