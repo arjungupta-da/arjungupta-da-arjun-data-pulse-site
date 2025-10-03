@@ -2,7 +2,8 @@ import { Linkedin, Mail, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect } from "react";
 import profileImg from "@/assets/arjun-portrait-new.jpg";
-import profileImgWebP from "@/assets/arjun-portrait-new.webp";
+import profileImg512 from "@/assets/arjun-portrait-512.webp";
+import profileImg1024 from "@/assets/arjun-portrait-1024.webp";
 const HeroSection = () => {
   useEffect(() => {
     // Defer loading LinkedIn script until user intent (hover/focus on any LinkedIn link)
@@ -85,14 +86,20 @@ const HeroSection = () => {
               <div className="w-full h-full rounded-full overflow-hidden bg-background">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-accent/20 pointer-events-none transition-opacity duration-500 group-hover:opacity-75 rounded-full"></div>
                 <picture>
-                  <source srcSet={profileImgWebP} type="image/webp" />
-                  <img
+                  <source 
+                    srcSet={`${profileImg512} 512w, ${profileImg1024} 1024w`}
+                    sizes="(max-width: 640px) 144px, (max-width: 768px) 224px, (max-width: 1024px) 288px, (max-width: 1280px) 320px, 384px"
+                    type="image/webp" 
+                  />
+                  <img 
                     src={profileImg} 
                     alt="Arjun Gupta — Data Analytics & Programming Trainer profile photo" 
                     className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-110 rounded-full" 
                     style={{ aspectRatio: "1 / 1" }}
                     loading="eager"
                     fetchPriority="high"
+                    width="384"
+                    height="384"
                   />
                 </picture>
               </div>
