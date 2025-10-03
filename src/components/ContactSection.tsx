@@ -36,7 +36,7 @@ const ContactSection = () => {
                   <MapPin className="text-primary transition-all duration-200" size={20} aria-hidden="true" focusable="false" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-lg">Location</h4>
+                  <h3 className="font-semibold text-lg">Location</h3>
                   <p className="text-muted-foreground mt-1">New Delhi, India</p>
                 </div>
               </div>
@@ -46,7 +46,7 @@ const ContactSection = () => {
                   <Mail className="text-primary transition-all duration-200" size={20} aria-hidden="true" focusable="false" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-lg">Email</h4>
+                  <h3 className="font-semibold text-lg">Email</h3>
                   <a href="mailto:arjunguptain@outlook.com" className="text-muted-foreground hover:text-primary transition-colors duration-200 mt-1 block apple-button">
                     arjunguptain@outlook.com
                   </a>
@@ -58,7 +58,7 @@ const ContactSection = () => {
                   <Phone className="text-primary transition-all duration-200" size={20} aria-hidden="true" focusable="false" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-lg">Phone</h4>
+                  <h3 className="font-semibold text-lg">Phone</h3>
                   <a href="tel:+917703976867" className="text-muted-foreground hover:text-primary transition-colors duration-200 mt-1 block apple-button">
                     +91 77039-76867
                   </a>
@@ -70,7 +70,7 @@ const ContactSection = () => {
                   <Linkedin className="text-primary transition-all duration-200" size={20} aria-hidden="true" focusable="false" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-lg">LinkedIn</h4>
+                  <h3 className="font-semibold text-lg">LinkedIn</h3>
                   <a href="https://www.linkedin.com/in/arjunguptain/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors duration-200 mt-1 block apple-button">
                     linkedin.com/in/arjunguptain
                   </a>
