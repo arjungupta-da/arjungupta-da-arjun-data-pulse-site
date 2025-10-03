@@ -2,8 +2,7 @@ import { Linkedin, Mail, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect } from "react";
 import profileImg from "@/assets/arjun-portrait-new.jpg";
-import profileImg512 from "@/assets/arjun-portrait-512.webp";
-import profileImg1024 from "@/assets/arjun-portrait-1024.webp";
+
 const HeroSection = () => {
   useEffect(() => {
     // Defer loading LinkedIn script until user intent (hover/focus on any LinkedIn link)
@@ -87,7 +86,7 @@ const HeroSection = () => {
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-accent/20 pointer-events-none transition-opacity duration-500 group-hover:opacity-75 rounded-full"></div>
                 <picture>
                   <source 
-                    srcSet={`${profileImg512} 512w, ${profileImg1024} 1024w`}
+                    srcSet="/arjun-portrait-512.webp 512w, /arjun-portrait-1024.webp 1024w"
                     sizes="(max-width: 640px) 144px, (max-width: 768px) 224px, (max-width: 1024px) 288px, (max-width: 1280px) 320px, 384px"
                     type="image/webp" 
                   />
