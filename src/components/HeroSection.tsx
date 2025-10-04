@@ -86,8 +86,8 @@ const HeroSection = () => {
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-accent/20 pointer-events-none transition-opacity duration-500 group-hover:opacity-75 rounded-full"></div>
                 <picture>
                   <source 
-                    srcSet="/arjun-portrait-384.webp 384w, /arjun-portrait-512-optimized.webp 512w, /arjun-portrait-1024.webp 1024w"
-                    sizes="(max-width: 640px) 144px, (max-width: 768px) 224px, (max-width: 1024px) 288px, (max-width: 1280px) 320px, 384px"
+                    srcSet="/arjun-portrait-384.webp 384w, /arjun-portrait-1024.webp 1024w"
+                    sizes="(max-width: 768px) 384px, (max-width: 1280px) 384px, 384px"
                     type="image/webp" 
                   />
                   <img 
