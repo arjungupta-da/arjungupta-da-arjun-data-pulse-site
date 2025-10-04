@@ -324,4 +324,14 @@
       transition-duration: 0.01ms !important;
     }
   }
+
+  /* Fix Lovable badge close button touch target size for accessibility */
+  #lovable-badge-close {
+    min-width: 24px !important;
+    min-height: 24px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 4px !important;
+  }
 }
