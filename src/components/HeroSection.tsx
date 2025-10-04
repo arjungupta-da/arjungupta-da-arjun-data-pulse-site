@@ -91,7 +91,7 @@ const HeroSection = () => {
                     type="image/webp" 
                   />
                   <img 
-                    src={profileImg} 
+                    src="/arjun-portrait-384.webp" 
                     alt="Arjun Gupta — Data Analytics & Programming Trainer profile photo" 
                     className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-110 rounded-full" 
                     style={{ aspectRatio: "1 / 1" }}
