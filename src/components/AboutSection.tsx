@@ -35,8 +35,8 @@ const AboutSection = () => {
               
               <div className="flex flex-col gap-6">
                 <div className="flex items-start gap-4 group">
-                    <div className="w-12 h-12 rounded-full bg-secondary/50 backdrop-blur-sm flex items-center justify-center border border-primary/30 transition-all duration-300 ease-out group-hover:scale-105 group-hover:border-primary/50 apple-button">
-                      <Briefcase className="text-primary transition-all duration-200" size={20} />
+                    <div className="w-14 h-14 sm:w-12 sm:h-12 rounded-full bg-secondary/50 backdrop-blur-sm flex items-center justify-center border border-primary/30 transition-all duration-300 ease-out group-hover:scale-105 group-hover:border-primary/50 apple-button flex-shrink-0">
+                      <Briefcase className="text-primary transition-all duration-200" size={22} />
                   </div>
                   <div>
                     <h4 className="font-semibold text-lg">Current Position</h4>
@@ -45,8 +45,8 @@ const AboutSection = () => {
                 </div>
                 
                 <div className="flex items-start gap-4 group">
-                    <div className="w-12 h-12 rounded-full bg-secondary/50 backdrop-blur-sm flex items-center justify-center border border-primary/30 transition-all duration-300 ease-out group-hover:scale-105 group-hover:border-primary/50 apple-button">
-                      <GraduationCap className="text-primary transition-all duration-200" size={20} />
+                    <div className="w-14 h-14 sm:w-12 sm:h-12 rounded-full bg-secondary/50 backdrop-blur-sm flex items-center justify-center border border-primary/30 transition-all duration-300 ease-out group-hover:scale-105 group-hover:border-primary/50 apple-button flex-shrink-0">
+                      <GraduationCap className="text-primary transition-all duration-200" size={22} />
                   </div>
                   <div>
                     <h4 className="font-semibold text-lg">Education</h4>
@@ -66,7 +66,7 @@ const AboutSection = () => {
               <div className="flex flex-col gap-6 flex-1 justify-center">
                 <div className="flex items-center gap-4 group">
                     <div className="w-12 h-12 rounded-full bg-secondary/50 backdrop-blur-sm flex items-center justify-center border border-primary/30 transition-all duration-300 ease-out group-hover:scale-105 group-hover:border-primary/50 apple-button flex-shrink-0">
-                      <MapPin className="text-primary transition-all duration-200" size={20} />
+                      <MapPin className="text-primary transition-all duration-200" size={22} />
                   </div>
                   <div className="flex-1">
                     <h4 className="font-semibold text-lg">Location</h4>
@@ -76,7 +76,7 @@ const AboutSection = () => {
                 
                 <div className="flex items-center gap-4 group">
                     <div className="w-12 h-12 rounded-full bg-secondary/50 backdrop-blur-sm flex items-center justify-center border border-primary/30 transition-all duration-300 ease-out group-hover:scale-105 group-hover:border-primary/50 apple-button flex-shrink-0">
-                      <Phone className="text-primary transition-all duration-200" size={20} />
+                      <Phone className="text-primary transition-all duration-200" size={22} />
                   </div>
                   <div className="flex-1">
                     <h4 className="font-semibold text-lg">Phone</h4>
@@ -86,7 +86,7 @@ const AboutSection = () => {
                 
                 <div className="flex items-center gap-4 group">
                     <div className="w-12 h-12 rounded-full bg-secondary/50 backdrop-blur-sm flex items-center justify-center border border-primary/30 transition-all duration-300 ease-out group-hover:scale-105 group-hover:border-primary/50 apple-button flex-shrink-0">
-                      <Mail className="text-primary transition-all duration-200" size={20} />
+                      <Mail className="text-primary transition-all duration-200" size={22} />
                   </div>
                   <div className="flex-1">
                     <h4 className="font-semibold text-lg">Email</h4>
