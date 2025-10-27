@@ -2,7 +2,6 @@ import { Linkedin, Mail, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect } from "react";
 import profileImg from "@/assets/arjun-portrait-new.jpg";
-
 const HeroSection = () => {
   useEffect(() => {
     // Defer loading LinkedIn script until user intent (hover/focus on any LinkedIn link)
@@ -47,7 +46,7 @@ const HeroSection = () => {
           </h1>
           
           <div className="flex w-full justify-center reveal reveal-delay-2">
-            <h2 className="text-xl md:text-2xl font-bold subtitle-spacing text-primary">Data Analytics and Programming Trainer</h2>
+            <h2 className="text-xl md:text-2xl font-bold subtitle-spacing text-primary text-justify">IBM-Certified Data Analytics and Programming Trainer</h2>
           </div>
           
           <p className="text-muted-foreground text-base md:text-lg paragraph-spacing max-w-xl mx-auto reveal reveal-delay-3">
@@ -83,25 +82,17 @@ const HeroSection = () => {
         
         <div className="flex-1 order-1 md:order-2 flex justify-center reveal-right reveal-delay-2">
           <div className="relative">
-            <div className="w-36 h-36 sm:w-56 sm:h-56 md:w-72 md:h-72 lg:w-80 lg:h-80 xl:w-96 xl:h-96 rounded-full overflow-hidden shadow-2xl shadow-primary/30 float-animation relative group apple-card" style={{ background: "var(--gradient-avatar)", padding: "4px" }}>
+            <div className="w-36 h-36 sm:w-56 sm:h-56 md:w-72 md:h-72 lg:w-80 lg:h-80 xl:w-96 xl:h-96 rounded-full overflow-hidden shadow-2xl shadow-primary/30 float-animation relative group apple-card" style={{
+            background: "var(--gradient-avatar)",
+            padding: "4px"
+          }}>
               <div className="w-full h-full rounded-full overflow-hidden bg-background">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-accent/20 pointer-events-none transition-opacity duration-500 group-hover:opacity-75 rounded-full"></div>
                 <picture>
-                  <source 
-                    srcSet="/arjun-portrait-384.webp 384w, /arjun-portrait-1024.webp 1024w"
-                    sizes="(max-width: 768px) 384px, (max-width: 1280px) 384px, 384px"
-                    type="image/webp" 
-                  />
-                  <img 
-                    src="/arjun-portrait-384.webp" 
-                    alt="Arjun Gupta — Data Analytics & Programming Trainer profile photo" 
-                    className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-110 rounded-full" 
-                    style={{ aspectRatio: "1 / 1" }}
-                    loading="eager"
-                    fetchPriority="high"
-                    width="384"
-                    height="384"
-                  />
+                  <source srcSet="/arjun-portrait-384.webp 384w, /arjun-portrait-1024.webp 1024w" sizes="(max-width: 768px) 384px, (max-width: 1280px) 384px, 384px" type="image/webp" />
+                  <img src="/arjun-portrait-384.webp" alt="Arjun Gupta — Data Analytics & Programming Trainer profile photo" className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-110 rounded-full" style={{
+                  aspectRatio: "1 / 1"
+                }} loading="eager" fetchPriority="high" width="384" height="384" />
                 </picture>
               </div>
             </div>
