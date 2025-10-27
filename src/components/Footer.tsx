@@ -14,12 +14,16 @@ const Footer = () => {
             <div className="flex gap-4">
               <a href="https://www.linkedin.com/in/arjunguptadataanalyst" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-4 py-2 rounded-md bg-secondary/50 backdrop-blur-sm hover:bg-primary/20 text-muted-foreground hover:text-primary transition-all border border-primary/20 hover:border-primary/40">
                 <Linkedin size={16} />
-                <span>LinkedIn Profile</span>
+                <span>LinkedIn</span>
+              </a>
+              
+              <a href="https://www.instagram.com/arjun.analyst" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-4 py-2 rounded-md bg-secondary/50 backdrop-blur-sm hover:bg-primary/20 text-muted-foreground hover:text-primary transition-all border border-primary/20 hover:border-primary/40">
+                <span>Instagram</span>
               </a>
               
               <a href="mailto:arjunguptain@outlook.com" className="flex items-center gap-2 px-4 py-2 rounded-md bg-secondary/50 backdrop-blur-sm hover:bg-primary/20 text-muted-foreground hover:text-primary transition-all border border-primary/20 hover:border-primary/40">
                 <Mail size={16} />
-                <span>Email Me</span>
+                <span>Email</span>
               </a>
             </div>
           </div>

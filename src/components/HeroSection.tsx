@@ -50,7 +50,7 @@ const HeroSection = () => {
           </div>
           
           <p className="text-muted-foreground text-base md:text-lg paragraph-spacing max-w-xl mx-auto reveal reveal-delay-3">
-            Hi, I'm Arjun Gupta — an IBM-Certified <strong className="text-foreground font-semibold">Data Analyst & Trainer</strong> at the Delhi School of Skill Development (DSSD). I specialise in <strong className="text-foreground font-semibold">Excel, Microsoft SQL Server, Python, Power BI</strong>, and <strong className="text-foreground font-semibold">Business Intelligence</strong>. I help students and professionals convert raw data into actionable insights through hands-on projects and real-world training.
+            I help learners and professionals master tools like Excel, Power BI, SQL Server, Python, and Tableau through hands-on analytics projects and real-world training. My focus is on turning complex data concepts into simple, career-ready skills that empower people to make data-driven decisions confidently.
           </p>
           
           <div className="flex flex-wrap gap-4 button-spacing justify-center reveal reveal-delay-4">
@@ -90,7 +90,7 @@ const HeroSection = () => {
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-accent/20 pointer-events-none transition-opacity duration-500 group-hover:opacity-75 rounded-full"></div>
                 <picture>
                   <source srcSet="/arjun-portrait-384.webp 384w, /arjun-portrait-1024.webp 1024w" sizes="(max-width: 768px) 384px, (max-width: 1280px) 384px, 384px" type="image/webp" />
-                  <img src="/arjun-portrait-384.webp" alt="Arjun Gupta — Data Analytics & Programming Trainer profile photo" className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-110 rounded-full" style={{
+                  <img src="/arjun-portrait-384.webp" alt="Arjun Gupta - Data Analyst and Trainer" className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-110 rounded-full" style={{
                   aspectRatio: "1 / 1"
                 }} loading="eager" fetchPriority="high" width="384" height="384" />
                 </picture>
