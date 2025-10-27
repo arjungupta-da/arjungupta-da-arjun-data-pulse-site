@@ -69,7 +69,7 @@ const HeroSection = () => {
           </div>
           
           <div className="flex gap-4 mt-8 justify-center reveal reveal-delay-4">
-            <a href="https://in.linkedin.com/in/arjunguptain" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full flex items-center justify-center bg-secondary/50 backdrop-blur-sm hover:bg-primary/20 text-muted-foreground hover:text-primary transition-all duration-500 border border-primary/20 hover:border-primary/40 gentle-hover" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/in/arjunguptadataanalyst" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full flex items-center justify-center bg-secondary/50 backdrop-blur-sm hover:bg-primary/20 text-muted-foreground hover:text-primary transition-all duration-500 border border-primary/20 hover:border-primary/40 gentle-hover" aria-label="LinkedIn">
               <Linkedin size={22} />
             </a>
             

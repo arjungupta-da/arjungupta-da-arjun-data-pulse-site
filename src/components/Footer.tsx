@@ -12,7 +12,7 @@ const Footer = () => {
           <div className="flex flex-col mb-4 md:mb-0 items-center">
             <p className="text-sm text-muted-foreground mb-2">Connect with me</p>
             <div className="flex gap-4">
-              <a href="https://www.linkedin.com/in/arjunguptain/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-4 py-2 rounded-md bg-secondary/50 backdrop-blur-sm hover:bg-primary/20 text-muted-foreground hover:text-primary transition-all border border-primary/20 hover:border-primary/40">
+              <a href="https://www.linkedin.com/in/arjunguptadataanalyst" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-4 py-2 rounded-md bg-secondary/50 backdrop-blur-sm hover:bg-primary/20 text-muted-foreground hover:text-primary transition-all border border-primary/20 hover:border-primary/40">
                 <Linkedin size={16} />
                 <span>LinkedIn Profile</span>
               </a>

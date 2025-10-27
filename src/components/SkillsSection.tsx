@@ -252,7 +252,7 @@ const SkillsSection = () => {
               
               <div className="mt-6 text-center">
                 <a 
-                  href="https://www.linkedin.com/in/arjunguptain/" 
+                  href="https://www.linkedin.com/in/arjunguptadataanalyst" 
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center text-primary hover:text-primary/80 transition-colors"

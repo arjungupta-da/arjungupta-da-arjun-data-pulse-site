@@ -71,8 +71,8 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold text-lg">LinkedIn</h3>
-                  <a href="https://www.linkedin.com/in/arjunguptain/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors duration-200 mt-1 block apple-button">
-                    linkedin.com/in/arjunguptain
+                  <a href="https://www.linkedin.com/in/arjunguptadataanalyst" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors duration-200 mt-1 block apple-button">
+                    linkedin.com/in/arjunguptadataanalyst
                   </a>
                 </div>
               </div>
