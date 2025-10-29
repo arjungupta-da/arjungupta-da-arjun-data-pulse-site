@@ -46,7 +46,7 @@ const HeroSection = () => {
           </h1>
           
           <div className="flex w-full justify-center reveal reveal-delay-2">
-            <h2 className="text-xl md:text-2xl font-bold subtitle-spacing text-primary text-justify">IBM-Certified Data Analytics and Programming Trainer</h2>
+            <h2 className="text-xl md:text-2xl font-bold subtitle-spacing text-primary text-center">IBM-Certified Data Analytics and Programming Trainer</h2>
           </div>
           
           <p className="text-muted-foreground text-base md:text-lg paragraph-spacing max-w-xl mx-auto reveal reveal-delay-3">
