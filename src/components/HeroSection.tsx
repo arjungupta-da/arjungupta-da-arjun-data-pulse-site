@@ -90,7 +90,7 @@ const HeroSection = () => {
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-accent/20 pointer-events-none transition-opacity duration-500 group-hover:opacity-75 rounded-full"></div>
                 <picture>
                   <source srcSet="/arjun-portrait-384.webp 384w, /arjun-portrait-1024.webp 1024w" sizes="(max-width: 768px) 384px, (max-width: 1280px) 384px, 384px" type="image/webp" />
-                  <img src="/arjun-portrait-384.webp" alt="Arjun Gupta — Data Analytics & Programming Trainer profile photo" className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-110 rounded-full" style={{
+                  <img src="/arjun-portrait-384.webp" alt="Arjun Gupta - Data Analyst and Trainer" className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-110 rounded-full" style={{
                   aspectRatio: "1 / 1"
                 }} loading="eager" fetchPriority="high" width="384" height="384" />
                 </picture>
