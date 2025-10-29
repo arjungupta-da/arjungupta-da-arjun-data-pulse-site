@@ -53,6 +53,10 @@ const HeroSection = () => {
             Hi, I'm Arjun Gupta — an IBM-Certified <strong className="text-foreground font-semibold">Data Analyst & Trainer</strong> at the Delhi School of Skill Development (DSSD). I specialise in <strong className="text-foreground font-semibold">Excel, Microsoft SQL Server, Python, Power BI</strong>, and <strong className="text-foreground font-semibold">Business Intelligence</strong>. I help students and professionals convert raw data into actionable insights through hands-on projects and real-world training.
           </p>
           
+          <p className="text-muted-foreground text-base md:text-lg paragraph-spacing max-w-xl mx-auto reveal reveal-delay-3">
+            I help learners and professionals master tools like Excel, Power BI, SQL Server, Python, and Tableau through hands-on analytics projects and real-world training. My focus is on turning complex data concepts into simple, career-ready skills that empower people to make data-driven decisions confidently.
+          </p>
+          
           <div className="flex flex-wrap gap-4 button-spacing justify-center reveal reveal-delay-4">
             <Button asChild variant="premium" size="lg">
               <a href="#contact">Get In Touch</a>
