@@ -1,4 +1,4 @@
-import { Linkedin, Mail } from "lucide-react";
+import { Linkedin, Mail, Instagram } from "lucide-react";
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   return <footer className="bg-secondary/30 backdrop-blur-sm border-t border-primary/20 py-8">
@@ -11,10 +11,15 @@ const Footer = () => {
           
           <div className="flex flex-col mb-4 md:mb-0 items-center">
             <p className="text-sm text-muted-foreground mb-2">Connect with me</p>
-            <div className="flex gap-4">
-              <a href="https://www.linkedin.com/in/arjunguptadataanalyst" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-4 py-2 rounded-md bg-secondary/50 backdrop-blur-sm hover:bg-primary/20 text-muted-foreground hover:text-primary transition-all border border-primary/20 hover:border-primary/40">
+            <div className="flex flex-wrap gap-4 justify-center">
+              <a href="https://www.linkedin.com/in/arjunguptadataanalyst" target="_blank" rel="noopener" className="flex items-center gap-2 px-4 py-2 rounded-md bg-secondary/50 backdrop-blur-sm hover:bg-primary/20 text-muted-foreground hover:text-primary transition-all border border-primary/20 hover:border-primary/40">
                 <Linkedin size={16} />
-                <span>LinkedIn Profile</span>
+                <span>LinkedIn</span>
+              </a>
+              
+              <a href="https://www.instagram.com/arjun.analyst" target="_blank" rel="noopener" className="flex items-center gap-2 px-4 py-2 rounded-md bg-secondary/50 backdrop-blur-sm hover:bg-primary/20 text-muted-foreground hover:text-primary transition-all border border-primary/20 hover:border-primary/40">
+                <Instagram size={16} />
+                <span>Instagram</span>
               </a>
               
               <a href="mailto:arjunguptain@outlook.com" className="flex items-center gap-2 px-4 py-2 rounded-md bg-secondary/50 backdrop-blur-sm hover:bg-primary/20 text-muted-foreground hover:text-primary transition-all border border-primary/20 hover:border-primary/40">
