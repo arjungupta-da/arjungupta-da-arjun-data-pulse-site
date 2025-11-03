@@ -45,9 +45,9 @@ const ContactSection = () => {
                 <div className="w-12 h-12 min-w-12 min-h-12 rounded-full bg-secondary/50 backdrop-blur-sm flex items-center justify-center border border-primary/30 transition-all duration-300 ease-out group-hover:scale-105 group-hover:border-primary/50 apple-button shrink-0">
                   <Mail className="text-primary transition-all duration-200 shrink-0" size={20} aria-hidden="true" focusable="false" />
                 </div>
-                <div>
+                <div className="min-w-0 flex-1">
                   <h3 className="font-semibold text-lg">Email</h3>
-                  <a href="mailto:arjunguptain@outlook.com" className="text-muted-foreground hover:text-primary transition-colors duration-200 mt-1 block apple-button">
+                  <a href="mailto:arjunguptain@outlook.com" className="text-muted-foreground hover:text-primary transition-colors duration-200 mt-1 block apple-button break-words">
                     arjunguptain@outlook.com
                   </a>
                 </div>
@@ -69,9 +69,9 @@ const ContactSection = () => {
                 <div className="w-12 h-12 min-w-12 min-h-12 rounded-full bg-secondary/50 backdrop-blur-sm flex items-center justify-center border border-primary/30 transition-all duration-300 ease-out group-hover:scale-105 group-hover:border-primary/50 apple-button shrink-0">
                   <Linkedin className="text-primary transition-all duration-200 shrink-0" size={20} aria-hidden="true" focusable="false" />
                 </div>
-                <div>
+                <div className="min-w-0 flex-1">
                   <h3 className="font-semibold text-lg">LinkedIn</h3>
-                  <a href="https://www.linkedin.com/in/arjunguptadataanalyst" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors duration-200 mt-1 block apple-button">
+                  <a href="https://www.linkedin.com/in/arjunguptadataanalyst" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors duration-200 mt-1 block apple-button break-words">
                     linkedin.com/in/arjunguptadataanalyst
                   </a>
                 </div>
