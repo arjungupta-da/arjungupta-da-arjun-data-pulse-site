@@ -66,8 +66,8 @@ const ContactSection = () => {
               </div>
               
               <div className="flex items-start gap-4 group">
-                <div className="w-12 h-12 rounded-full bg-secondary/50 backdrop-blur-sm flex items-center justify-center border border-primary/30 transition-all duration-300 ease-out group-hover:scale-105 group-hover:border-primary/50 apple-button">
-                  <Linkedin className="text-primary transition-all duration-200" size={20} aria-hidden="true" focusable="false" />
+                <div className="w-12 h-12 min-w-12 min-h-12 rounded-full bg-secondary/50 backdrop-blur-sm flex items-center justify-center border border-primary/30 transition-all duration-300 ease-out group-hover:scale-105 group-hover:border-primary/50 apple-button shrink-0">
+                  <Linkedin className="text-primary transition-all duration-200 shrink-0" size={20} aria-hidden="true" focusable="false" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-lg">LinkedIn</h3>
