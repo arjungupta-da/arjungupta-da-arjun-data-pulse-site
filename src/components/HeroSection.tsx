@@ -88,12 +88,19 @@ const HeroSection = () => {
           }}>
               <div className="w-full h-full rounded-full overflow-hidden bg-background">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-accent/20 pointer-events-none transition-opacity duration-500 group-hover:opacity-75 rounded-full"></div>
-                <picture>
-                  <source srcSet="/arjun-portrait-384.webp 384w, /arjun-portrait-512-optimized.webp 512w, /arjun-portrait-1024.webp 1024w" sizes="(max-width: 640px) 144px, (max-width: 768px) 224px, (max-width: 1024px) 288px, 384px" type="image/webp" />
-                  <img src="/arjun-portrait-384.webp" alt="Arjun Gupta - Data Analyst and Trainer" className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-110 rounded-full" style={{
-                  aspectRatio: "1 / 1"
-                }} loading="eager" fetchPriority="high" width="384" height="384" decoding="async" />
-                </picture>
+                <img 
+                  src="/arjun-portrait-384.webp" 
+                  srcSet="/arjun-portrait-384.webp 384w, /arjun-portrait-512-optimized.webp 512w" 
+                  sizes="(max-width: 640px) 144px, (max-width: 768px) 224px, 384px"
+                  alt="Arjun Gupta - Data Analyst and Trainer" 
+                  className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-110 rounded-full" 
+                  style={{ aspectRatio: "1 / 1" }} 
+                  loading="eager" 
+                  fetchPriority="high" 
+                  width="384" 
+                  height="384" 
+                  decoding="async" 
+                />
               </div>
             </div>
             
